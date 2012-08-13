@@ -63,6 +63,7 @@
 
 <div id="wrap">
 	<h5><a href="<?php echo html_escape(uri('exhibits')); ?>">Back to Exhibits</a></h5>
+	<div id="logo"><?php echo link_to_home_page(custom_display_logo()); ?></div>
 	<h1><?php echo exhibit_builder_link_to_exhibit($exhibit); ?></h1>
 
     <div id="exhibit-nav">
