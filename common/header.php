@@ -23,8 +23,18 @@
 <!-- Custom Styles --> 
 <style type="text/css"> 
 	body { 
-		background-color: <?php get_theme_option('Background Color'); ?>;
+		background-color: <?php echo get_theme_option('Background Color'); ?>;
 	} 
+	#wrap { 
+		background-color: <?php echo get_theme_option('Inner Background Color'); ?>;
+	} 
+	h1 a, h1 a:visited { 
+		color: <?php echo get_theme_option('Heading Color'); ?>;
+	}
+	p { 
+		color: <?php echo get_theme_option('Body Text Color'); ?>;
+	} 
+	
 
 </style>
 
