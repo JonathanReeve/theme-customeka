@@ -22,6 +22,9 @@
 
 <!-- Custom Styles --> 
 <style type="text/css"> 
+	body { 
+		background-color: <?php get_theme_option('Background Color'); ?>;
+	} 
 
 </style>
 
