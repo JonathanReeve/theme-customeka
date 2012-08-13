@@ -20,6 +20,15 @@
 <!-- Plugin Stuff -->
 <?php plugin_header(); ?>
 
+<!-- Load Google Font Stylesheet for Header--> 
+<?php 
+	$headingTextFont=get_theme_option('Heading Text Font');  
+	$googleLink="<link href='http://fonts.googleapis.com/css?family=".$headingTextFont."' rel='stylesheet' type='text/css'>";
+	if (get_theme_option('Heading Text Font') != NULL) {
+		echo $googleLink;
+	} 
+?>
+
 <!-- Custom Styles --> 
 <style type="text/css"> 
 	body { 
@@ -30,10 +39,12 @@
 	} 
 	h1 a, h1 a:visited { 
 		color: <?php echo get_theme_option('Heading Color'); ?>;
+		font-family: <?php echo get_theme_option('Heading Text Font'); ?>;
 	}
 	p { 
 		color: <?php echo get_theme_option('Body Text Color'); ?>;
-	} 
+		font-family: <?php echo get_theme_option('Body Text Font'); ?>;
+	} 	
 	
 
 </style>
@@ -53,4 +64,3 @@
     	<?php echo exhibit_builder_page_nav(); ?>
     <?php echo flash(); ?>				
 
-		
