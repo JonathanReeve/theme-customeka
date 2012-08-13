@@ -22,9 +22,18 @@
 
 <!-- Load Google Font Stylesheet for Header--> 
 <?php 
-	$headingTextFont=get_theme_option('Heading Text Font');  
-	$googleLink="<link href='http://fonts.googleapis.com/css?family=".$headingTextFont."' rel='stylesheet' type='text/css'>";
 	if (get_theme_option('Heading Text Font') != NULL) {
+		$headingTextFont=get_theme_option('Heading Text Font');  
+		$googleLink="<link href='http://fonts.googleapis.com/css?family=".$headingTextFont."' rel='stylesheet' type='text/css'>";
+		echo $googleLink;
+	} 
+?>
+
+<!-- Load Google Font Stylesheet for Body--> 
+<?php 
+	if (get_theme_option('Body Text Font') != NULL) {
+		$bodyTextFont=get_theme_option('Body Text Font');  
+		$googleLink="<link href='http://fonts.googleapis.com/css?family=".$bodyTextFont."' rel='stylesheet' type='text/css'>";
 		echo $googleLink;
 	} 
 ?>
