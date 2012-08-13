@@ -7,14 +7,23 @@
 <!-- Meta -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<!-- Stylesheets -->
-<link rel="stylesheet" media="screen" href="<?php echo html_escape(exhibit_builder_exhibit_css('screen')); ?>" />
+	<!--Stylesheets-->
+    		<?php
+      			elementaire_queue_css('reset.css');
+      			elementaire_queue_css('screen.css');
+			display_css();
+    		?>
 
 <!-- JavaScripts -->
 <?php echo js('prototype'); ?>
 
 <!-- Plugin Stuff -->
 <?php plugin_header(); ?>
+
+<!-- Custom Styles --> 
+<style type="text/css"> 
+
+</style>
 
 </head>
 <body<?php echo $bodyclass ? ' class="'.$bodyclass.'"' : ''; ?>  id="<?php echo html_escape($exhibit->theme); ?>">
