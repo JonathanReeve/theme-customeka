@@ -20,7 +20,15 @@ a:hover {color: #6699ff;text-decoration: none;}
 
 /* == Structure == */
 
-#wrap {width:950px; margin:0 auto 1em; overflow:hidden;background-color:#fff;}
+#wrap {
+	width:950px; 
+	margin:0 auto 1em; 
+	overflow:hidden;
+	background-color:#fff;
+	-webkit-box-shadow: 0px 0px 5px 6px rgba(22,22,22,0.5);
+	-moz-box-shadow: 0px 0px 5px 6px rgba(22,22,22,0.5);
+	-box-shadow: 0px 0px 5px 6px rgba(22,22,22,0.5);
+}
 #header {clear: both;padding:0; margin: 0;overflow: hidden;}
 #exhibit-nav {float: left;width: 164px;padding: 0 18px;}
 #content {float: right;overflow: hidden;min-height:400px;width: 713px; padding:0 18px; border-left: 1px solid #c7b5a2;}
