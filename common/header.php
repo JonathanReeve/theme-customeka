@@ -42,6 +42,7 @@
 <style type="text/css"> 
 	body { 
 		background-color: <?php echo get_theme_option('Background Color'); ?>;
+		background-image: url('<?php echo elementaire_custom_background(); ?>');
 	} 
 	#wrap { 
 		background-color: <?php echo get_theme_option('Inner Background Color'); ?>;
