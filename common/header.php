@@ -47,6 +47,9 @@
 	#wrap { 
 		background-color: <?php echo get_theme_option('Inner Background Color'); ?>;
 	} 
+	#header { 
+		background-image: url('<?php echo elementaire_custom_header_background(); ?>');
+	}
 	h1 a, h1 a:visited { 
 		color: <?php echo get_theme_option('Heading Color'); ?>;
 		font-family: <?php echo get_theme_option('Heading Text Font'); ?>;
@@ -63,9 +66,11 @@
 <body<?php echo $bodyclass ? ' class="'.$bodyclass.'"' : ''; ?>  id="<?php echo html_escape($exhibit->theme); ?>">
 
 <div id="wrap">
-	<h5><a href="<?php echo html_escape(uri('exhibits')); ?>">Back to Exhibits</a></h5>
-	<div id="logo"><?php echo link_to_home_page(custom_display_logo()); ?></div>
-	<h1><?php echo exhibit_builder_link_to_exhibit($exhibit); ?></h1>
+	<div id="header">
+		<h5><a href="<?php echo html_escape(uri('exhibits')); ?>">Back to Exhibits</a></h5>
+		<div id="logo"><?php echo link_to_home_page(custom_display_logo()); ?></div>
+		<h1><?php echo exhibit_builder_link_to_exhibit($exhibit); ?></h1>
+	</div> <!-- end of Header --> 
 
     <div id="exhibit-nav">
     	<?php echo exhibit_builder_section_nav();?>
