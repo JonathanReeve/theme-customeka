@@ -69,7 +69,16 @@
 	<div id="header">
 		<h5><a href="<?php echo html_escape(uri('exhibits')); ?>">Back to Exhibits</a></h5>
 		<div id="logo"><?php echo link_to_home_page(custom_display_logo()); ?></div>
-		<h1><?php echo exhibit_builder_link_to_exhibit($exhibit); ?></h1>
+
+		<?php if (get_theme_option('Display Header Text')==1) { 
+			$exhibitHeaderTextHTML= '<h1>'.exhibit_builder_link_to_exhibit($exhibit).'</h1>'; 
+			echo $exhibitHeaderTextHTML;
+		} else { 
+			$exhibitHeaderTextHTML= '<h1>&nbsp;&nbsp;</h1>'; // this is a placeholder so that the background image doesn't get cut off 
+			echo $exhibitHeaderTextHTML;
+		}
+		?> 
+
 	</div> <!-- end of Header --> 
 
     <div id="exhibit-nav">
