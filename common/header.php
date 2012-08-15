@@ -50,7 +50,7 @@
 	#header { 
 		background-image: url('<?php echo elementaire_custom_header_background(); ?>');
 	}
-	h1 a, h1 a:visited { 
+	h1, h2, h3, h4, h5, h1 a, h1 a:visited { 
 		color: <?php echo get_theme_option('Heading Color'); ?>;
 		font-family: <?php echo get_theme_option('Heading Text Font'); ?>;
 	}
