@@ -37,7 +37,7 @@
 		background-image: url('<?php echo elementaire_custom_background(); ?>');
 	} 
 	#wrap { 
-		background-color: <?php echo get_theme_option('Inner Background Color'); ?>;
+		background-color: <?php echo get_theme_option('Page Background Color'); ?>;
 	} 
 	#header { 
 		background-image: url('<?php echo elementaire_custom_header_background(); ?>');
