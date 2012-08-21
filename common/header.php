@@ -50,6 +50,9 @@
 		color: <?php echo get_theme_option('Body Text Color'); ?>;
 		font-family: <?php echo get_theme_option('Body Text Font'); ?>;
 	} 	
+	#exhibit-sections { 
+		<?php if ((int)get_theme_option('Display Exhibit Sections')==0) echo 'display: none;' ?> 
+	}
 </style>
 </head>
 <body<?php echo $bodyclass ? ' class="'.$bodyclass.'"' : ''; ?>  id="<?php echo html_escape($exhibit->theme); ?>">
