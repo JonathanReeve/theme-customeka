@@ -128,7 +128,7 @@ a:hover {color: #6699ff;text-decoration: none;}
 .exhibit-section-nav {width: 164px;overflow:hidden; }
 	.exhibit-section-nav li {width:auto;list-style-type:square;}
 	.exhibit-section-nav li a {display:block;text-decoration:none;padding:.5em;}
-	.exhibit-section-nav li a.current {color: #003399; background-color: #e3ecff;}
+	.exhibit-section-nav li.current a {color: #003399; background-color: #e3ecff;}
 	.exhibit-section-nav li a:hover {color: #003399; background-color: #e3ecff;}
 	
 /* =Page Navigation= */
