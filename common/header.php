@@ -7,8 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<!--Stylesheets-->
     		<?php
-      			elementaire_queue_css('reset.css');
-      			elementaire_queue_css('screen.css');
+      			elementaire_queue_css('style.css');
 			display_css();
     		?>
 <!-- JavaScripts -->
