@@ -64,7 +64,7 @@ h2 {
 }
 h3 {
 	font-size:1.8em; 
-	margin-bottom:1.2857em; 
+	margin: 1em 0; 
 	line-height:1.2857em;
 	clear: both;
 }
