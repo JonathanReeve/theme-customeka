@@ -39,12 +39,15 @@
 	#wrap { 
 		background-color: <?php echo get_theme_option('Page Background Color'); ?>;
 	} 
+	#content { 
+		<?php if (get_theme_option('Hide Dividers')) echo 'border-left: none;'; ?>
+        }
 	#header { 
 		background-image: url('<?php echo elementaire_custom_header_background(); ?>');
 	}
 	h1, h2, h3, h4, h5, h1 a, h1 a:visited { 
 		color: <?php echo get_theme_option('Heading Color'); ?>;
-		font-family: <?php echo get_theme_option('Heading Text Font'); ?>;
+		font-family: <?php echo get_theme_option('Heading Text Font'); ?>;			
 	}
 	p { 
 		color: <?php echo get_theme_option('Body Text Color'); ?>;
@@ -53,6 +56,7 @@
 	#exhibit-sections { 
 		<?php if ((int)get_theme_option('Display Exhibit Sections')==0) echo 'display: none;' ?> 
 	}
+	
 </style>
 </head>
 <body<?php echo $bodyclass ? ' class="'.$bodyclass.'"' : ''; ?>  id="<?php echo html_escape($exhibit->theme); ?>">
