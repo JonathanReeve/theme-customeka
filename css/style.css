@@ -124,18 +124,31 @@ a:hover {color: #6699ff;text-decoration: none;}
 }
 	#footer a:visited {color: #666;}
 		
-/* =Exhibit Navigation= */	
-.exhibit-section-nav {width: 164px;overflow:hidden; }
-	.exhibit-section-nav li {width:auto;list-style-type:square;}
-	.exhibit-section-nav li a {display:block;text-decoration:none;padding:.5em;}
-	.exhibit-section-nav li.current a {color: #003399; background-color: #e3ecff;}
-	.exhibit-section-nav li a:hover {color: #003399; background-color: #e3ecff;}
+/* =Vertical Exhibit Navigation= */	
+.vertical .exhibit-section-nav {width: 164px;overflow:hidden; }
+	.vertical .exhibit-section-nav li {width:auto;list-style-type:square;}
+	.vertical .exhibit-section-nav li a {display:block;text-decoration:none;padding:.5em;}
+	.vertical .exhibit-section-nav li.current a {color: #003399; background-color: #e3ecff;}
+	.vertical .exhibit-section-nav li a:hover {color: #003399; background-color: #e3ecff;}
 	
-/* =Page Navigation= */
-.exhibit-page-nav {list-style:none; float: left; padding: 1em 0; width: 100%; border-top: 1px solid #c7b5a2;}
-	.exhibit-page-nav li {display:inline;float: left; margin-right:1.5em; text-align: left;}
-	.exhibit-page-nav li a {text-decoration:none;}
-	.exhibit-page-nav li.current a {color: #6699ff; text-decoration:none;}
+/* =Vertical Page Navigation= */
+.vertical .exhibit-page-nav {list-style:none; float: left; padding: 1em 0; width: 100%; border-top: 1px solid #c7b5a2;}
+	.vertical .exhibit-page-nav li {display:inline;float: left; margin-right:1.5em; text-align: left;}
+	.vertical .exhibit-page-nav li a {text-decoration:none;}
+	.vertical .exhibit-page-nav li.current a {color: #6699ff; text-decoration:none;}
+
+/* =Horizontal Exhibit Navigation= */	
+.horizontal .exhibit-section-nav {width: 164px;overflow:hidden; }
+	.horizontal .exhibit-section-nav li {width:auto;list-style-type:square;}
+	.horizontal .exhibit-section-nav li a {display:block;text-decoration:none;padding:.5em;}
+	.horizontal .exhibit-section-nav li.current a {color: #003399; background-color: #e3ecff;}
+	.horizontal .exhibit-section-nav li a:hover {color: #003399; background-color: #e3ecff;}
+	
+/* =Horizontal Page Navigation= */
+.horizontal .exhibit-page-nav {list-style:none; float: left; padding: 1em 0; width: 100%; border-top: 1px solid #c7b5a2;}
+	.horizontal .exhibit-page-nav li {display:inline;float: left; margin-right:1.5em; text-align: left;}
+	.horizontal .exhibit-page-nav li a {text-decoration:none;}
+	.horizontal .exhibit-page-nav li.current a {color: #6699ff; text-decoration:none;}
 
 /* == Previous-Next Navigation == */
 #previous-next-nav {font-size:1.1em;}
