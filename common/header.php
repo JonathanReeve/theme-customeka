@@ -56,6 +56,13 @@
 	#exhibit-sections { 
 		<?php if ((int)get_theme_option('Display Exhibit Sections')==0) echo 'display: none;' ?> 
 	}
+	.exhibit-section-nav li a, .exhibit-page-nav li a { 
+		color: <?php echo get_theme_option('Link Color'); ?>;
+	}
+	.exhibit-section-nav li.current a, .exhibit-section-nav li a:hover, .exhibit-page-nav li.current a, .exhibit-page-nav li a:hover { 
+		color: <?php echo get_theme_option('Active Link Color'); ?> !important;
+		background-color: <?php echo get_theme_option('Active Link Background Color') ; ?> !important;
+	}
 	
 </style>
 </head>

@@ -138,7 +138,7 @@ a:hover {
 		color: #666;
 	}
 
-/* =Vertical Section Navigation= */	
+/* = Styles for Vertical-Nav Pages = {{{1 */	
 .vertical #content {
 	float: right;
 	overflow: hidden;
@@ -153,6 +153,7 @@ a:hover {
 	padding: 0 18px;
 }
 	
+/* = Vertical Section Navigation = {{{2 */	
 .vertical .exhibit-section-nav {
 	width: 164px;
 	overflow:hidden;
@@ -175,7 +176,7 @@ a:hover {
 		background-color: #e3ecff;
 	}
 	
-/* =Vertical Page Navigation= */
+/* = Vertical Page Navigation = {{{2 */
 .vertical .exhibit-page-nav {
 	list-style:none;
 	float: left;
@@ -241,15 +242,20 @@ a:hover {
 .horizontal .exhibit-page-nav li {
 	display:inline;
 	float: left;
-	margin: 0 1.5em;
+	margin: 0 0.5em;
 	text-align: left;
 }
 .horizontal .exhibit-page-nav li a {
 	text-decoration:none;
+	padding: .5em;
+}
+.horizontal .exhibit-page-nav li a:hover {
+	color: #003399;
+	background-color: #e3ecff;
 }
 .horizontal .exhibit-page-nav li.current a {
-	color: #6699ff;
-	text-decoration:none;
+	color: #003399;
+	background-color: #e3ecff;
 }
 
 /* = Previous-Next Navigation = {{{1 */
