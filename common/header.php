@@ -82,7 +82,7 @@
 	</div> <!-- end of Header --> 
     <div id="exhibit-nav">
     	<?php echo exhibit_builder_section_nav();?>
+    	<?php echo exhibit_builder_page_nav(); ?>
     </div>
     <div id="content">
-    	<?php echo exhibit_builder_page_nav(); ?>
     <?php echo flash(); ?>				

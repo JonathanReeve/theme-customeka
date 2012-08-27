@@ -210,8 +210,9 @@ a:hover {
 .horizontal #exhibit-nav {
 	padding: 0 18px;
 }
-.horizontal .exhibit-section-nav ul {
-	line-height: 1.3em;
+.horizontal ul.exhibit-section-nav {
+	margin-bottom: 0.6em; 
+	padding: 10px 0; 
 }
 .horizontal .exhibit-section-nav li {
 	display: inline; 
@@ -327,6 +328,8 @@ color: #6699ff;
 .item img, .exhibit-item img {
 	margin-bottom: 1.5em;
 }
+#itemfiles { 
+	margin: 10px 0; 
 
 /* == Header == */
 #logo {
