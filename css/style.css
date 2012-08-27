@@ -210,7 +210,8 @@ a:hover {
 .horizontal #exhibit-nav {
 	padding: 0 18px;
 }
-.horizontal .exhibit-section-nav {
+.horizontal .exhibit-section-nav ul {
+	line-height: 1.3em;
 }
 .horizontal .exhibit-section-nav li {
 	display: inline; 
