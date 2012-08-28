@@ -180,15 +180,9 @@ a:hover {
 .vertical .exhibit-page-nav {
 	list-style:none;
 	float: left;
-	padding: 1em 0;
-	width: 100%;
-	border-top: 1px solid #c7b5a2;
+	padding: 0.8em 0;
 }
 	.vertical .exhibit-page-nav li {
-		display:inline;
-		float: left;
-		margin-right:1.5em;
-		text-align: left;
 	}
 	.vertical .exhibit-page-nav li a {
 		text-decoration:none;

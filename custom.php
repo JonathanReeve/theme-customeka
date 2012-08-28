@@ -38,5 +38,6 @@ function elementaire_custom_header_background()
     }
 }
 
+
 ?>
 

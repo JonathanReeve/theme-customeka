@@ -81,8 +81,12 @@
 		?> 
 	</div> <!-- end of Header --> 
     <div id="exhibit-nav">
-    	<?php echo exhibit_builder_section_nav();?>
-    	<?php echo exhibit_builder_page_nav(); ?>
+	<?php if (get_theme_option('Style Sheet')!="horizontal") {
+		echo exhibit_builder_nested_nav($exhibit = null, $showAllPages = true);
+	} else {
+    		echo exhibit_builder_section_nav();
+		echo exhibit_builder_page_nav(); 
+	}?>
     </div>
     <div id="content">
     <?php echo flash(); ?>				
