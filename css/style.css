@@ -222,22 +222,21 @@ a:hover {
 /* = Horizontal Section Navigation = {{{2 */	
 .horizontal #exhibit-nav {
 	padding: 0 18px;
-	height: 70px;
-	width: 999px;
 }
 .horizontal ul.exhibit-section-nav {
-	margin-bottom: 0.6em; /* overrides standard ul margin */
+	margin-bottom: 0.8em; /* overrides standard ul margin */
 }
 .horizontal .exhibit-section-nav li {
 	display: inline-block; 
 	width:auto;
+	margin-bottom: 10px;
+	line-height: 3em; 
 }
 .horizontal .exhibit-section-nav li a {
 	display: inline;
 	text-decoration: none;
-	padding: .5em;
+	padding: 1.2em;
 	background-color: #777; 
-	padding:.8em;
 	color: #eee; 
 	border-bottom: 1px solid #555; 
 	border-right: 1px solid #666; 
@@ -259,9 +258,9 @@ a:hover {
 	text-align: left;
 }
 .horizontal .exhibit-page-nav li a {
-	padding: .9em;
+	padding: 1.2em;
 	padding-top: 15px;
-	margin-top: 5px;
+	margin-top: 15px;
 	margin-left: 0;
 	text-decoration:none;
 	background-color: #777; 
