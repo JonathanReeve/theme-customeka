@@ -160,21 +160,22 @@ a:hover {
 }
 	.vertical .exhibit-section-nav li {
 		width:auto;
-		list-style-type:square;
 	}
 	.vertical .exhibit-section-nav li a {
 		display:block;
 		text-decoration:none;
 		padding:.5em;
 	}
-	.vertical .exhibit-section-nav li.current a {
+	.vertical a.exhibit-section-title { 
+	} 
+	/*.vertical .exhibit-section-nav li.current a {
 		color: #003399;
 		background-color: #e3ecff;
 	}
 	.vertical .exhibit-section-nav li a:hover {
 		color: #003399;
 		background-color: #e3ecff;
-	}
+	} */
 	
 /* = Vertical Page Navigation = {{{2 */
 .vertical .exhibit-page-nav {
@@ -186,6 +187,7 @@ a:hover {
 	}
 	.vertical .exhibit-page-nav li a {
 		text-decoration:none;
+		font-size: 0.9em; 
 	}
 	.vertical .exhibit-page-nav li.current a {
 		color: #6699ff;
@@ -211,7 +213,6 @@ a:hover {
 .horizontal .exhibit-section-nav li {
 	display: inline; 
 	width:auto;
-	list-style-type:square;
 	padding:.5em;
 }
 .horizontal .exhibit-section-nav li a {

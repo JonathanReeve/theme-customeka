@@ -63,7 +63,6 @@
 		color: <?php echo get_theme_option('Active Link Color'); ?> !important;
 		background-color: <?php echo get_theme_option('Active Link Background Color') ; ?> !important;
 	}
-	
 </style>
 </head>
 <body<?php echo $bodyclass ? ' class="'.$bodyclass.'"' : ''; ?>  id="<?php echo html_escape($exhibit->theme); ?>">
@@ -82,7 +81,7 @@
 	</div> <!-- end of Header --> 
     <div id="exhibit-nav">
 	<?php if (get_theme_option('Style Sheet')!="horizontal") {
-		echo exhibit_builder_nested_nav($exhibit = null, $showAllPages = true);
+		echo exhibit_builder_nested_nav($exhibit = null); // add $showallpages=TRUE as another argument	to get all pages
 	} else {
     		echo exhibit_builder_section_nav();
 		echo exhibit_builder_page_nav(); 
