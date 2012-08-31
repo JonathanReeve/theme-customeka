@@ -222,13 +222,14 @@ a:hover {
 /* = Horizontal Section Navigation = {{{2 */	
 .horizontal #exhibit-nav {
 	padding: 0 18px;
+	height: 70px;
+	width: 999px;
 }
 .horizontal ul.exhibit-section-nav {
 	margin-bottom: 0.6em; /* overrides standard ul margin */
-	padding: 10px 0; 
 }
 .horizontal .exhibit-section-nav li {
-	display: inline; 
+	display: inline-block; 
 	width:auto;
 }
 .horizontal .exhibit-section-nav li a {
@@ -238,6 +239,8 @@ a:hover {
 	background-color: #777; 
 	padding:.8em;
 	color: #eee; 
+	border-bottom: 1px solid #555; 
+	border-right: 1px solid #666; 
 }
 .horizontal .exhibit-section-nav li.current a, .horizontal .exhibit-section-nav li a:hover  {
 	color: #555;
@@ -245,29 +248,33 @@ a:hover {
 }
 	
 /* = Horizontal Page Navigation = {{{2 */
-.horizontal .exhibit-page-nav {
+.horizontal ul.exhibit-page-nav {
+	margin-top: 15px;
 	list-style:none;
-	padding: 1em 0;
 	width: 100%;
-	border-top: 1px solid #c7b5a2;
 }
 .horizontal .exhibit-page-nav li {
 	display:inline;
 	float: left;
-	margin: 0 0.5em;
 	text-align: left;
 }
 .horizontal .exhibit-page-nav li a {
+	padding: .9em;
+	padding-top: 15px;
+	margin-top: 5px;
+	margin-left: 0;
 	text-decoration:none;
-	padding: .5em;
+	background-color: #777; 
+	color: #eee; 
+	border-right: 1px solid #666; 
 }
 .horizontal .exhibit-page-nav li a:hover {
-	color: #003399;
-	background-color: #e3ecff;
+	color: #555;
+	background-color: #eee;
 }
 .horizontal .exhibit-page-nav li.current a {
-	color: #003399;
-	background-color: #e3ecff;
+	color: #555;
+	background-color: #eee;
 }
 
 /* = Previous-Next Navigation = {{{1 */
