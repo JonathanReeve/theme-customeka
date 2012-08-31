@@ -94,7 +94,7 @@ a:link {
 	color: #003399;
 }
 a:visited {
-	color: #466bb5;
+	color: #003399; /*different colors for visited links is annoying */
 }
 a:hover {
 	color: #6699ff;
@@ -143,7 +143,7 @@ a:hover {
 	float: right;
 	overflow: hidden;
 	min-height:400px;
-	width: 713px; 
+	width: 673px; 
 	padding:0 18px; 
 	border-left: 1px solid #c7b5a2;
 }
@@ -152,46 +152,61 @@ a:hover {
 	width: 164px;
 	padding: 0 18px;
 }
+.vertical #exhibit-nav a { 
+	text-decoration:none;
+}
+	
 	
 /* = Vertical Section Navigation = {{{2 */	
 .vertical .exhibit-section-nav {
-	width: 164px;
+	width: 194px;
 	overflow:hidden;
 }
 	.vertical .exhibit-section-nav li {
 		width:auto;
 	}
-	.vertical .exhibit-section-nav li a {
-		display:block;
-		text-decoration:none;
-		padding:.5em;
+	.vertical .exhibit-nested-section { 
+	} 
+	.vertical .exhibit-section-nav li {
 	}
 	.vertical a.exhibit-section-title { 
+		background: #333; 
+	 	display:block;
+		color: #eee; 
+		font-size: 1.0em;
+		text-decoration:none;
+	 	text-transform: uppercase; 	
+		font-weight: 600px;
+		text-shadow: 0px 1px 0px rgba(33,33,33,.5); 
+		padding: 0.8em;
+		border-left: 5px solid #555;
 	} 
-	/*.vertical .exhibit-section-nav li.current a {
-		color: #003399;
-		background-color: #e3ecff;
-	}
-	.vertical .exhibit-section-nav li a:hover {
-		color: #003399;
-		background-color: #e3ecff;
-	} */
-	
+	.vertical li.exhibit-nested-section.current a.exhibit-section-title, .vertical li.exhibit-nested-section a.exhibit-section-title:hover { 
+		border-left: 5px solid #58589F;
+	} 
+
 /* = Vertical Page Navigation = {{{2 */
 .vertical .exhibit-page-nav {
 	list-style:none;
-	float: left;
-	padding: 0.8em 0;
+	margin-bottom: 0;
+	margin-left: 15px;
+	background: #555;
 }
 	.vertical .exhibit-page-nav li {
+		margin: 0;
 	}
 	.vertical .exhibit-page-nav li a {
-		text-decoration:none;
-		font-size: 0.9em; 
+		display: block; 
+		font-size: smaller;
+		padding: 0.6em;
+		color: #eee;
+		border-right: 5px solid #333;
 	}
+	.vertical .exhibit-page-nav li.current a, .vertical .exhibit-page-nav li a:hover {
+/*		background-color: #5f5f5f; */
+		border-right: 5px solid #58589F;
+	} 
 	.vertical .exhibit-page-nav li.current a {
-		color: #6699ff;
-		text-decoration:none;
 	}
 
 /* = Styles for Horizontal-Nav Pages = {{{1 */
@@ -282,7 +297,7 @@ a:hover {
 	text-transform: uppercase;
 	letter-spacing: .1em;
 }
-	#exhibit-sections h3 a,#exhibit-sections h3 a:visited {
+	#exhibit-sections h3 a {
 		text-decoration: none;
 		color: #663300;
 	}
