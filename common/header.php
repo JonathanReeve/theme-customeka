@@ -45,14 +45,23 @@
 	#header { 
 		background-image: url('<?php echo elementaire_custom_header_background(); ?>');
 	}
-	/*.horizontal .exhibit-section-title li { 
-		background-color: <?php echo get_theme_option('Navigation Color 1'); ?>;
-		color: <?php echo get_theme_option('Navigation Color 2'); ?>;
+	.horizontal .exhibit-section-nav li a { 
+		background-color: <?php echo get_theme_option('Navigation Color One'); ?>;
+		color: <?php echo get_theme_option('Navigation Color Two'); ?>;
 	}
-	.horizontal .exhibit-section-title li.current { 
-		background-color: <?php echo get_theme_option('Navigation Color 2'); ?>;
-		color: <?php echo get_theme_option('Navigation Color 1'); ?>;
-	} */
+	.horizontal .exhibit-section-nav li.current a, .horizontal .exhibit-section-nav li a:hover { 
+		background-color: <?php echo get_theme_option('Navigation Color Two'); ?>;
+		color: <?php echo get_theme_option('Navigation Color One'); ?>;
+	} 
+	.horizontal .exhibit-page-nav li a { 
+		background-color: <?php echo get_theme_option('Navigation Color One'); ?>;
+		color: <?php echo get_theme_option('Navigation Color Two'); ?>;
+	}	
+	.horizontal .exhibit-page-nav li.current a, .horizontal .exhibit-page-nav li a:hover { 
+		background-color: <?php echo get_theme_option('Navigation Color Two'); ?>;
+		color: <?php echo get_theme_option('Navigation Color One'); ?>;
+	} 
+		
 	h1, h2, h3, h4, h5, h1 a, h1 a:visited { 
 		color: <?php echo get_theme_option('Heading Color'); ?>;
 		font-family: <?php echo get_theme_option('Heading Text Font'); ?>;			
