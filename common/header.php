@@ -38,13 +38,21 @@
 	} 
 	#wrap { 
 		background-color: <?php echo get_theme_option('Page Background Color'); ?>;
-	} 
+	}
 	#content { 
 		<?php if (get_theme_option('Hide Dividers')) echo 'border-left: none;'; ?>
         }
 	#header { 
 		background-image: url('<?php echo elementaire_custom_header_background(); ?>');
 	}
+	/*.horizontal .exhibit-section-title li { 
+		background-color: <?php echo get_theme_option('Navigation Color 1'); ?>;
+		color: <?php echo get_theme_option('Navigation Color 2'); ?>;
+	}
+	.horizontal .exhibit-section-title li.current { 
+		background-color: <?php echo get_theme_option('Navigation Color 2'); ?>;
+		color: <?php echo get_theme_option('Navigation Color 1'); ?>;
+	} */
 	h1, h2, h3, h4, h5, h1 a, h1 a:visited { 
 		color: <?php echo get_theme_option('Heading Color'); ?>;
 		font-family: <?php echo get_theme_option('Heading Text Font'); ?>;			

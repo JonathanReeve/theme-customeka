@@ -258,14 +258,15 @@ a:hover {
 	text-align: left;
 }
 .horizontal .exhibit-page-nav li a {
-	padding: 1.2em;
-	padding-top: 15px;
-	margin-top: 15px;
+	padding: 0.9em;
+	font-size: 90%;
+	margin-top: 10px;
 	margin-left: 0;
 	text-decoration:none;
 	background-color: #777; 
 	color: #eee; 
 	border-right: 1px solid #666; 
+	border-left: 1px solid #666; 
 }
 .horizontal .exhibit-page-nav li a:hover {
 	color: #555;
