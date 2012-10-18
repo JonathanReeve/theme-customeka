@@ -28,6 +28,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 /* == Generic Styles == {{{1 */
 body {
 	line-height: 1;
@@ -47,11 +48,13 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 body {
 	font: 62.5% Verdana, Arial, sans-serif;
 	color:#555;
 	background:CornflowerBlue;
 }
+
 h1, h2, h3, h4, h5 {color: orange;}
 h1 {
 	line-height:1em;
@@ -86,6 +89,7 @@ p,ul,ol,dl {
 p {
 	padding: 0 18px 0 0;
 }
+
 a:link {
 	color: #003399;
 }
@@ -103,7 +107,10 @@ a:hover {
 	h5 a, h5 a:visited {
 		color: #663300;
 	}
+
 /* == Structure == */
+
+#wrap {
 	width:950px; 
 	margin:0 auto 1em; 
 	overflow:hidden;
@@ -113,20 +120,24 @@ a:hover {
 	-moz-box-shadow: 0px 0px 5px 6px rgba(22,22,22,0.5);
 	-box-shadow: 0px 0px 5px 6px rgba(22,22,22,0.5);
 }
+#header {
 	clear: both;
 	padding:0; 
 	margin: 0;
 	overflow: hidden;
 }
+#footer {
 	clear: both;
 	margin-top: 1em; 
 	padding: 1em;
 }
+#footer a {
 	color: #333;
 }
 	#footer a:visited {
 		color: #666;
 	}
+
 /* = Styles for Vertical-Nav Pages = {{{1 */	
 .vertical #content {
 	float: right;
@@ -144,6 +155,8 @@ a:hover {
 .vertical #exhibit-nav a { 
 	text-decoration:none;
 }
+	
+	
 /* = Vertical Section Navigation = {{{2 */	
 .vertical .exhibit-section-nav {
 	width: 194px;
@@ -172,6 +185,7 @@ a:hover {
 	.vertical li.exhibit-nested-section.current a.exhibit-section-title, .vertical li.exhibit-nested-section a.exhibit-section-title:hover { 
 		border-left: 5px solid #58589F;
 	} 
+
 /* = Vertical Page Navigation = {{{2 */
 .vertical .exhibit-page-nav {
 	list-style:none;
@@ -196,6 +210,7 @@ a:hover {
 	} 
 	.vertical .exhibit-page-nav li.current a {
 	}
+
 /* = Styles for Horizontal-Nav Pages = {{{1 */
 .horizontal #content {
 	overflow: hidden;
@@ -203,6 +218,7 @@ a:hover {
 	width: 913px; 
 	padding:0 18px; 
 }
+
 /* = Horizontal Section Navigation = {{{2 */	
 .horizontal #exhibit-nav {
 	padding: 0 18px;
@@ -229,6 +245,7 @@ a:hover {
 	color: #555;
 	background-color: #eee;
 }
+	
 /* = Horizontal Page Navigation = {{{2 */
 .horizontal ul.exhibit-page-nav {
 	margin-top: 15px;
@@ -241,15 +258,14 @@ a:hover {
 	text-align: left;
 }
 .horizontal .exhibit-page-nav li a {
-	padding: 0.8em;
-	font-size: 85%;
-	margin-top: 10px;
+	padding: 1.2em;
+	padding-top: 15px;
+	margin-top: 15px;
 	margin-left: 0;
 	text-decoration:none;
 	background-color: #777; 
 	color: #eee; 
 	border-right: 1px solid #666; 
-	border-left: 1px solid #666;
 }
 .horizontal .exhibit-page-nav li a:hover {
 	color: #555;
@@ -259,22 +275,28 @@ a:hover {
 	color: #555;
 	background-color: #eee;
 }
+
 /* = Previous-Next Navigation = {{{1 */
+#previous-next-nav {
 	font-size:1.1em;
 }
 	#previous-next-nav a {
 		text-decoration:none;
  }
+#previous-next-nav .previous {
 	float:left;
 	width:48%;
 	margin-bottom:2em;
 }
+#previous-next-nav .next {
 	float:right;
 	width: 48%;
 	text-align:right;
 	margin-bottom:2em;
 }
+
 /* == Content == */
+#exhibit-sections h3 {
 	margin: 0 0 .5em;
 	font-weight:bold;
 	font-size: 1.2em;
@@ -288,9 +310,11 @@ a:hover {
 	#exhibit-sections h3 a:hover {
 color: #6699ff;
 }
+#exhibit-sections p {
 	margin: 0 0 1.8em;
 	padding: 0 18px 0 0;
 }
+	
 .commentary {
 	background:#eee;
 	padding:18px;
@@ -299,6 +323,7 @@ color: #6699ff;
 		font-size:1.1em;
 		line-height:1.63636;
 	}
+	
 /* == Layout == */
 .gallery-full-left,
 .gallery-full-right,
@@ -315,15 +340,21 @@ color: #6699ff;
 	{
 		clear: both;
 	}
+
 .item img, .exhibit-item img {
 	margin-bottom: 1.5em;
 }
+#itemfiles { 
 	margin: 10px 0; 
+
 /* == Header == */
+#logo {
 	float: left;
 	margin-left: 20px;
 	margin-top: 20px;
 }
+
+
 /* == Item Show == */
 .item-title {
 	padding-left: 0;
@@ -339,5 +370,6 @@ color: #6699ff;
 .tags {
 	margin-bottom: 1em;
 }
+#item-files {
 	margin-bottom:1.5em;
 }
