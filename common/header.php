@@ -30,6 +30,14 @@
 		echo $googleLink;
 	} 
 ?>
+<!-- Load Google Font Stylesheet for Nav--> 
+<?php 
+	if (get_theme_option('Navigation Font') != NULL) {
+		$navigationFont=get_theme_option('Navigation Font');  
+		$googleLink="<link href='http://fonts.googleapis.com/css?family=".$navigationFont."' rel='stylesheet' type='text/css'>";
+		echo $googleLink;
+	} 
+?>
 <!-- Custom Styles --> 
 <style type="text/css"> 
 	body { 
@@ -45,6 +53,9 @@
 	#header { 
 		background-image: url('<?php echo elementaire_custom_header_background(); ?>');
 	}
+	#exhibit-nav { 
+		font-family: <?php echo get_theme_option('Navigation Font'); ?>;
+        }
 	.horizontal .exhibit-section-nav li a { 
 		background-color: <?php echo get_theme_option('Navigation Color One'); ?>;
 		color: <?php echo get_theme_option('Navigation Color Two'); ?>;
