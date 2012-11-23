@@ -77,9 +77,13 @@
 		color: <?php echo get_theme_option('Heading Color'); ?>;
 		font-family: <?php echo get_theme_option('Heading Text Font'); ?>;			
 	}
-	p { 
+	h1 { 
+		font-size: <?php echo get_theme_option('Heading Font Size'); ?>; 
+	} 
+	.exhibit-text, p { 
 		color: <?php echo get_theme_option('Body Text Color'); ?>;
 		font-family: <?php echo get_theme_option('Body Text Font'); ?>;
+		font-size: <?php echo get_theme_option('Body Font Size'); ?>; 
 	} 	
 	#exhibit-sections { 
 		<?php if ((int)get_theme_option('Display Exhibit Sections')==0) echo 'display: none;' ?> 
