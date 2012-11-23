@@ -2,14 +2,7 @@
 <div id="primary" class="show">
 
 	<h2 class="item-title"><?php echo item('Dublin Core', 'Title'); ?></h2>
-	<ul>
-        <?php foreach (item('Dublin Core', 'Title', 'all') as $title): ?>
-           <li class="item-title">
-           <?php echo $title; ?>
-           </li>
-        <?php endforeach ?>
-	</ul>
-	
+		
 	<?php echo show_item_metadata(); ?>
 
 	<div id="itemfiles">
