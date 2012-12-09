@@ -38,6 +38,15 @@
 		echo $googleLink;
 	} 
 ?>
+<!--Get Variables for Navigation Colors to be Used in Custom Styles Below--> 
+<?php 
+	if (get_theme_option('Navigation Color One') != NULL) {
+		$navColorOne=get_theme_option('Navigation Color One');
+	} 
+	if (get_theme_option('Navigation Color Two') != NULL) {
+		$navColorTwo=get_theme_option('Navigation Color Two');
+	} 
+?>
 <!-- Custom Styles --> 
 <style type="text/css"> 
 	body { 
@@ -72,7 +81,14 @@
 		background-color: <?php echo get_theme_option('Navigation Color Two'); ?>;
 		color: <?php echo get_theme_option('Navigation Color One'); ?>;
 	} 
-		
+	.vertical a.exhibit-section-title, .vertical .exhibit-page-nav li a { 
+		background-color: <?php echo get_theme_option('Navigation Color One'); ?>;
+		color: <?php echo get_theme_option('Navigation Color Two'); ?>;
+	} 
+	.vertical .exhibit-page-nav li.current a, .vertical .exhibit-page-nav li a:hover, .vertical li.exhibit-nested-section.current a.exhibit-section-title, .vertical li.exhibit-nested-section a.exhibit-section-title:hover { 
+		border-left-color: <?php echo get_theme_option('Navigation Color Two'); ?>; 
+	}
+
 	h1, h2, h3, h4, h5, h1 a, h1 a:visited { 
 		color: <?php echo get_theme_option('Heading Color'); ?>;
 		font-family: <?php echo get_theme_option('Heading Text Font'); ?>;			
