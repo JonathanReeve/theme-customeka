@@ -2,13 +2,13 @@
 <div id="primary" class="show">
 
 	<h2 class="item-title"><?php echo item('Dublin Core', 'Title'); ?></h2>
-		
-	<?php echo show_item_metadata(); ?>
 
 	<div id="itemfiles">
 		<?php echo display_files_for_item(); ?>
 	</div>
-	
+
+	<?php echo show_item_metadata(); ?>
+		
 	<?php if(item_belongs_to_collection()): ?>
         <div id="collection" class="field">
             <h2>Collection</h2>
