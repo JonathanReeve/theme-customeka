@@ -8,4 +8,4 @@ To use this theme, you must have at least Omeka version 1.5. It has not yet been
 
 #Installation 
 
-To install this theme, download the .zip file of this repository and unzip it to your omeka/themes/ directory. Then, in the Exhibits administration view, select the Elementaire theme for your exhibit. 
+To install this theme, first make sure you delete any old versions of Elementaire from your Omeka install. Then, download the .zip file of this repository and unzip it to your themes/ directory in your Omeka install. Then, in the exhibits administration view, select the Elementaire theme for your exhibit. 
