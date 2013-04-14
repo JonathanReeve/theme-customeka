@@ -326,18 +326,7 @@ color: #6699ff;
 	}
 	
 /* == Layout == */
-.gallery-full-left,
-.gallery-full-right,
-.gallery-thumbnails,
-.gallery-thumbnails-text-bottom,
-.gallery-thumbnails-text-top,
-.image-list-left,
-.image-list-left-thumbs,
-.image-list-right,
-.image-list-right-thumbs,
-.text-full,
-.text-image-left,
-.text-image-right
+.exhibit-content
 	{
 		clear: both;
 	}
