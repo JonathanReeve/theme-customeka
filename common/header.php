@@ -115,7 +115,7 @@
 			$exhibitHeaderTextHTML= '<h1>&nbsp;&nbsp;</h1>'; // this is a placeholder so that the background image doesn't get cut off 
 			echo $exhibitHeaderTextHTML;
 		} else { 
-			$exhibitHeaderTextHTML= '<h1>'.exhibit_builder_link_to_exhibit($exhibit).'</h1>'; 
+			if($exhibit){$exhibitHeaderTextHTML= '<h1>'.exhibit_builder_link_to_exhibit($exhibit).'</h1>';} //
 			echo $exhibitHeaderTextHTML;
 		}
 		?> 
