@@ -11,7 +11,10 @@
 			echo head_css();
     		?>
 <!-- JavaScripts -->
-<?php echo js('prototype'); ?>
+<?php 
+	queue_js_file('prototype'); 
+	echo js('prototype'); 
+?>
 <!-- Plugin Stuff -->
 <?php plugin_header(); ?>
 <!-- Load Google Font Stylesheet for Header--> 
