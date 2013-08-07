@@ -13,7 +13,7 @@
 <!-- JavaScripts -->
 <?php // queue_js_file('prototype'); echo js('prototype'); ?> <!-- this is causing trouble in 2.0 for some reason --> 
 <!-- Plugin Stuff -->
-<?php plugin_header(); ?>
+    <?php fire_plugin_hook('public_head', array('view'=>$this)); ?>
 <!-- Load Google Font Stylesheet for Header--> 
 <?php 
 	if (get_theme_option('Heading Text Font') != NULL) {
