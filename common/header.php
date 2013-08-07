@@ -7,8 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<!--Stylesheets-->
     		<?php
-      			elementaire_queue_css('style.css');
-			display_css();
+      			queue_css_file('style');
+			echo head_css();
     		?>
 <!-- JavaScripts -->
 <?php echo js('prototype'); ?>
