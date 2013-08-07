@@ -11,10 +11,7 @@
 			echo head_css();
     		?>
 <!-- JavaScripts -->
-<?php 
-	queue_js_file('prototype'); 
-	echo js('prototype'); 
-?>
+<?php // queue_js_file('prototype'); echo js('prototype'); ?> <!-- this is causing trouble in 2.0 for some reason --> 
 <!-- Plugin Stuff -->
 <?php plugin_header(); ?>
 <!-- Load Google Font Stylesheet for Header--> 

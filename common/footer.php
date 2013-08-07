@@ -4,7 +4,7 @@
                     <?php echo $copyright; ?>
 	<?php endif; ?>
 	<a href="http://omeka.org" id="omeka-logo">Proudly Powered by Omeka</a>
-	<?php plugin_footer(); ?>
+    <?php fire_plugin_hook('public_footer'); ?>
 </div>
 </div>
 </div>
