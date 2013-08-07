@@ -109,8 +109,10 @@
 <body<?php echo $bodyclass ? ' class="'.$bodyclass.'"' : ''; ?>  id="<?php echo html_escape($exhibit->theme); ?>">
 <div id="wrap">
 	<div id="header">
-		<h5><a href="<?php echo html_escape(uri('exhibits')); ?>">Back to Exhibits</a></h5>
-		<div id="logo"><?php echo link_to_home_page(custom_display_logo()); ?></div>
+		<h5><a href="<?php // echo html_escape(uri('exhibits')); ?>">Back to Exhibits</a></h5>
+		<div id="logo">
+<!--disabling this because custom_display_logo() doesn't appear to work in 2.0--> 
+<?php // echo link_to_home_page(custom_display_logo()); ?></div>
 		<?php if ((int)get_theme_option('Hide Header Text')==1) { 
 			$exhibitHeaderTextHTML= '<h1>&nbsp;&nbsp;</h1>'; // this is a placeholder so that the background image doesn't get cut off 
 			echo $exhibitHeaderTextHTML;
@@ -121,12 +123,13 @@
 		?> 
 	</div> <!-- end of Header --> 
     <div id="exhibit-nav">
-	<?php if (get_theme_option('Style Sheet')!="horizontal") {
-		echo exhibit_builder_nested_nav($exhibit = null); // add $showallpages=TRUE as another argument	to get all pages
-	} else {
-    		echo exhibit_builder_section_nav();
-		echo exhibit_builder_page_nav(); 
-	}?>
+<!-- disabling this because of the new nav style for 2.0. Though unfortunately this will break nav styles --> 
+	<?php // if (get_theme_option('Style Sheet')!="horizontal") { echo exhibit_builder_nested_nav($exhibit = null); // add $showallpages=TRUE as another argument	to get all pages } else { echo exhibit_builder_section_nav(); echo exhibit_builder_page_nav(); }?>
     </div>
+
+        <nav class="top">
+            <?php echo public_nav_main(); ?>
+        </nav>
+
     <div id="content">
     <?php echo flash(); ?>				
