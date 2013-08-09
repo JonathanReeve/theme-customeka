@@ -166,18 +166,18 @@ a:hover {
 	
 	
 /* = Vertical Section Navigation = {{{2 */	
-.vertical .exhibit-section-nav {
+.vertical .exhibit-page-nav {
 	width: 194px;
 	overflow:hidden;
 }
-	.vertical .exhibit-section-nav li {
+	.vertical .exhibit-page-nav li {
 		width:auto;
 	}
-	.vertical .exhibit-nested-section { 
+	.vertical .exhibit-nested-page { 
 	} 
-	.vertical .exhibit-section-nav li {
+	.vertical .exhibit-page-nav li {
 	}
-	.vertical a.exhibit-section-title { 
+	.vertical a.exhibit-page-title { 
 		background: #333; 
 	 	display:block;
 		color: #eee; 
@@ -190,21 +190,21 @@ a:hover {
 		border-left: 5px solid #555;
 		border-bottom: 1px solid #555;
 	} 
-	.vertical li.exhibit-nested-section.current a.exhibit-section-title, .vertical li.exhibit-nested-section a.exhibit-section-title:hover { 
+	.vertical li.exhibit-nested-page.current a.exhibit-page-title, .vertical li.exhibit-nested-page a.exhibit-page-title:hover { 
 		border-left: 5px solid #58589F;
 	} 
 
 /* = Vertical Page Navigation = {{{2 */
-.vertical .exhibit-page-nav {
+.vertical .exhibit-child-nav {
 	list-style:none;
 	margin-bottom: 0;
 	margin-left: 15px;
 	background: #555;
 }
-	.vertical .exhibit-page-nav li {
+	.vertical .exhibit-child-nav li {
 		margin: 0;
 	}
-	.vertical .exhibit-page-nav li a {
+	.vertical .exhibit-child-nav li a {
 		display: block; 
 		font-size: smaller;
 		padding: 0.6em;
@@ -212,11 +212,11 @@ a:hover {
 		border-left: 5px solid #333;
 		border-bottom: 1px solid #454545; 
 	}
-	.vertical .exhibit-page-nav li.current a, .vertical .exhibit-page-nav li a:hover {
+	.vertical .exhibit-child-nav li.current a, .vertical .exhibit-child-nav li a:hover {
 /*		background-color: #5f5f5f; */
 		border-left: 5px solid #58589F;
 	} 
-	.vertical .exhibit-page-nav li.current a {
+	.vertical .exhibit-child-nav li.current a {
 	}
 
 /* = Styles for Horizontal-Nav Pages = {{{1 */
