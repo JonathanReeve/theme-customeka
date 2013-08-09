@@ -5,7 +5,7 @@ echo head(array(
 ?>
 
 <nav id="exhibit-nav">
-    <?php echo exhibit_builder_page_nav(); ?>
+    <?php echo elementaire_nested_nav(); ?>
 </nav>
 
 <div id="content">
