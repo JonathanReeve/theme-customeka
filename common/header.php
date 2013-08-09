@@ -131,5 +131,4 @@
             <?php echo public_nav_main(); ?>
         </nav>
 
-    <div id="content">
     <?php echo flash(); ?>				

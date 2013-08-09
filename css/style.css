@@ -22,6 +22,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -137,6 +138,13 @@ a:hover {
 	#footer a:visited {
 		color: #666;
 	}
+
+/* Parent Site Controls - Bar at the Top of the Page */ 
+	nav.top { 
+		display: none; /* disabling this temporarily */ 
+	} 
+
+/* End of Parent Site Controls */ 
 
 /* = Styles for Vertical-Nav Pages = {{{1 */	
 .vertical #content {
