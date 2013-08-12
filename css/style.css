@@ -139,9 +139,36 @@ a:hover {
 		color: #666;
 	}
 
+	#query-types { 
+		display: none; /* disabling query types right now, since it's too much */ 
+	} 
+
 /* Parent Site Controls - Bar at the Top of the Page */ 
-	nav.top { 
-		display: none; /* disabling this temporarily */ 
+	body.exhibits.show header { 
+		background-color: black; 
+		width: 100%; 
+	} 
+	body.exhibits.show #headerContainer { 
+		width: 970px; 
+		height: 45px; 
+		margin: 0 auto; 
+		border-bottom: 1px #eee; 
+	} 
+	body.exhibits.show #site-title { 
+		display: inline-block; 
+		margin-top: 11px; 
+		font-size: 16px; 
+		text-transform: small-caps; 
+		text-shadow: 1px 1px 2px #555; 
+		text-decoration: none; 
+	} 
+	body.exhibits.show #search-container { 
+		display: inline-block; 
+		float: right; 
+	} 
+
+	body.exhibits.show nav.top { /* exhibit theme nav area */ 
+		display: none; /* disabling this until I make a black bar at the top */ 
 	} 
 
 /* End of Parent Site Controls */ 

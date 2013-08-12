@@ -108,17 +108,19 @@
 
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
 
-<div id="wrap">
 	<header>
-            <div id="site-title">
-                <?php echo link_to_home_page(theme_logo()); ?>
-            </div>
-            <div id="search-container">
-                <?php echo search_form(array('show_advanced' => true)); ?>
-            </div>
-            <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
+	    <div id="headerContainer"> 
+		    <div id="site-title">
+			<?php echo link_to_home_page(theme_logo()); ?>
+		    </div>
+		    <div id="search-container">
+			<?php echo search_form(array('show_advanced' => true)); ?>
+		    </div>
+		    <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
+            </div> <!-- end of headerContainer --> 
         </header>
 
+<div id="wrap">
 
 	<div id="header">
 		<h5><a href="<?php // echo html_escape(uri('exhibits')); ?>">Back to Exhibits</a></h5>
