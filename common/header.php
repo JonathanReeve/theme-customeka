@@ -1,6 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="<?php echo get_html_lang(); ?>" class="<?php echo (get_theme_option('Style Sheet') ? get_theme_option('Style Sheet') : 'vertical'); ?>"> 
+<!DOCTYPE html>
+<html lang="<?php echo get_html_lang(); ?>" class="<?php echo (get_theme_option('Style Sheet') ? get_theme_option('Style Sheet') : 'vertical'); ?>"> 
 <head>
 <title><?php echo option('site_title'); ?></title>
 <!-- Meta -->
@@ -106,8 +105,21 @@
 	}
 	</style>
 </head>
-<body<?php echo $bodyclass ? ' class="'.$bodyclass.'"' : ''; ?>  id="<?php echo html_escape($exhibit->theme); ?>">
+
+<?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
+
 <div id="wrap">
+	<header>
+            <div id="site-title">
+                <?php echo link_to_home_page(theme_logo()); ?>
+            </div>
+            <div id="search-container">
+                <?php echo search_form(array('show_advanced' => true)); ?>
+            </div>
+            <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
+        </header>
+
+
 	<div id="header">
 		<h5><a href="<?php // echo html_escape(uri('exhibits')); ?>">Back to Exhibits</a></h5>
 		<div id="logo">
@@ -117,8 +129,9 @@
 			$exhibitHeaderTextHTML= '<h1>&nbsp;&nbsp;</h1>'; // this is a placeholder so that the background image doesn't get cut off 
 			echo $exhibitHeaderTextHTML;
 		} else { 
-			if($exhibit){$exhibitHeaderTextHTML= '<h1>'.exhibit_builder_link_to_exhibit($exhibit).'</h1>';} //
-			echo $exhibitHeaderTextHTML;
+			// disabling these for the moment
+			//if($exhibit){$exhibitHeaderTextHTML= '<h1>'.exhibit_builder_link_to_exhibit($exhibit).'</h1>';} 
+			//echo $exhibitHeaderTextHTML;
 		}
 		?> 
 	</div> <!-- end of Header --> 
