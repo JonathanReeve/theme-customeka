@@ -9,7 +9,6 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
     <?php echo public_nav_items(); ?>
 </nav>
 
-<?php echo pagination_links(); ?>
 
 <?php if ($total_results > 0): ?>
 
@@ -23,6 +22,10 @@ $sortLinks[__('Date Added')] = 'added';
 </div>
 
 <?php endif; ?>
+
+<?php echo pagination_links(); ?>
+
+<div id="itemsContainer" class="cf">
 
 <?php foreach (loop('items') as $item): ?>
 <div class="item hentry">
@@ -52,7 +55,11 @@ $sortLinks[__('Date Added')] = 'added';
 </div><!-- end class="item hentry" -->
 <?php endforeach; ?>
 
+</div> <!-- end of #itemsContainer --> 
+
+<div id="bottomPagination"> 
 <?php echo pagination_links(); ?>
+</div> <!-- end of #bottomPagination --> 
 
 <?php fire_plugin_hook('public_items_browse', array('items'=>$items, 'view' => $this)); ?>
 

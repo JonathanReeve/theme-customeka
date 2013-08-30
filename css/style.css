@@ -76,19 +76,18 @@ body {
 
 
 h1 {
+	font-size: 20px; 
 	line-height: 1em;
 	font-size: 2.7em; 
 	margin: 1em 0; 
 }
 h2 {
-	font-size:2em; 
+	font-size: 18px; 
 	color: #663300; 
-	margin-top: 1.1em;
 	margin-bottom: 0.8em; 
-	line-height: 1.125em;
 }
 h3 {
-	font-size:1.8em; 
+	font-size: 16px; 
 	margin: 1em 0; 
 	line-height:1.2857em;
 	clear: both;
@@ -143,6 +142,38 @@ a:hover {
 	padding:0; 
 	margin: 0;
 }
+
+#headerContainer { 
+	width: 960px; 
+	margin: 0 auto; 
+}
+
+#site-title { 
+	font-size: 40px; 
+	display: inline-block;
+	margin: 20px; 
+} 
+
+#site-title a { 
+	text-decoration: none; 
+	color: #5F77B3; 
+	margin: 20px 0; 
+}
+
+#search-container { 
+	float: right; 
+} 
+
+#search-container input { 
+	display: inline-block; 
+} 
+
+
+#bottomPagination { 
+	width: 200px; 
+	margin: 0 auto; 
+} 
+
 #footer {
 	clear: both;
 	margin-top: -1em; /* fixes gap before footer */
@@ -162,17 +193,17 @@ a:hover {
 	} 
 
 /* Parent Site Controls - Bar at the Top of the Page */ 
-	body.exhibits.show header { 
+	body.exhibits.summary header, body.exhibits.show header { 
 		background-color: black; 
 		width: 100%; 
 	} 
-	body.exhibits.show #headerContainer { 
+	body.exhibits.show #headerContainer, body.exhibits.summary #headerContainer { 
 		width: 970px; 
 		height: 45px; 
 		margin: 0 auto; 
 		border-bottom: 1px #eee; 
 	} 
-	body.exhibits.show #site-title { 
+	body.exhibits.show #site-title, body.exhibits.summary #site-title { 
 		display: inline-block; 
 		margin-top: 11px; 
 		font-size: 16px; 
@@ -180,7 +211,7 @@ a:hover {
 		text-shadow: 1px 1px 2px #555; 
 		text-decoration: none; 
 	} 
-	body.exhibits.show #search-container { 
+	body.exhibits.show #search-container, body.exhibits.summary #search-container { 
 		display: inline-block; 
 		float: right; 
 	} 
@@ -200,7 +231,7 @@ nav.top ul {
 	display: table; 
 /*	border: 1px solid green;  */
 	margin: 0 auto; 
-	padding: 5px; 
+	padding: 9px; 
 } 
 
 nav.top li { 
@@ -212,12 +243,17 @@ nav.top li {
 
 nav.top li a { 
 	color: #eee; 
+	font-size: 18px; 
 	height: 40px; 
 	text-decoration: none; 
+	text-shadow: -1px -1px 1px #333; 
 } 
 
-nav.top li:hover { 
-	background-color: #888; 
+nav.top li:hover, nav.top li.active { 
+	background-color: #444; 
+	-webkit-box-shadow: 0px 0px 2px #333; 
+	-moz-box-shadow: 0px 0px 2px #333; 
+	box-shadow: 0px 0px 2px #333; 
 } 
 
 nav.top li { 
@@ -237,22 +273,26 @@ nav.top li ul {
 	margin: 5px; 
 
 } 
-.secondary-nav ul li { /* these are the buttons "Browse All," "Browse by Tag," Etc */ 
+.secondary-nav ul li, .sort-label, #sort-links-list li { /* these are the buttons "Browse All," "Browse by Tag," Etc */ 
 	display: inline; 
 	border: 1px solid #444; 
 	background-color: #222; 
 	padding: 12px; 
 } 
 
-.secondary-nav ul li:hover { 
+.secondary-nav li:hover, .secondary-nav li.active, #sort-links-list li:hover { 
 	background-color: #333; 
 } 
 
-.secondary-nav ul li a { 
+.secondary-nav ul li a, .sort-label, #sort-links-list li a { 
 	color: white; 
 	text-decoration: none; 
 	padding: 12px; 
 }
+
+#sort-links-list, #sort-links-list li { 
+	display: inline-block; 
+} 
 
 ul.pagination { 
 	display: inline-block; 
@@ -271,32 +311,6 @@ ul.pagination li {
 
 #topHeader { 
 	background-color: #222; 
-	min-height: 100px; 
-} 
-
-#headerContainer { 
-	width: 960px; 
-	margin: 0 auto; 
-}
-
-#site-title { 
-	font-size: 40px; 
-	display: inline-block;
-	margin-top: 20px; 
-} 
-
-#site-title a { 
-	text-decoration: none; 
-	color: #5F77B3; 
-	margin: 20px 0; 
-}
-
-#search-container { 
-	float: right; 
-} 
-
-#search-container input { 
-	display: inline-block; 
 } 
 
 
@@ -304,14 +318,40 @@ ul.pagination li {
 
 /* Items */ 
 .item.hentry { 
-	width: 200px; 
+	width: 210px; 
+	height: 210px; 
 	display: inline-block; 
-} 
-.item.hentry .item-img img { 
-	width: 200px; 
-	height: 200px; 
+	vertical-align: top; 
+	padding: 10px; 
+	position: relative; 
 } 
 
+
+.item.hentry .item-img img { 
+	width: 210px; 
+	height: 210px; 
+	position: absolute; 
+	top: 0; 
+	-webkit-box-shadow: 1px 1px 3px #555; 
+	-moz-box-shadow: 1px 1px 3px #555; 
+	box-shadow: 1px 1px 3px #555; 
+} 
+
+.item.hentry h2 { 
+	position: absolute; 
+	top: 0; 
+	z-index: 1; 
+	background-color: rgba(50,50,50,.9); 
+	width: 192px; 
+	font-size: 16px; 
+	padding: 9px; 
+} 
+
+.item.hentry h2 a { 
+	font-size: 12px; 
+	text-decoration: none; 
+	color: white; 
+} 
 /* = Styles for Vertical-Nav Pages = {{{1 */	
 .vertical #content {
 	float: right;
