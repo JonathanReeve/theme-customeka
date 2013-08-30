@@ -108,7 +108,7 @@
 
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
 
-	<header>
+	<header id="topHeader">
 	    <div id="headerContainer"> 
 		    <div id="site-title">
 			<?php echo link_to_home_page(theme_logo()); ?>
@@ -123,7 +123,6 @@
 <div id="wrap">
 
 	<div id="header">
-		<h5><a href="<?php // echo html_escape(uri('exhibits')); ?>">Back to Exhibits</a></h5>
 		<div id="logo">
 <!--disabling this because custom_display_logo() doesn't appear to work in 2.0--> 
 <?php // echo link_to_home_page(custom_display_logo()); ?></div>
@@ -136,14 +135,14 @@
 			//echo $exhibitHeaderTextHTML;
 		}
 		?> 
+	<nav class="top">
+	    <?php echo public_nav_main(); ?>
+	</nav>
 	</div> <!-- end of Header --> 
     <div id="exhibit-nav">
 <!-- disabling this because of the new nav style for 2.0. Though unfortunately this will break nav styles --> 
 	<?php // if (get_theme_option('Style Sheet')!="horizontal") { echo exhibit_builder_nested_nav($exhibit = null); // add $showallpages=TRUE as another argument	to get all pages } else { echo exhibit_builder_section_nav(); echo exhibit_builder_page_nav(); }?>
     </div>
 
-        <nav class="top">
-            <?php echo public_nav_main(); ?>
-        </nav>
 
     <?php echo flash(); ?>				

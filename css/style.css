@@ -52,15 +52,14 @@ table {
 body {
 	font: 62.5% Verdana, Arial, sans-serif;
 	color:#555;
-	background:CornflowerBlue;
+	background: CornflowerBlue;
 }
 
 
 h1 {
-	line-height:1em;
+	line-height: 1em;
 	font-size: 2.7em; 
-	margin:1em 0; 
-	padding: 1em 18px .5em;
+	margin: 1em 0; 
 }
 h2 {
 	font-size:2em; 
@@ -95,7 +94,7 @@ a:link {
 	color: #003399;
 }
 a:visited {
-	color: #003399; /*different colors for visited links is annoying */
+	color: #003399; /* different colors for visited links is annoying */
 }
 a:hover {
 	color: #6699ff;
@@ -104,7 +103,7 @@ a:hover {
 	h1 a, h1 a:visited {
 		text-decoration: none;
 		color:#663300;
-	}
+	 }
 	h5 a, h5 a:visited {
 		color: #663300;
 	}
@@ -114,7 +113,6 @@ a:hover {
 #wrap {
 	width:950px; 
 	margin:0 auto 1em; 
-	overflow:hidden;
 	background-color:#fff;
 	border: 10px solid transparent; 
 	-webkit-box-shadow: 0px 0px 5px 6px rgba(22,22,22,0.5);
@@ -125,19 +123,20 @@ a:hover {
 	clear: both;
 	padding:0; 
 	margin: 0;
-	overflow: hidden;
 }
 #footer {
 	clear: both;
-	margin-top: 1em; 
+	margin-top: -1em; /* fixes gap before footer */
 	padding: 1em;
+	background-color: #333; 
 }
-#footer a {
-	color: #333;
-}
-	#footer a:visited {
-		color: #666;
-	}
+#footerContent { 
+	width: 200px; 
+	margin: 20px auto;
+} 
+#footerContent a { 
+	color: white; 
+} 
 
 	#query-types { 
 		display: none; /* disabling query types right now, since it's too much */ 
@@ -173,6 +172,9 @@ a:hover {
 
 nav.top { 
 	background-color: #333; 
+	width: 990px; 
+	position: relative; /* hack to shift things left */ 
+	left: -20px; 
 } 
 
 nav.top ul { 
@@ -191,29 +193,105 @@ nav.top li {
 
 nav.top li a { 
 	color: #eee; 
+	height: 40px; 
+	text-decoration: none; 
 } 
 
-.horizontal nav.top li { 
+nav.top li:hover { 
+	background-color: #888; 
+} 
+
+nav.top li { 
 	display: inline; 
 } 
 
-.horizontal nav.top li ul { 
+nav.top li ul { 
 	display: none; /* disabling simple pages child pages for the moment */ 
+}
+
+.secondary-nav { 
+	display: inline-block; 
 }
 
 .secondary-nav ul { 
 	border-bottom: 1px solid #444; 
+	margin: 5px; 
 
 } 
 .secondary-nav ul li { /* these are the buttons "Browse All," "Browse by Tag," Etc */ 
 	display: inline; 
-	margin: 10px; 
-	padding: 2px; 
 	border: 1px solid #444; 
+	background-color: #222; 
+	padding: 12px; 
 } 
+
+.secondary-nav ul li:hover { 
+	background-color: #333; 
+} 
+
+.secondary-nav ul li a { 
+	color: white; 
+	text-decoration: none; 
+	padding: 12px; 
+}
+
+ul.pagination { 
+	display: inline-block; 
+} 
+
+ul.pagination li { 
+	display: inline-block; 
+} 
+
+.pagination .page-input input { 
+	width: 10px; 
+} 
+#sort-links { 
+	display: inline-block; 
+}
+
+#topHeader { 
+	background-color: #222; 
+	min-height: 100px; 
+} 
+
+#headerContainer { 
+	width: 960px; 
+	margin: 0 auto; 
+}
+
+#site-title { 
+	font-size: 40px; 
+	display: inline-block;
+	margin-top: 20px; 
+} 
+
+#site-title a { 
+	text-decoration: none; 
+	color: #5F77B3; 
+	margin: 20px 0; 
+}
+
+#search-container { 
+	float: right; 
+} 
+
+#search-container input { 
+	display: inline-block; 
+} 
+
 
 /* End of Parent Site Controls */ 
 
+/* Items */ 
+.item.hentry { 
+	width: 200px; 
+	display: inline-block; 
+} 
+.item.hentry .item-img img { 
+	width: 200px; 
+	height: 200px; 
+} 
 
 /* = Styles for Vertical-Nav Pages = {{{1 */	
 .vertical #content {
@@ -374,6 +452,10 @@ nav.top li a {
 }
 
 /* == Content == */
+
+#primary { 
+	margin: 10px; 
+} 
 #exhibit-sections h3 {
 	margin: 0 0 .5em;
 	font-weight:bold;
