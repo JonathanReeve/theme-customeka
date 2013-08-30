@@ -29,6 +29,25 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
+/* Clearfix */ 
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+} 
+
 /* == Generic Styles == {{{1 */
 body {
 	line-height: 1;

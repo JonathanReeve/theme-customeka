@@ -135,7 +135,7 @@
 			//echo $exhibitHeaderTextHTML;
 		}
 		?> 
-	<nav class="top">
+	<nav class="top cf">
 	    <?php echo public_nav_main(); ?>
 	</nav>
 	</div> <!-- end of Header --> 
