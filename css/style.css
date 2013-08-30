@@ -158,6 +158,9 @@ a:hover {
 	text-decoration: none; 
 	color: #5F77B3; 
 	margin: 20px 0; 
+	-webkit-text-shadow: -1px -1px 0px #555; 
+	-moz-text-shadow: -1px -1px 0px #555; 
+	text-shadow: -1px -1px 0px #555; /* FIXME */ 
 }
 
 #search-container { 
@@ -254,6 +257,9 @@ nav.top li:hover, nav.top li.active {
 	-webkit-box-shadow: 0px 0px 2px #333; 
 	-moz-box-shadow: 0px 0px 2px #333; 
 	box-shadow: 0px 0px 2px #333; 
+	-moz-transition: 0.2s ease-in-out; 
+	-webkit-transition: 0.2s ease-in-out; 
+	transition: 0.2s ease-in-out; 
 } 
 
 nav.top li { 
@@ -543,6 +549,14 @@ color: #6699ff;
 		line-height:1.63636;
 	}
 	
+
+/* Browse Collections */ 
+
+.collections .collection { 
+	display: inline-block; 
+	width: 40%; 
+} 
+
 /* == Layout == */
 .exhibit-content
 	{
