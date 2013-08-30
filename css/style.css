@@ -553,7 +553,14 @@ color: #6699ff;
 	margin-bottom: 1.5em;
 }
 #itemfiles { 
-	margin: 10px 0; 
+	width: 50%; 
+	display: inline-block; 
+	vertical-align: top; 
+}
+.element-set { 
+	vertical-align: top; 
+	display: inline-block; 
+} 
 
 /* == Header == */
 #logo {
