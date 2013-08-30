@@ -158,9 +158,9 @@ a:hover {
 	text-decoration: none; 
 	color: #5F77B3; 
 	margin: 20px 0; 
-	-webkit-text-shadow: -1px -1px 0px #555; 
-	-moz-text-shadow: -1px -1px 0px #555; 
-	text-shadow: -1px -1px 0px #555; /* FIXME */ 
+	-webkit-text-shadow: 1px 1px 0px #555;  
+	-moz-text-shadow: 1px 1px 0px #555;  
+	text-shadow: 1px 1px 0px #555;  
 }
 
 #search-container { 
@@ -173,8 +173,7 @@ a:hover {
 
 
 #bottomPagination { 
-	width: 200px; 
-	margin: 0 auto; 
+	text-align: center; 
 } 
 
 #footer {
@@ -184,8 +183,7 @@ a:hover {
 	background-color: #333; 
 }
 #footerContent { 
-	width: 200px; 
-	margin: 20px auto;
+	text-align: center; 
 } 
 #footerContent a { 
 	color: white; 
@@ -275,25 +273,39 @@ nav.top li ul {
 }
 
 .secondary-nav ul { 
-	border-bottom: 1px solid #444; 
 	margin: 5px; 
 
 } 
-.secondary-nav ul li, .sort-label, #sort-links-list li { /* these are the buttons "Browse All," "Browse by Tag," Etc */ 
-	display: inline; 
+.secondary-nav ul li, .sort-label, #sort-links-list li, .pagination li { /* these are the buttons "Browse All," "Browse by Tag," Etc */ 
+	display: inline-block; 
 	border: 1px solid #444; 
 	background-color: #222; 
-	padding: 12px; 
+	padding: 8px 4px; 
 } 
 
-.secondary-nav li:hover, .secondary-nav li.active, #sort-links-list li:hover { 
+ul.pagination { 
+	background-color: #222; 
+}
+
+.pagination li { 
+	border: none; /* overrides previous declaration */ 
+	padding: 8px 3px; 
+} 
+
+.secondary-nav li:hover, .secondary-nav li.active, .pagination .current,  #sort-links-list li:hover, .pagination li:hover { 
 	background-color: #333; 
+	-webkit-transform: scale(1.2); 
+	-moz-transform: scale(1.2); 
+	transform: scale(1.2); 
+	-webkit-transition: all .2s ease-out; 
+	-moz-transition: all .2s ease-out; 
+	transition: all .2s ease-out; 
 } 
 
-.secondary-nav ul li a, .sort-label, #sort-links-list li a { 
+.secondary-nav ul li a, .sort-label, #sort-links-list li a, .pagination li a, .pagination span { 
 	color: white; 
 	text-decoration: none; 
-	padding: 12px; 
+	padding: 8px 4px; /* the links should be as tall as their containers */ 
 }
 
 #sort-links-list, #sort-links-list li { 
@@ -400,7 +412,6 @@ ul.pagination li {
 		text-shadow: 0px 1px 0px rgba(33,33,33,.5); 
 		padding: 0.8em;
 		border-left: 5px solid #555;
-		border-bottom: 1px solid #555;
 	} 
 	.vertical li.exhibit-nested-page.current a.exhibit-page-title, .vertical li.exhibit-nested-page a.exhibit-page-title:hover { 
 		border-left: 5px solid #58589F;
