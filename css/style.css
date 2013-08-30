@@ -55,7 +55,7 @@ body {
 	background:CornflowerBlue;
 }
 
-h1, h2, h3, h4, h5 {color: orange;}
+
 h1 {
 	line-height:1em;
 	font-size: 2.7em; 
@@ -171,7 +171,49 @@ a:hover {
 		display: none; /* disabling this until I make a black bar at the top */ 
 	} 
 
+nav.top { 
+	background-color: #333; 
+} 
+
+nav.top ul { 
+	display: table; 
+/*	border: 1px solid green;  */
+	margin: 0 auto; 
+	padding: 5px; 
+} 
+
+nav.top li { 
+	display: table-cell; 
+/*	border: 1px solid red;  */
+	height: 40px; 
+	padding: 1.5em; 
+} 
+
+nav.top li a { 
+	color: #eee; 
+} 
+
+.horizontal nav.top li { 
+	display: inline; 
+} 
+
+.horizontal nav.top li ul { 
+	display: none; /* disabling simple pages child pages for the moment */ 
+}
+
+.secondary-nav ul { 
+	border-bottom: 1px solid #444; 
+
+} 
+.secondary-nav ul li { /* these are the buttons "Browse All," "Browse by Tag," Etc */ 
+	display: inline; 
+	margin: 10px; 
+	padding: 2px; 
+	border: 1px solid #444; 
+} 
+
 /* End of Parent Site Controls */ 
+
 
 /* = Styles for Vertical-Nav Pages = {{{1 */	
 .vertical #content {
