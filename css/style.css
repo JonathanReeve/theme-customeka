@@ -905,6 +905,22 @@
     display: inline-table;
   }
 
+  /* my additions */ 
+
+  .clearfix { 
+	  display: block; 
+	  clear: both; 
+	  margin: -10px; 
+  } 
+
+  .item.hentry { 
+	  display: inline-block; 
+	  width: 30%; 
+	  vertical-align: top; 
+  } 
+
+  /* end my additions */ 
+
   #content #outputs {
     background-color: transparent;
     border-top: 0;
