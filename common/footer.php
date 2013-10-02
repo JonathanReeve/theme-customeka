@@ -1,14 +1,31 @@
-</div>
-<footer id="footer">
-<div id="footerContent"> 
-	<?php echo get_theme_option('Footer Text'); ?>
-	<?php if ((get_theme_option('Display Footer Copyright') == 1) && $copyright = settings('copyright')): ?>
-		    <?php echo $copyright; ?>
-	<?php endif; ?>
-	<a href="http://omeka.org" id="omeka-logo">Proudly Powered by Omeka</a>
+</div><!-- end content -->
+
+<footer>
+
+        <div id="custom-footer-text">
+            <?php if ( $footerText = get_theme_option('Footer Text') ): ?>
+            <p><?php echo $footerText; ?></p>
+            <?php endif; ?>
+            <?php if ((get_theme_option('Display Footer Copyright') == 1) && $copyright = option('copyright')): ?>
+                <p><?php echo $copyright; ?></p>
+            <?php endif; ?>
+        </div>
+
+        <p><?php echo __('Proudly powered by <a href="http://omeka.org">Omeka</a>.'); ?></p>
+        
     <?php fire_plugin_hook('public_footer'); ?>
-</div> <!-- end of footerContent--> 
+    
 </footer>
-</div>
+
+</div><!--end wrap-->
+
+<script type="text/javascript">
+jQuery(document).ready(function () {
+    Seasons.showAdvancedForm();
+    Seasons.mobileSelectNav();
+});
+</script>
+
 </body>
+
 </html>
