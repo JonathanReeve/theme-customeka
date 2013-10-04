@@ -54,6 +54,7 @@ $sortLinks[__('Date Added')] = 'added';
 </div><!-- end class="item hentry" -->
 <?php endforeach; ?>
 
+<p class="clearfix">&nbsp;</p> 
 
 <?php echo pagination_links(); ?>
 
