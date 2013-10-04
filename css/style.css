@@ -478,12 +478,10 @@
   }
   #content > h2, #content > div > h2, #content #primary > h2, #content #primary > div > h2,
   #content #sidebar > h2, #content #sidebar > div > h2 {
-    padding: 0 16px 0.375em;
+    padding: 10px;
+    padding-bottom: 16px; 
     font-weight: 500;
-    border-style: solid;
-    border-width: 0 0 5px 0;
     margin-top: 0em;
-    margin-bottom: 0.75em;
   }
   #content #primary {
     border-style: solid;
@@ -526,12 +524,7 @@
     padding-right: 16px;
   }
   #content > div, #content section {
-    background-color: #fff;
-    border-style: solid;
-    border-width: 10px 0 0 0;
     overflow: visible;
-    padding-top: 0.75em;
-    padding-bottom: 0.75em;
     -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 10px;
     -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 10px;
     box-shadow: rgba(0, 0, 0, 0.15) 0 0 10px;
@@ -625,8 +618,8 @@
     max-width: 100%;
     display: inline-block;
     border: 1px solid #dfe2e2;
-    width: 85%;
-    margin: 0 16px 1.125em 16px;
+    width: 95%;
+    margin: 5px;
     float: left;
     padding: 0;
     overflow: visible;
@@ -913,10 +906,32 @@
 	  margin: -10px; 
   } 
 
-  .item.hentry { 
+  .items.browse .item.hentry { 
 	  display: inline-block; 
-	  width: 30%; 
+	  width: 49%; /* two images per page in mobile */ 
 	  vertical-align: top; 
+  } 
+
+  .items.browse .item.hentry h2 { 
+	  font-size: 16px; 
+	  line-height: 1.3em; 
+	  background-color: #333; 
+	  height: 2em; 
+	  overflow: hidden; 
+	  margin-bottom: 0px; 
+	  transition: height 0.3s ease-in-out; 
+  } 
+  .items.browse .item.hentry h2:hover { 
+	  min-height: 2em; 
+	  height: 100%; 
+	  transition: height 0.3s ease-in-out; 
+  } 
+
+  .items.browse .item-description { 
+	  display: none; /* disabling long descriptions for now. FIXME: do this in php */ 
+  } 
+  .items.browse .tags { 
+	  display: none; /* disabling tags for now. FIXME: do this in php */ 
   } 
 
   /* end my additions */ 
@@ -2149,6 +2164,7 @@
 
   /* @end */
 }
+
 @media screen and (min-width: 768px) {
   header {
     *zoom: 1;
@@ -2418,6 +2434,12 @@
   .exhibits.show #content #exhibit-page-navigation a, .exhibits.show #content #exhibit-page-navigation span {
     width: 100%;
   }
+
+  /* my additions */ 
+  .items.browse .item.hentry { 
+	  width: 32.8%; /* show three items per page on big devices */ 
+  } 
+
 }
 @media print {
   /* Print Styles */
