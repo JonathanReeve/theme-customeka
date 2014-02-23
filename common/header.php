@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="<?php echo get_theme_option('Style Sheet'); ?>" lang="<?php echo get_html_lang(); ?>">
+<html lang="<?php echo get_html_lang(); ?>" class="<?php echo (get_theme_option('Style Sheet') ? get_theme_option('Style Sheet') : 'vertical'); ?>"> 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,6 +35,97 @@
     <?php queue_js_file('vendor/respond'); ?>
     <?php queue_js_file('globals'); ?>
     <?php echo head_js(); ?>
+
+<!-- Load Google Font Stylesheet for Header--> 
+<?php 
+	if (get_theme_option('Heading Text Font') != NULL) {
+		$headingTextFont=get_theme_option('Heading Text Font');  
+		$googleLink="<link href='http://fonts.googleapis.com/css?family=".$headingTextFont."' rel='stylesheet' type='text/css'>";
+		echo $googleLink;
+	} 
+    
+        // Load Google Font Stylesheet for Body--> 
+	if (get_theme_option('Body Text Font') != NULL) {
+		$bodyTextFont=get_theme_option('Body Text Font');  
+		$googleLink="<link href='http://fonts.googleapis.com/css?family=".$bodyTextFont."' rel='stylesheet' type='text/css'>";
+		echo $googleLink;
+	} 
+	
+	// Load Google Font Stylesheet for Nav
+	if (get_theme_option('Navigation Font') != NULL) {
+		$navigationFont=get_theme_option('Navigation Font');  
+		$googleLink="<link href='http://fonts.googleapis.com/css?family=".$navigationFont."' rel='stylesheet' type='text/css'>";
+		echo $googleLink;
+	} 
+	
+	// Get Variables for Navigation Colors to be Used in Custom Styles Below
+	if (get_theme_option('Navigation Color One') != NULL) {
+		$navColorOne=get_theme_option('Navigation Color One');
+	} 
+	if (get_theme_option('Navigation Color Two') != NULL) {
+		$navColorTwo=get_theme_option('Navigation Color Two');
+	} 
+?>
+    	
+<!-- Custom Styles --> 
+<style type="text/css"> 
+	body { 
+		background-color: <?php echo get_theme_option('Background Color'); ?>;
+		background-image: url('<?php echo elementaire_custom_background(); ?>');
+	} 
+	#wrap { 
+		background-color: <?php echo get_theme_option('Page Background Color'); ?>;
+	}
+	#content { 
+		<?php if (get_theme_option('Hide Dividers')) echo 'border-left: none;'; ?>
+        }
+	#header { 
+		background-image: url('<?php echo elementaire_custom_header_background(); ?>');
+	}
+	#exhibit-nav { 
+		font-family: <?php echo get_theme_option('Navigation Font'); ?>;
+        }
+	.horizontal .exhibit-section-nav li a { 
+		background-color: <?php echo get_theme_option('Navigation Color One'); ?>;
+		color: <?php echo get_theme_option('Navigation Color Two'); ?>;
+	}
+	.horizontal .exhibit-section-nav li.current a, .horizontal .exhibit-section-nav li a:hover { 
+		background-color: <?php echo get_theme_option('Navigation Color Two'); ?>;
+		color: <?php echo get_theme_option('Navigation Color One'); ?>;
+	} 
+	.horizontal .exhibit-page-nav li a { 
+		background-color: <?php echo get_theme_option('Navigation Color One'); ?>;
+		color: <?php echo get_theme_option('Navigation Color Two'); ?>;
+	}	
+	.horizontal .exhibit-page-nav li.current a, .horizontal .exhibit-page-nav li a:hover { 
+		background-color: <?php echo get_theme_option('Navigation Color Two'); ?>;
+		color: <?php echo get_theme_option('Navigation Color One'); ?>;
+	} 
+	.vertical a.exhibit-section-title, .vertical .exhibit-page-nav li a { 
+		background-color: <?php echo get_theme_option('Navigation Color One'); ?>;
+		color: <?php echo get_theme_option('Navigation Color Two'); ?>;
+	} 
+	.vertical .exhibit-page-nav li.current a, .vertical .exhibit-page-nav li a:hover, .vertical li.exhibit-nested-section.current a.exhibit-section-title, .vertical li.exhibit-nested-section a.exhibit-section-title:hover { 
+		border-left-color: <?php echo get_theme_option('Navigation Color Two'); ?>; 
+	}
+
+	h1, h2, h3, h4, h5, h1 a, h1 a:visited { 
+		color: <?php echo get_theme_option('Heading Color'); ?>;
+		font-family: <?php echo get_theme_option('Heading Text Font'); ?>;			
+	}
+	h1 { 
+		font-size: <?php echo get_theme_option('Heading Font Size'); ?>; 
+	} 
+	.exhibit-text, p { 
+		color: <?php echo get_theme_option('Body Text Color'); ?>;
+		font-family: <?php echo get_theme_option('Body Text Font'); ?>;
+		font-size: <?php echo get_theme_option('Body Font Size'); ?>; 
+	} 	
+	#exhibit-sections { 
+		<?php if ((int)get_theme_option('Display Exhibit Sections')==0) echo 'display: none;' ?> 
+	}
+	</style>
+
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
