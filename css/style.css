@@ -29,12 +29,11 @@
   /* -------------------------------------------------------------------------*/
   /* @group ---------- General HTML Elements ---------- */
   body {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 24px;
-    word-wrap: break-word;
-    height: 100%;
+	  font-size: 16px;
+	  word-wrap: break-word;
+	  font: 62.5% Verdana, Arial, sans-serif;
+	  color:#555;
+	  background: CornflowerBlue;
   }
 
   a {
@@ -443,6 +442,21 @@
   }
 
   /* @end */
+  /* --------- Black Bar Header for Exhibits -JR ---------- */ 
+  .exhibits header { 
+	  background-color: #000; 
+  } 
+  .exhibits #site-title { 
+	  font-size: 20px; 
+	  line-height: 14px; 
+  } 
+  .exhibits #site-title a { 
+	  color: #eee; 
+	  font-family: Ubuntu; 
+  } 
+  .exhibits nav.top, .exhibits #search-container { 
+	  display: none; 
+  } 
   /* @group ---------- Footer ---------- */
   footer {
     margin-top: 1.5em;
