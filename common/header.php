@@ -69,20 +69,29 @@
     	
 <!-- Custom Styles --> 
 <style type="text/css"> 
-	body { 
+	body.exhibits { 
 		background-color: <?php echo get_theme_option('Background Color'); ?>;
 		background-image: url('<?php echo elementaire_custom_background(); ?>');
 	} 
-	#wrap { 
+	.exhibits #wrap { 
 		background-color: <?php echo get_theme_option('Page Background Color'); ?>;
 	}
-	#content { 
+	.exhibits #content { 
 		<?php if (get_theme_option('Hide Dividers')) echo 'border-left: none;'; ?>
         }
-	#header { 
-		background-image: url('<?php echo elementaire_custom_header_background(); ?>');
+	.exhibits #banner { 
+		<?php if (get_theme_option('Header Background')): ?> 
+			background-image: url('<?php echo elementaire_custom_header_background(); ?>');
+		<?php else: ?> 
+			display: none; 
+		<?php endif; ?> 
 	}
-	#exhibit-nav { 
+	.exhibits h1 { 
+		<?php if (get_theme_option('Hide Header Text')): ?> 
+			display: none; 
+		<?php endif; ?> 
+	} 
+	.exhibits #exhibit-nav { 
 		font-family: <?php echo get_theme_option('Navigation Font'); ?>;
         }
 	.horizontal .exhibit-section-nav li a { 
@@ -129,7 +138,6 @@
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
-    <div id="wrap">
         <header>
             <div id="site-title">
                 <?php echo link_to_home_page(theme_logo()); ?>
@@ -140,8 +148,12 @@
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
         </header>
 
+    <div id="wrap">
         <nav class="top">
             <?php echo public_nav_main(); ?>
         </nav>
+
+	<div id="banner"> <!-- Placeholder for custom header image --> 
+	</div> 
 
         <div id="content">

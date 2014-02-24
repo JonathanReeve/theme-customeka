@@ -442,17 +442,26 @@
   }
 
   /* @end */
+  /* ----------- Stuff for Exhibits --------------- */ 
+  .exhibits #wrap { 
+	  width: 950px; 
+	  margin: 0 auto; 
+  } 
   /* --------- Black Bar Header for Exhibits -JR ---------- */ 
   .exhibits header { 
 	  background-color: #000; 
   } 
+  .exhibits #banner { 
+	  width: 950px;
+	  height: 120px;  
+	  margin: 0 auto; 
+  }
   .exhibits #site-title { 
 	  font-size: 20px; 
 	  line-height: 14px; 
   } 
   .exhibits #site-title a { 
 	  color: #eee; 
-	  font-family: Ubuntu; 
   } 
   .exhibits nav.top, .exhibits #search-container { 
 	  display: none; 
