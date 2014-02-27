@@ -133,6 +133,9 @@
 	#exhibit-sections { 
 		<?php if ((int)get_theme_option('Display Exhibit Sections')==0) echo 'display: none;' ?> 
 	}
+	.exhibits #exhibit-pages a { 
+		color: <?php echo get_theme_option('Navigation Color Two'); ?>;
+	} 
 	</style>
 
 </head>

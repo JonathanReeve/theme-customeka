@@ -1174,9 +1174,14 @@
 
   /* @end */
   /* @group ---------- ExhibitBuilder ---------- */
-  .exhibits h1 {
+  .exhibits #content { 
+	  padding-left: 50px; 
+	  padding-right: 50px; 
+  } 
+  .exhibits #content h1 {
     margin-bottom: 0;
     padding-bottom: 0;
+    text-transform: none; 
   }
   .exhibits #content .navigation {
     padding-left: 0;
@@ -1360,7 +1365,6 @@
     box-shadow: rgba(0, 0, 0, 0.15) 0 0 10px;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
-    background-color: #fff;
   }
   .summary #exhibit-pages ul {
     margin-left: 0;
@@ -2269,11 +2273,11 @@
     display: none;
   }
 
-  header, nav.top, #content, footer {
+  nav.top, #content {
     *zoom: 1;
     padding-left: 14.70588%;
     padding-right: 14.70588%;
-  }
+  }  
   header:after, nav.top:after, #content:after, footer:after {
     content: "";
     display: table;
@@ -2423,19 +2427,20 @@
   /* Exhibits */
   .exhibits.summary #primary {
     width: 66.10169%;
-    float: left;
-    margin-right: 1.69492%;
-    display: inline;
+    margin-left: 1.2%;
+    display: inline-block;
+    vertical-align: top; 
   }
   .exhibits.summary #exhibit-pages {
     display: inline-block;
-    float: right;
     width: 32.20339%;
-    float: right;
     margin-right: 0;
     *margin-left: -1em;
-    display: inline;
+    display: inline-block;
   }
+  .exhibits #exhibit-pages .exhibit-page-nav > ul { 
+	  display: inline-block; 
+  } 
 
   .exhibits.show #content .exhibit-page-nav > li:first-child {
     background-color: rgba(0, 0, 0, 0.1);
