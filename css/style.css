@@ -1197,8 +1197,8 @@
   }
   .exhibits #content .navigation li {
     display: inline-block;
-    float: left;
-    width: auto;
+    float: none;
+    width: 100%;
     margin-right: 16px;
   }
   .exhibits #content .primary {
@@ -1251,9 +1251,11 @@
   .exhibits.show #content h1 {
     margin-top: 0.1875em;
     font-size: 40px;
+    text-align: center; 
   }
   .exhibits.show #content div[role="main"] {
     margin-top: 1.5em;
+    padding: 15px; 
   }
   .exhibits.show #content #primary:first-child {
     margin-top: 1.5em;
@@ -1264,6 +1266,14 @@
   .exhibits.show #content .exhibit-item {
     padding-top: 0;
   }
+  .exhibits.show .exhibit-item-caption h3 { 
+	  font-size: 14px; 
+	  line-height: 1.3em; 
+	  text-align: center; 
+  } 
+  .exhibits.show .exhibit-text p {
+	  line-height: 1.4em; 
+  } 
   .exhibits.show #content #exhibit-page-navigation {
     background-color: transparent;
     border-top: 0;
@@ -1298,6 +1308,18 @@
     margin-left: 0;
     padding-left: 0;
   }
+  .exhibits #content .exhibit-child-nav { 
+	  text-align: center; 
+	  margin: 15px;
+	  margin-left: 28px !important; 
+	  font-size: 13px; 
+  } 
+  .exhibits #content .exhibit-child-nav ul { 
+	  width: 100%; 
+  } 
+  .exhibits #content .exhibit-child-nav li { 
+	  width: auto; 
+  } 
   .exhibits.show #content .exhibit-page-nav .current, .exhibits.show #content .exhibit-child-nav .current {
     font-weight: bold;
   }
@@ -1306,6 +1328,8 @@
     -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 10px;
     box-shadow: rgba(0, 0, 0, 0.15) 0 0 10px;
     margin-bottom: 1.5em;
+    text-align: center; 
+    font-size: 13px; 
   }
   .exhibits.show #content .exhibit-page-nav a {
     padding: 0;
@@ -1320,7 +1344,7 @@
     background-color: rgba(0, 0, 0, 0.3);
   }
   .exhibits.show #content .exhibit-page-nav > li {
-    display: block;
+    display: inline-block; 
     float: none;
     overflow: auto;
     margin-right: 0;
@@ -2443,7 +2467,7 @@
   } 
 
   .exhibits.show #content .exhibit-page-nav > li:first-child {
-    background-color: rgba(0, 0, 0, 0.1);
+/*    background-color: rgba(0, 0, 0, 0.1); */ 
     float: left;
   }
   .exhibits.show #content .exhibit-page-nav > li:nth-child(2) li:first-of-type {

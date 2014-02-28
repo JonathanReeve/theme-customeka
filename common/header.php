@@ -98,20 +98,20 @@
 		background-color: <?php echo get_theme_option('Navigation Color One'); ?>;
 		color: <?php echo get_theme_option('Navigation Color Two'); ?>;
 	}
-	.horizontal .exhibit-section-nav li.current a, .horizontal .exhibit-section-nav li a:hover { 
+	/* .horizontal .exhibit-section-nav li.current a, .horizontal .exhibit-section-nav li a:hover { 
 		background-color: <?php echo get_theme_option('Navigation Color Two'); ?>;
 		color: <?php echo get_theme_option('Navigation Color One'); ?>;
-	} 
+	} */ 
 	.horizontal .exhibit-page-nav li a { 
-		background-color: <?php echo get_theme_option('Navigation Color One'); ?>;
+		/* background-color: <?php echo get_theme_option('Navigation Color One'); ?>; */ 
 		color: <?php echo get_theme_option('Navigation Color Two'); ?>;
 	}	
-	.horizontal .exhibit-page-nav li.current a, .horizontal .exhibit-page-nav li a:hover { 
+	/* .horizontal .exhibit-page-nav li.current a, .horizontal .exhibit-page-nav li a:hover { 
 		background-color: <?php echo get_theme_option('Navigation Color Two'); ?>;
 		color: <?php echo get_theme_option('Navigation Color One'); ?>;
-	} 
+	} */ 
 	.vertical a.exhibit-section-title, .vertical .exhibit-page-nav li a { 
-		background-color: <?php echo get_theme_option('Navigation Color One'); ?>;
+		/* background-color: <?php echo get_theme_option('Navigation Color One'); ?>; */ 
 		color: <?php echo get_theme_option('Navigation Color Two'); ?>;
 	} 
 	.vertical .exhibit-page-nav li.current a, .vertical .exhibit-page-nav li a:hover, .vertical li.exhibit-nested-section.current a.exhibit-section-title, .vertical li.exhibit-nested-section a.exhibit-section-title:hover { 
@@ -136,6 +136,10 @@
 	.exhibits #exhibit-pages a { 
 		color: <?php echo get_theme_option('Navigation Color Two'); ?>;
 	} 
+	.exhibits #exhibit-page-navigation a { 
+		color: <?php echo get_theme_option('Navigation Color Two'); ?>;
+	} 
+		
 	</style>
 
 </head>
