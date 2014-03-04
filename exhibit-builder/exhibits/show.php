@@ -4,17 +4,26 @@ echo head(array(
     'bodyclass' => 'exhibits show'));
 ?>
 <nav id="exhibit-pages">
-    <?php echo exhibit_builder_page_nav(); ?>
+    <?php echo elementaire_exhibit_builder_page_nav(); ?>
 </nav>
 
 <h1><span class="exhibit-page"><?php echo metadata('exhibit_page', 'title'); ?></span></h1>
 
-<nav id="exhibit-child-pages">
-    <?php echo exhibit_builder_child_page_nav(); ?>
-</nav>
+<!-- <nav id="exhibit-child-pages">
+    <?php // echo exhibit_builder_child_page_nav(); ?>
+</nav> --> 
 
 <div role="main">
-<?php exhibit_builder_render_exhibit_page(); ?>
+<?php 
+exhibit_builder_render_exhibit_page(); 
+if (!$exhibitPage) {
+	$exhibitPage = get_current_record('exhibit_page');
+}
+echo "Exhibit page: "; 
+print_r($exhibitPage); 
+$text = $exhibitPage->ExhibitPageEntry[(int) $entryIndex]->text;
+echo $text
+?> 
 </div>
 
 <div id="exhibit-page-navigation">

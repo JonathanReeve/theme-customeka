@@ -40,6 +40,51 @@ function elementaire_custom_header_background()
     }
 }
 
+/* Custom version of ExhibitBuilder/helpers/ExhibitPageFunctions.php -> exhibit_builder_page_nav()
+ * Displays all the pages, not just the parents and siblings. */ 
+function elementaire_exhibit_builder_page_nav($exhibitPage = null)
+{
+    if (!$exhibitPage) {
+        if (!($exhibitPage = get_current_record('exhibit_page', false))) {
+            return;
+        }
+    }
+
+    $exhibit = $exhibitPage->getExhibit();
+    $html = '<ul class="exhibit-page-nav navigation" id="secondary-nav">' . "\n";
+    $pagesTrail = $exhibitPage->getAncestors();
+    $pagesTrail[] = $exhibitPage;
+    $html .= '<li>';
+    $html .= '<a class="exhibit-title" href="'. html_escape(exhibit_builder_exhibit_uri($exhibit)) . '">';
+    $html .= html_escape($exhibit->title) .'</a></li>' . "\n";
+    foreach ($pagesTrail as $page) {
+        $linkText = $page->title;
+        $pageExhibit = $page->getExhibit();
+        $pageParent = $page->getParent();
+        $pageSiblings = ($pageParent ? exhibit_builder_child_pages($pageParent) : $pageExhibit->getTopPages()); 
+	$pageChildren = exhibit_builder_child_pages(); 
+
+        $html .= "<li>\n<ul>\n";
+        foreach ($pageSiblings as $pageSibling) {
+            $html .= '<li' . ($pageSibling->id == $page->id ? ' class="current"' : '') . '>';
+            $html .= '<a class="exhibit-page-title" href="' . html_escape(exhibit_builder_exhibit_uri($exhibit, $pageSibling)) . '">';
+            $html .= html_escape($pageSibling->title) . "</a></li>\n";
+        }
+        $html .= "</ul>\n</li>\n";
+
+        $html .= "<li>\n<ul>\n";
+	foreach ($pageChildren as $pageChild) { 
+            $html .= '<li' . ($pageChild->id == $page->id ? ' class="current"' : '') . '>';
+            $html .= '<a class="exhibit-page-title" href="' . html_escape(exhibit_builder_exhibit_uri($exhibit, $pageChild)) . '">';
+            $html .= html_escape($pageChild->title) . "</a></li>\n";
+	} 
+        $html .= "</ul>\n</li>\n";
+    }
+    $html .= '</ul>' . "\n";
+    $html = apply_filters('exhibit_builder_page_nav', $html);
+    return $html;
+}
+
 
 ?>
 
