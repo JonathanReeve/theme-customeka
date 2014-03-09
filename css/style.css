@@ -1335,7 +1335,8 @@
     padding: 0;
   }
   .exhibits.show #content .exhibit-page-nav > li:nth-child(2) {
-    background-color: rgba(0, 0, 0, 0.1);
+    border-top: 1px solid #666; 
+    background-color: rgba(0, 0, 0, 0.1);  
   }
   .exhibits.show #content .exhibit-page-nav > li:nth-child(3) {
     background-color: rgba(0, 0, 0, 0.2);
@@ -1349,22 +1350,26 @@
     overflow: auto;
     margin-right: 0;
   }
+  /* first of type is now sections, not title. 
   .exhibits.show #content .exhibit-page-nav > li:first-of-type {
     text-transform: uppercase;
     margin-right: 0;
     padding: 0.375em 16px;
   }
   .exhibits.show #content .exhibit-page-nav > li:first-of-type a:after {
-    content: ":";
+    content: ":";  
   }
+  */ 
   .exhibits.show #content .exhibit-page-nav > li ul {
     padding-left: 0;
+    padding: 1em; 
   }
   .exhibits.show #content .exhibit-page-nav > li ul li {
     display: inline-block;
-    margin-right: 16px;
-    padding: 0.375em 8px;
+    padding: 1em; 
     width: auto;
+    border: 1px solid #666; 
+    margin: 5px; 
   }
   .exhibits.show #content .exhibit-page-nav > li ul li:first-of-type {
     padding-left: 16px;

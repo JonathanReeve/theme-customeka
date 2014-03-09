@@ -9,33 +9,15 @@ echo head(array(
 
 <h1><span class="exhibit-page"><?php echo metadata('exhibit_page', 'title'); ?></span></h1>
 
-<!-- <nav id="exhibit-child-pages">
+<nav id="exhibit-child-pages">
     <?php // echo exhibit_builder_child_page_nav(); ?>
-</nav> --> 
+</nav> 
 
 <div role="main">
 <?php 
 if (elementaire_exhibit_page_is_empty()) {
-//	echo "Exhibit page is empty"; 
-//	echo "Exhibit page used to be: "; 
-//	print_r($exhibit); 
-//	print_r($exhibitPage); 
-	
-	if (!isset($exhibitPage)) {
-		if (!($exhibitPage = get_current_record('exhibit_page', false))) {
-			return;
-		}
-	}
-
-	$exhibitPage = elementaire_get_first_nonempty_page($exhibit, $exhibitPage); 
-//	echo "Exhibit page now is: "; 
-//	print_r($exhibitPage); 
-//	apparently returns the right exhibit page but 
-//	grrrr doesn't render it! 
-
-	exhibit_builder_render_exhibit_page($exhibitPage); 
+	echo "This exhibit page is empty. Please choose a page above."; 
 } else { 
-//	echo "Exhibit page is not empty"; 
 	exhibit_builder_render_exhibit_page(); 
 } 
 ?> 
