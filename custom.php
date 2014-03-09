@@ -85,6 +85,79 @@ function elementaire_exhibit_builder_page_nav($exhibitPage = null)
     return $html;
 }
 
+/**
+ * Check if the provided exhibit page is empty (layout type = text, no text)
+ *
+ * @param ExhibitPage $exhibitPage
+ * @return boolean
+ **/
+function elementaire_exhibit_page_is_empty($exhibitPage= null)
+{
+    if (!$exhibitPage) {
+        if (!($exhibitPage = get_current_record('exhibit_page', false))) {
+            return;
+        }
+    }
 
+	if ($exhibitPage->layout == 'text') {
+		$entries = $exhibitPage->getPageEntries();
+		if ($entry = $entries[1]) {
+			if (trim($entry->text) == '') {
+				return true;
+			}
+		}
+	}
+	return false;
+} 
+/**
+ * Return the first non-empty page in an exhibit, beginning with provided page
+ * If provided page is non-empty, it will be immediately returned; otherwise a search
+ * proceeds through the page structure to find the next non-empty page.
+ *
+ * @param Exhibit $exhibit
+ * @param ExhibitPage|null $exhibitPage
+ * @return ExhibitPage|null
+ **/
+function elementaire_get_first_nonempty_page($exhibit, $exhibitPage = null)
+{
+	// if a page is passed in, start there, otherwise load the first top page
+	if (!$exhibitPage)
+	{
+		$topPages = $exhibit->getTopPages();
+		if (count($topPages) > 0)
+		{
+			$exhibitPage = $topPages[0];
+		}
+		else
+		{
+			return null;
+		}
+	}
+
+	// check if page is text layout, and empty
+	if (elementaire_exhibit_page_is_empty($exhibitPage))
+	{
+		// page is empty, look for the next page
+		$targetPage = null;
+
+		if ($nextPage = $exhibitPage->firstChildOrNext())
+		{
+			$targetPage = $nextPage;
+		}
+		elseif ($exhibitPage->parent_id)
+		{
+			$parentPage = $exhibitPage->getParent();
+			$nextParentPage = $parentPage->next();
+			if ($nextParentPage)
+			{
+				$targetPage = $nextPage;
+			}
+		}
+
+		return elementaire_get_first_nonempty_page($exhibit, $targetPage);
+	}
+	// page is not empty, so return it
+	return $exhibitPage;
+} 
 ?>
 

@@ -1407,6 +1407,11 @@
   #content .exhibit-item:empty {
     padding: 0;
   }
+  .exhibits .exhibit-description img { 
+	  /* there aren't supposed to be images in the description like this, but might as well make them look good */ 
+	  max-width: 100%; 
+	  height: auto; 
+  } 
 
   .gallery-full-left, .gallery-full-right, .gallery-thumbnails,
   .gallery-thumbnails-text-bottom, .gallery-thumbnails-text-top, .image-list-left,
