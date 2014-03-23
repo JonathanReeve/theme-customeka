@@ -1,6 +1,8 @@
 <?php echo head(array('title' => metadata('exhibit', 'title'), 'bodyclass'=>'exhibits summary')); ?>
 
-<h1><?php echo metadata('exhibit', 'title'); ?></h1>
+<div id="header">
+	<h1><?php echo metadata('exhibit', 'title'); ?></h1>
+</div> 
 <?php echo exhibit_builder_page_nav(); ?>
 
 <nav id="exhibit-pages">

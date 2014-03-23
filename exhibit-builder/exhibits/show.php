@@ -3,6 +3,11 @@ echo head(array(
     'title' => metadata('exhibit_page', 'title') . ' &middot; ' . metadata('exhibit', 'title'),
     'bodyclass' => 'exhibits show'));
 ?>
+
+<div id="header"> 
+<h1><?php echo metadata('exhibit', 'title'); ?></h1> 
+</div> 
+
 <nav id="exhibit-pages">
     <?php echo elementaire_exhibit_builder_page_nav(); ?>
 </nav>

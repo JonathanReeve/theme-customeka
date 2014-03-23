@@ -1247,14 +1247,14 @@
   .exhibits.summary #content #primary > div:last-child {
     margin-bottom: 0;
   }
-  .exhibits.show #header { 
-	  min-height: 120px; 
+  .exhibits #header { 
+	  width: 100%; 
   } 
-  .exhibits.show #header h1 { 
+  .exhibits #header h1 { 
 	  padding-top: 10px; 
 	  padding: 20px; 
   } 
-  .exhibits.show #content h1 {
+  .exhibits #content h1 {
     margin-top: 0.1875em;
     font-size: 40px;
     font-weight: 300; 
@@ -1401,7 +1401,7 @@
   .summary #exhibit-pages {
     border-style: solid;
     border-width: 10px 0 0 0;
-    overflow: visible;
+    overflow: hidden;
     -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 10px;
     -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 10px;
     box-shadow: rgba(0, 0, 0, 0.15) 0 0 10px;
@@ -1414,10 +1414,16 @@
   .summary #exhibit-pages ul ul {
     padding-left: 0;
   }
-
+  .exhibits.summary #content h1 { 
+	  line-height: 1.2em; 
+	  text-align: center; 
+	  color: #630; /* default */ 
+  } 
   .exhibits.summary #exhibit-pages a { 
 	  padding: 10px; 
 	  font-size: 16px; 
+	  width: 100%; 
+	  border-left: 6px solid #000;  
   } 
   .exhibit-block {
     padding: 0 16px !important;

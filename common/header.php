@@ -79,51 +79,58 @@
 	.exhibits #content { 
 		<?php if (get_theme_option('Hide Dividers')) echo 'border-left: none;'; ?>
         }
-	.exhibits #banner { 
+	.exhibits #header { 
 		<?php if (get_theme_option('Header Background')): ?> 
 			background-image: url('<?php echo elementaire_custom_header_background(); ?>');
-		<?php else: ?> 
-			display: none; 
+			min-height: 120px; 
+			display: table; 
 		<?php endif; ?> 
 	}
-	.exhibits h1 { 
+	.exhibits #header h1 { 
+		<?php if (get_theme_option('Header Background')): ?> 
+			display: table-cell; 
+		<?php endif; ?> 
 		<?php if (get_theme_option('Hide Header Text')): ?> 
 			display: none; 
 		<?php endif; ?> 
 	} 
-	.exhibits #exhibit-nav { 
+	.exhibits #exhibit-pages, .exhibits #exhibit-page-navigation a, .exhibits #exhibit-page-navigation .current-page { 
 		font-family: <?php echo get_theme_option('Navigation Font'); ?>;
         }
-	.horizontal .exhibit-section-nav li a { 
+	.horizontal .exhibit-page-title, .vertical .exhibit-page-title, #exhibit-nav-up a, #exhibit-nav-prev a, #exhibit-nav-next a { 
 		background-color: <?php echo get_theme_option('Navigation Color One'); ?>;
 		color: <?php echo get_theme_option('Navigation Color Two'); ?>;
 	}
-	/* .horizontal .exhibit-section-nav li.current a, .horizontal .exhibit-section-nav li a:hover { 
+	.horizontal .current .exhibit-page-title, .horizontal .exhibit-page-title:hover,  .vertical .current .exhibit-page-title, .vertical .exhibit-page-title:hover, .exhibits #exhibit-nav-up .current-page, #exhibit-nav-up a:hover, #exhibit-nav-next a:hover, #exhibit-nav-prev a:hover { 
 		background-color: <?php echo get_theme_option('Navigation Color Two'); ?>;
 		color: <?php echo get_theme_option('Navigation Color One'); ?>;
-	} */ 
-	.horizontal .exhibit-page-nav li a { 
-		/* background-color: <?php echo get_theme_option('Navigation Color One'); ?>; */ 
+	}  
+	.horizontal .exhibit-page-title, .vertical .exhibit-page-title { 
+		background-color: <?php echo get_theme_option('Navigation Color One'); ?>;
 		color: <?php echo get_theme_option('Navigation Color Two'); ?>;
 	}	
-	/* .horizontal .exhibit-page-nav li.current a, .horizontal .exhibit-page-nav li a:hover { 
+	.exhibits.summary #exhibit-pages li a:hover { 
 		background-color: <?php echo get_theme_option('Navigation Color Two'); ?>;
 		color: <?php echo get_theme_option('Navigation Color One'); ?>;
-	} */ 
-	.vertical a.exhibit-section-title, .vertical .exhibit-page-nav li a { 
-		/* background-color: <?php echo get_theme_option('Navigation Color One'); ?>; */ 
+	}  
+	.vertical .exhibit-page-title, .exhibits.summary #exhibit-pages li a { 
+		background-color: <?php echo get_theme_option('Navigation Color One'); ?>; 
 		color: <?php echo get_theme_option('Navigation Color Two'); ?>;
 	} 
-	.vertical .exhibit-page-nav li.current a, .vertical .exhibit-page-nav li a:hover, .vertical li.exhibit-nested-section.current a.exhibit-section-title, .vertical li.exhibit-nested-section a.exhibit-section-title:hover { 
+	#content p a { 
+		color: <?php echo get_theme_option('Navigation Color Two'); ?>;
+	} 
+	.exhibits.summary #exhibit-pages a { 
 		border-left-color: <?php echo get_theme_option('Navigation Color Two'); ?>; 
 	}
-
-	h1, h2, h3, h4, h5, h1 a, h1 a:visited { 
+	.exhibits.show h1, .exhibits.show h2, .exhibits.show h3, .exhibits.show h4, .exhibits.show h5, .exhibits.show h1 a, .exhibits.show h1 a:visited, .exhibits.summary #content h1 { 
 		color: <?php echo get_theme_option('Heading Color'); ?>;
 		font-family: <?php echo get_theme_option('Heading Text Font'); ?>;			
 	}
-	h1 { 
+	.exhibits.show #content h1, .exhibits.summary #content h1 { 
 		font-size: <?php echo get_theme_option('Heading Font Size'); ?>; 
+		color: <?php echo get_theme_option('Heading Color'); ?>;
+		font-family: <?php echo get_theme_option('Heading Text Font'); ?>;			
 	} 
 	.exhibit-text, p { 
 		color: <?php echo get_theme_option('Body Text Color'); ?>;
@@ -133,12 +140,12 @@
 	#exhibit-sections { 
 		<?php if ((int)get_theme_option('Display Exhibit Sections')==0) echo 'display: none;' ?> 
 	}
-	.exhibits #exhibit-pages a { 
+/*	.exhibits #exhibit-pages a { 
+		color: <?php echo get_theme_option('Navigation Color Two'); ?>; 
+	} */ 
+/*	.exhibits #exhibit-page-navigation a { 
 		color: <?php echo get_theme_option('Navigation Color Two'); ?>;
-	} 
-	.exhibits #exhibit-page-navigation a { 
-		color: <?php echo get_theme_option('Navigation Color Two'); ?>;
-	} 
+	} */ 
 		
 	</style>
 
@@ -159,8 +166,5 @@
         <nav class="top">
             <?php echo public_nav_main(); ?>
         </nav>
-
-	<div id="banner"> <!-- Placeholder for custom header image --> 
-	</div> 
 
         <div id="content">
