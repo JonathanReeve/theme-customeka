@@ -138,8 +138,8 @@
   nav li {
     display: block;
   }
-  nav li ul li {
-    padding-left: 16px;
+  .exhibits.summary nav li ul li {
+    padding-left: 16px;   
   }
   nav a {
     display: inline-block;
@@ -444,7 +444,7 @@
   /* @end */
   /* ----------- Stuff for Exhibits --------------- */ 
   .exhibits #wrap { 
-	  width: 950px; 
+	  width: 1050px; 
 	  margin: 0 auto; 
   } 
   /* --------- Black Bar Header for Exhibits -JR ---------- */ 
@@ -1212,7 +1212,6 @@
     padding-right: 16px !important;
   }
   .exhibits .exhibit-page {
-    font-weight: bold;
   }
   .exhibits.tags #content p:only-of-type {
     background-color: #fff;
@@ -1248,9 +1247,18 @@
   .exhibits.summary #content #primary > div:last-child {
     margin-bottom: 0;
   }
+  .exhibits.show #header { 
+	  min-height: 120px; 
+  } 
+  .exhibits.show #header h1 { 
+	  padding-top: 10px; 
+	  padding: 20px; 
+  } 
   .exhibits.show #content h1 {
     margin-top: 0.1875em;
     font-size: 40px;
+    font-weight: 300; 
+    line-height: 1.1em; 
     text-align: center; 
   }
   .exhibits.show #content div[role="main"] {
@@ -1273,6 +1281,7 @@
   } 
   .exhibits.show .exhibit-text p {
 	  line-height: 1.4em; 
+	  font-size: 14px; 
   } 
   .exhibits.show #content #exhibit-page-navigation {
     background-color: transparent;
@@ -1280,6 +1289,7 @@
     -webkit-box-shadow: transparent 0 0 0;
     -moz-box-shadow: transparent 0 0 0;
     box-shadow: transparent 0 0 0;
+    font-size: 12px; 
   }
   .exhibits.show #content #exhibit-page-navigation a, .exhibits.show #content #exhibit-page-navigation span {
     padding: 0.375em 16px;
@@ -1298,6 +1308,9 @@
     width: 100%;
     text-align: center;
   }
+  .exhibits.show #content #exhibit-page-navigation > div a, .exhibits.show #content #exhibit-page-navigation #exhibit-nav-up .current-page {
+	  padding: 10px; 
+  } 
   .exhibits.show #content #exhibit-page-navigation #exhibit-nav-next {
     margin-bottom: 1.5em;
   }
@@ -1332,11 +1345,12 @@
     font-size: 13px; 
   }
   .exhibits.show #content .exhibit-page-nav a {
-    padding: 0;
+    padding: 10px;
   }
   .exhibits.show #content .exhibit-page-nav > li:nth-child(2) {
     border-top: 1px solid #666; 
     background-color: rgba(0, 0, 0, 0.1);  
+    margin-bottom: -3px; /* fix for phantom 3px line */  
   }
   .exhibits.show #content .exhibit-page-nav > li:nth-child(3) {
     background-color: rgba(0, 0, 0, 0.2);
@@ -1366,18 +1380,17 @@
   }
   .exhibits.show #content .exhibit-page-nav > li ul li {
     display: inline-block;
-    padding: 1em; 
     width: auto;
     border: 1px solid #666; 
     margin: 5px; 
   }
   .exhibits.show #content .exhibit-page-nav > li ul li:first-of-type {
-    padding-left: 16px;
+  /*  padding-left: 16px; */ 
   }
   .exhibits #content #secondary-nav .current a,
   .exhibits #content #secondary-nav a.current,
   .exhibits #content .exhibit-section-nav .current a {
-    background-color: transparent;
+  /*  background-color: transparent; */ 
   }
 
   #content .exhibit-items,
@@ -1402,6 +1415,10 @@
     padding-left: 0;
   }
 
+  .exhibits.summary #exhibit-pages a { 
+	  padding: 10px; 
+	  font-size: 16px; 
+  } 
   .exhibit-block {
     padding: 0 16px !important;
   }
@@ -2481,7 +2498,7 @@
     float: left;
   }
   .exhibits.show #content .exhibit-page-nav > li:nth-child(2) li:first-of-type {
-    padding-left: 8px;
+  /*  padding-left: 8px; */ 
   }
   .exhibits.show #content #exhibit-page-navigation .exhibits-nav-prev {
     text-align: left;
@@ -2497,7 +2514,6 @@
     width: 100%;
   }
 
-  /* my additions */ 
   .items.browse .item.hentry { 
 	  width: 32.8%; /* show three items per page on big devices */ 
   } 
