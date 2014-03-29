@@ -154,7 +154,7 @@
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
         <header>
             <div id="site-title">
-                <?php echo link_to_home_page(theme_logo()); ?>
+                <?php echo link_to_home_page(); ?>
             </div>
             <div id="search-container">
                 <?php echo search_form(array('show_advanced' => true)); ?>
@@ -168,3 +168,6 @@
         </nav>
 
         <div id="content">
+		<div id="logo"> 
+			<?php if (theme_logo()) { echo theme_logo(); } ?> 
+		</div> <!--end logo--> 
