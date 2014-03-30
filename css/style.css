@@ -446,6 +446,7 @@
   .exhibits #wrap { 
 	  width: 1050px; 
 	  margin: 0 auto; 
+	  background-color: #fff; 
   } 
   /* --------- Black Bar Header for Exhibits -JR ---------- */ 
   .exhibits header { 

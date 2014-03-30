@@ -82,7 +82,8 @@
 	.exhibits #header { 
 		<?php if (get_theme_option('Header Background')): ?> 
 			background-image: url('<?php echo elementaire_custom_header_background(); ?>');
-			min-height: 120px; 
+			height: 120px; 
+			width: 950px; 
 			display: table; 
 		<?php endif; ?> 
 	}
@@ -168,6 +169,8 @@
         </nav>
 
         <div id="content">
+		<?php if (theme_logo()): ?> 
 		<div id="logo"> 
-			<?php if (theme_logo()) { echo theme_logo(); } ?> 
+			<?php echo theme_logo(); ?> 
 		</div> <!--end logo--> 
+		<?php endif; ?> 
