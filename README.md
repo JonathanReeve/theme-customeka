@@ -2,7 +2,7 @@
 
 This is the development version of the Elementaire theme, reconfigured to work with Omeka 2.0. Be aware that this will probably not work yet, so don't install it unless you are interested in bugfixing. 
 
-This particular branch, "seasons-based" is based on the Seasons theme.  
+This particular branch is based on the Seasons theme.  
 
 #Elementaire Theme
 
