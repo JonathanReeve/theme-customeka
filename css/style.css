@@ -443,6 +443,29 @@
 
   /* @end */
   /* ----------- Stuff for Exhibits --------------- */ 
+  .exhibits body { 
+	  background-color: #6495ED;  
+  } 
+  .exhibits #logo img { 
+	  width: 950px; 
+  } 
+  .exhibits #content { 
+	  background-color: #fff; 
+  } 
+  .exhibits .exhibit-page-nav, .exhibits #exhibit-page-navigation { 
+	  background-color: #eee; 
+	  color: #444; 
+  } 
+  .exhibits .exhibit-page-nav a, .exhibits #exhibit-page-navigation a { 
+	  color: #444; 
+  } 
+  .exhibits .exhibit-page-nav a:hover, .exhibits #exhibit-page-navigation a { 
+	  background-color: #ddd; 
+	  color: #444; 
+  } 
+  .exhibits #exhibit-page-navigation .current-page { 
+	  background-color: #ddd; 
+  } 
   .exhibits #wrap { 
 	  width: 1050px; 
 	  margin: 0 auto; 
@@ -466,6 +489,17 @@
   } 
   .exhibits nav.top, .exhibits #search-container { 
 	  display: none; 
+  } 
+  /* --------- Black Bar Footer for Exhibits -JR --------- */ 
+  .exhibits footer { 
+	  background-color: #000; 
+	  color: #fff; 
+	  padding: 10px; 
+	  text-align: center; 
+	  margin: 0; 
+  } 
+  .exhibits footer a { 
+	  color: #ccc; 
   } 
   /* @group ---------- Footer ---------- */
   footer {
@@ -1941,10 +1975,10 @@
 
   /* @end */
   /* @group ---------- Autumn Styles ---------- */
-  .autumn body {
+  /*.autumn body {
     background-color: #86443c;
     color: #86443c;
-  }
+  } 
   .autumn h1, .autumn #site-title a {
     color: #f8f1e5;
   }
@@ -1998,7 +2032,7 @@
   .autumn .secondary-nav a.current,
   .autumn .exhibit-section-nav .current a {
     background-color: #f8f1e5;
-  }
+  }  
   .autumn #home #content > div {
     border-color: #cabfa6;
     *border-width: 10px 1px 1px 1px;
@@ -2064,19 +2098,19 @@
   }
   .autumn .exhibit-page-nav {
     background-color: #86443c;
-  }
+  }  
   .autumn .exhibit-page-nav .current, .autumn .exhibit-child-nav .current {
     background-color: rgba(0, 0, 0, 0.1);
   }
-  .autumn .exhibit-page-nav a:link, .autumn .exhibit-page-nav a:visited {
+   .autumn .exhibit-page-nav a:link, .autumn .exhibit-page-nav a:visited {
     color: #cabfa6;
-  }
+  }  
   .autumn .exhibit-page-nav a:hover, .autumn .exhibit-page-nav a:active {
     color: #fff;
   }
   .autumn #exhibit-page-navigation a, .autumn #exhibit-page-navigation span {
     background-color: #fff;
-  }
+  }*/
 
   /* @end */
   /* @group ---------- Night Styles ---------- */
