@@ -1451,6 +1451,9 @@
 	  text-align: center; 
 	  color: #555; /* default */ 
   } 
+  .exhibits.show #content h1 a { 
+	  color: #555; 
+  } 
   .exhibits.summary #exhibit-pages a { 
 	  background-color: #334; 
 	  color: #fff; 

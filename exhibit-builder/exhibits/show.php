@@ -5,7 +5,7 @@ echo head(array(
 ?>
 
 <div id="header"> 
-<h1><?php echo metadata('exhibit', 'title'); ?></h1> 
+<h1><?php echo exhibit_builder_link_to_exhibit() ?></h1> 
 </div> 
 
 <nav id="exhibit-pages">
