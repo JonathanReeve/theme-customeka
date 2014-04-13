@@ -138,9 +138,6 @@
   nav li {
     display: block;
   }
-  .exhibits.summary nav li ul li {
-    padding-left: 16px;   
-  }
   nav a {
     display: inline-block;
   }
@@ -1452,13 +1449,24 @@
   .exhibits.summary #content h1 { 
 	  line-height: 1.2em; 
 	  text-align: center; 
-	  color: #630; /* default */ 
+	  color: #555; /* default */ 
   } 
   .exhibits.summary #exhibit-pages a { 
+	  background-color: #334; 
+	  color: #fff; 
 	  padding: 10px; 
 	  font-size: 16px; 
 	  width: 100%; 
 	  border-left: 6px solid #000;  
+  } 
+  .exhibits.summary #exhibit-pages a:hover { 
+	  background-color: #445; 
+  } 
+  .exhibits.summary nav li ul li { /* second level */ 
+    padding-left: 16px;   
+  }
+  .exhibits.summary nav li ul li ul li { /* third level */ 
+    padding-left: 32px;   
   } 
   .exhibit-block {
     padding: 0 16px !important;
@@ -1466,7 +1474,6 @@
   .exhibit-block:first-child p:first-of-type {
     margin-top: 0;
   }
-
   #content .exhibit-item:empty {
     padding: 0;
   }
