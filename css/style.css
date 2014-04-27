@@ -31,9 +31,9 @@
   body {
 	  font-size: 16px;
 	  word-wrap: break-word;
-	  font: 62.5% Verdana, Arial, sans-serif;
+	  font: 75% Verdana, Arial, sans-serif;
 	  color:#555;
-	  background: CornflowerBlue;
+	  background: #334;
   }
 
   a {
@@ -614,13 +614,13 @@
     -moz-box-shadow: transparent 0 0 0;
     box-shadow: transparent 0 0 0;
     border-top: 0;
-    margin-bottom: 0;
+  /*  margin-bottom: 0; */  
   }
   #content > div > div div:first-of-type, #content > div > div h3:first-of-type, #content > div > div h4:first-of-type, #content > div > div h5:first-of-type, #content > div > div h6:first-of-type, #content > div > div p:first-of-type, #content section > div div:first-of-type, #content section > div h3:first-of-type, #content section > div h4:first-of-type, #content section > div h5:first-of-type, #content section > div h6:first-of-type, #content section > div p:first-of-type {
     border-top: 0;
   }
   #content > div *:only-child, #content section *:only-child {
-    margin-top: 0;
+  /*  margin-top: 0; */ 
   }
   #content > div:after, #content section:after {
     content: "";
@@ -1303,6 +1303,9 @@
   .exhibits.show #content #primary p, .exhibits.show #content #primary ol, .exhibits.show #content #primary ul {
     margin-bottom: 1.5em;
   }
+  .exhibits.show .exhibit-item-caption p { 
+	  margin: 5px; 
+  } 
   .exhibits.show #content .exhibit-item {
     padding-top: 0;
   }
