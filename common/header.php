@@ -28,6 +28,45 @@
     echo head_css();
     ?>
 
+<!-- Load Google Font Stylesheet for Header--> 
+<?php 
+	if (get_theme_option('Heading Text Font') != NULL) {
+		$headingTextFont=get_theme_option('Heading Text Font');  
+		$googleLink="<link href='http://fonts.googleapis.com/css?family=".$headingTextFont."' rel='stylesheet' type='text/css'>";
+		echo $googleLink;
+	} 
+    
+        // Load Google Font Stylesheet for Body--> 
+	if (get_theme_option('Body Text Font') != NULL) {
+		$bodyTextFont=get_theme_option('Body Text Font');  
+		$googleLink="<link href='http://fonts.googleapis.com/css?family=".$bodyTextFont."' rel='stylesheet' type='text/css'>";
+		echo $googleLink;
+	} 
+	
+	// Load Google Font Stylesheet for Nav
+	if (get_theme_option('Navigation Font') != NULL) {
+		$navigationFont=get_theme_option('Navigation Font');  
+		$googleLink="<link href='http://fonts.googleapis.com/css?family=".$navigationFont."' rel='stylesheet' type='text/css'>";
+		echo $googleLink;
+	} 
+	
+	// Get Variables for Navigation Colors to be Used in Custom Styles Below
+	if (get_theme_option('Navigation Color One') != NULL) {
+		$navColorOne=get_theme_option('Navigation Color One');
+	} 
+	if (get_theme_option('Navigation Color Two') != NULL) {
+		$navColorTwo=get_theme_option('Navigation Color Two');
+	} 
+?>
+
+<!-- Custom Styles --> 
+<style type="text/css"> 
+	header a, h1, h2, h3, h4, h5, h6 { 
+		color: <?php echo get_theme_option('Heading Color'); ?>;
+		font-family: <?php echo get_theme_option('Heading Text Font'); ?>;			
+	}
+</style> 
+
     <!-- JavaScripts -->
     <?php queue_js_file('vendor/modernizr'); ?>
     <?php queue_js_file('vendor/selectivizr'); ?>
