@@ -108,6 +108,9 @@
 		font-family: <?php echo get_theme_option('Body Text Font'); ?>;
 		font-size: <?php echo get_theme_option('Body Font Size'); ?>; 
 	} 	
+	body { 
+		font-family: <?php echo get_theme_option('Body Text Font'); ?>;
+	} 
 </style> 
 
     <!-- JavaScripts -->
