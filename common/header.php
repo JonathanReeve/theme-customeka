@@ -78,9 +78,6 @@
   #wrap h1, #wrap #site-title a {
     <?php if (get_theme_option('Color Three')) echo 'color: ' . get_theme_option('Color Three'); ?> 
   }
-  #wrap a:visited {
-    <?php if (get_theme_option('Color Five')) echo 'color: ' . get_theme_option('Color Five'); ?> 
-  }
   #wrap a:hover, #wrap a:active {
     <?php if (get_theme_option('Color Four')) echo 'color: ' . get_theme_option('Color Four'); ?> 
   }
