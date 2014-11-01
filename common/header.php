@@ -62,9 +62,52 @@
 <!-- Custom Styles --> 
 <style type="text/css"> 
 	header a, h1, h2, h3, h4, h5, h6 { 
+		<?php if (get_theme_option('Heading Color')) echo 'color: ' .  get_theme_option('Heading Color'); ?>
+		<?php if (get_theme_option('Heading Text Font')) echo 'font-family: ' .  get_theme_option('Heading Text Font'); ?>			
+	}
+	#content { 
+		<?php if (get_theme_option('Background Color')) echo 'background color: ' .  get_theme_option('Background Color'); ?> 
+	} 
+	nav li a, .exhibits #exhibit-pages, .exhibits #exhibit-page-navigation a, .exhibits #exhibit-page-navigation .current-page { 
+		<?php if (get_theme_option('Navigation Font')) echo 'font-family: ' .  get_theme_option('Navigation Font'); ?>
+	} 
+	#wrap nav.top, #wrap nav.top ul li ul, #wrap footer, .horizontal .exhibit-page-title, .vertical .exhibit-page-title, #exhibit-nav-up a, #exhibit-nav-prev a, #exhibit-nav-next a, .vertical .exhibit-page-title, .exhibits.summary #exhibit-pages li a { 
+		background-color: <?php echo get_theme_option('Navigation Color One'); ?>;
+		color: <?php echo get_theme_option('Navigation Color Two'); ?>;
+	}
+	#wrap #content > div, #wrap #content #primary > div, #wrap #content #sidebar > div { 
+		border-color: <?php echo get_theme_option('Navigation Color One'); ?>; 
+	} 
+	#wrap nav.top a:hover { 
+		background-color: rgba(255,255,255,0.1); /* lighten up nav items on hover */  
+	} 
+	#wrap nav.top a { 
+		color: <?php echo get_theme_option('Navigation Color Two'); ?>;
+	} 
+	.exhibit-page-title:hover, .exhibits #exhibit-nav-up .current-page, #exhibit-nav-up a:hover, #exhibit-nav-next a:hover, #exhibit-nav-prev a:hover, .exhibits.summary #exhibit-pages li a:hover  { 
+		background-color: <?php echo get_theme_option('Navigation Color Two'); ?>;
+		color: <?php echo get_theme_option('Navigation Color One'); ?>;
+	}  
+	#content p a { 
+		color: <?php echo get_theme_option('Navigation Color Two'); ?>;
+	} 
+	.exhibits.summary #exhibit-pages a { 
+		border-left-color: <?php echo get_theme_option('Navigation Color Two'); ?>; 
+	}
+	.exhibits.show h1, .exhibits.show h2, .exhibits.show h3, .exhibits.show h4, .exhibits.show h5, .exhibits.show h1 a, .exhibits.show h1 a:visited, .exhibits.summary #content h1 { 
 		color: <?php echo get_theme_option('Heading Color'); ?>;
 		font-family: <?php echo get_theme_option('Heading Text Font'); ?>;			
 	}
+	.exhibits.show #content h1, .exhibits.summary #content h1 { 
+		font-size: <?php echo get_theme_option('Heading Font Size'); ?>; 
+		color: <?php echo get_theme_option('Heading Color'); ?>;
+		font-family: <?php echo get_theme_option('Heading Text Font'); ?>;			
+	} 
+	p, .exhibits.show .exhibit-text p { 
+		color: <?php echo get_theme_option('Body Text Color'); ?>;
+		font-family: <?php echo get_theme_option('Body Text Font'); ?>;
+		font-size: <?php echo get_theme_option('Body Font Size'); ?>; 
+	} 	
 </style> 
 
     <!-- JavaScripts -->
