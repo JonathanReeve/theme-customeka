@@ -62,55 +62,137 @@
 <!-- Custom Styles --> 
 <style type="text/css"> 
 	header a, h1, h2, h3, h4, h5, h6 { 
-		<?php if (get_theme_option('Heading Color')) echo 'color: ' .  get_theme_option('Heading Color'); ?>
 		<?php if (get_theme_option('Heading Text Font')) echo 'font-family: ' .  get_theme_option('Heading Text Font'); ?>			
 	}
-	#content { 
-		<?php if (get_theme_option('Background Color')) echo 'background color: ' .  get_theme_option('Background Color'); ?> 
-	} 
 	nav li a, .exhibits #exhibit-pages, .exhibits #exhibit-page-navigation a, .exhibits #exhibit-page-navigation .current-page { 
 		<?php if (get_theme_option('Navigation Font')) echo 'font-family: ' .  get_theme_option('Navigation Font'); ?>
 	} 
-	#wrap nav.top, #wrap nav.top ul li ul, #wrap footer, .horizontal .exhibit-page-title, .vertical .exhibit-page-title, #exhibit-nav-up a, #exhibit-nav-prev a, #exhibit-nav-next a, .vertical .exhibit-page-title, .exhibits.summary #exhibit-pages li a { 
-		background-color: <?php echo get_theme_option('Navigation Color One'); ?>;
-		color: <?php echo get_theme_option('Navigation Color Two'); ?>;
-	}
-	#wrap #content > div, #wrap #content #primary > div, #wrap #content #sidebar > div { 
-		border-color: <?php echo get_theme_option('Navigation Color One'); ?>; 
-	} 
-	#wrap nav.top a:hover { 
-		background-color: rgba(255,255,255,0.1); /* lighten up nav items on hover */  
-	} 
-	#wrap nav.top a { 
-		color: <?php echo get_theme_option('Navigation Color Two'); ?>;
-	} 
-	.exhibit-page-title:hover, .exhibits #exhibit-nav-up .current-page, #exhibit-nav-up a:hover, #exhibit-nav-next a:hover, #exhibit-nav-prev a:hover, .exhibits.summary #exhibit-pages li a:hover  { 
-		background-color: <?php echo get_theme_option('Navigation Color Two'); ?>;
-		color: <?php echo get_theme_option('Navigation Color One'); ?>;
-	}  
-	#content p a { 
-		color: <?php echo get_theme_option('Navigation Color Two'); ?>;
-	} 
-	.exhibits.summary #exhibit-pages a { 
-		border-left-color: <?php echo get_theme_option('Navigation Color Two'); ?>; 
-	}
-	.exhibits.show h1, .exhibits.show h2, .exhibits.show h3, .exhibits.show h4, .exhibits.show h5, .exhibits.show h1 a, .exhibits.show h1 a:visited, .exhibits.summary #content h1 { 
-		color: <?php echo get_theme_option('Heading Color'); ?>;
-		font-family: <?php echo get_theme_option('Heading Text Font'); ?>;			
-	}
-	.exhibits.show #content h1, .exhibits.summary #content h1 { 
-		font-size: <?php echo get_theme_option('Heading Font Size'); ?>; 
-		color: <?php echo get_theme_option('Heading Color'); ?>;
-		font-family: <?php echo get_theme_option('Heading Text Font'); ?>;			
-	} 
-	p, .exhibits.show .exhibit-text p { 
-		color: <?php echo get_theme_option('Body Text Color'); ?>;
-		font-family: <?php echo get_theme_option('Body Text Font'); ?>;
-		font-size: <?php echo get_theme_option('Body Font Size'); ?>; 
-	} 	
 	body { 
 		font-family: <?php echo get_theme_option('Body Text Font'); ?>;
 	} 
+
+ /* colors */ 
+  #wrap body, #wrap footer {
+    <?php if (get_theme_option('Color One')) echo 'background-color: ' . get_theme_option('Color One'); ?> 
+    color: #5a5a5a;
+  }
+  #wrap h1, #wrap #site-title a {
+    <?php if (get_theme_option('Color Three')) echo 'color: ' . get_theme_option('Color Three'); ?> 
+  }
+  #wrap input[type=submit], #wrap button, #wrap .button, #wrap #advanced-search {
+    background-color: #4b6569;
+  }
+  #wrap input[type=text], #wrap input[type=password], #wrap textarea {
+    background-color: #dfe2e2;
+  }
+  #wrap a:visited {
+    <?php if (get_theme_option('Color Five')) echo 'color: ' . get_theme_option('Color Five'); ?> 
+  }
+  #wrap a:hover, #wrap a:active {
+    <?php if (get_theme_option('Color Four')) echo 'color: ' . get_theme_option('Color Four'); ?> 
+    color: #3acacc;
+  }
+  #wrap header {
+    background-color: #fff;
+  }
+  #wrap nav.top li:hover a {
+    color: #fff;
+  }
+  #wrap nav.top a:link, #wrap nav.top a:visited {
+    color: #def9ff;
+  }
+  #wrap nav.top a:active, #wrap nav.top a:hover {
+    color: #fff;
+  }
+  #wrap nav.top ul li ul li > a:link, #wrap nav.top ul li ul li > a:visited, #wrap nav.top ul li ul li > a:active, #wrap nav.top ul li ul li > a:hover {
+    color: #fff;
+  }
+  #wrap #intro {
+    color: #fff;
+  }
+  #wrap #content,
+  #wrap #secondary-nav .current a,
+  #wrap #secondary-nav a.current,
+  #wrap .secondary-nav .current a,
+  #wrap .secondary-nav a.current,
+  #wrap .exhibit-section-nav .current a {
+    <?php if (get_theme_option('Color Five')) echo 'background-color: ' . get_theme_option('Color Five'); ?> 
+  }
+  #wrap #home #content > div {
+    border-color: #4b6569;
+  }
+  #wrap #content h1 {
+    color: #fff;
+  }
+  #wrap #content h2 {
+    border-color: #dfe2e2;
+  }
+  #wrap #content div {
+    <?php if (get_theme_option('Color Three')) echo 'border-color: ' . get_theme_option('Color Three'); ?> 
+  }
+  #wrap #content > div, #wrap #content #primary > div, #wrap #content #sidebar > div,
+  #wrap #content #advanced-search-form > div, #wrap #content #exhibit-pages {
+    border-color: #4b6569;
+  }
+  #wrap #content #primary > div, #wrap #content #sidebar > div {
+    background-color: #fff;
+  }
+  #wrap #content .pagination_previous a, #wrap #content .pagination_next a, #wrap #content nav .pagination_list, #wrap a:link, #wrap nav.top, #wrap nav.top ul li ul {
+    <?php if (get_theme_option('Color Two')) echo 'background-color: ' . get_theme_option('Color Two'); ?> 
+  }
+  #wrap #content .pagination a:link, #wrap #content .pagination a:visited {
+    color: #def9ff;
+  }
+  #wrap #content .pagination a:hover, #wrap #content .pagination a:active {
+    color: #fff;
+  }
+  #wrap #content .pagination input[type=text] {
+    border-color: #dfe2e2;
+  }
+  #wrap #content .items-nav a:link, #wrap #content .items-nav a:visited, #wrap #content .secondary-nav a:link, #wrap #content .secondary-nav a:visited, #wrap #content #secondary-nav a:link, #wrap #content #secondary-nav a:visited, #wrap #content #outputs a:link, #wrap #content #outputs a:visited, #wrap #content #exhibit-child-pages a:link, #wrap #content #exhibit-child-pages a:visited {
+    color: #def9ff;
+  }
+  #wrap #content .items-nav a:hover, #wrap #content .items-nav a:active, #wrap #content .secondary-nav a:hover, #wrap #content .secondary-nav a:active, #wrap #content #secondary-nav a:hover, #wrap #content #secondary-nav a:active, #wrap #content #outputs a:hover, #wrap #content #outputs a:active, #wrap #content #exhibit-child-pages a:hover, #wrap #content #exhibit-child-pages a:active {
+    color: #fff;
+  }
+  #wrap #content .item-img {
+    border-color: #dfe2e2;
+  }
+  #wrap #content div.hTagcloud {
+    border: 0;
+    background-color: transparent;
+    -moz-box-shadow: transparent 0 0 0;
+    -webkit-box-shadow: transparent 0 0 0;
+    box-shadow: transparent 0 0 0;
+  }
+  #wrap #search-results th {
+    background-color: #4b6569;
+  }
+  #wrap #search-filters li, #wrap #item-filters li {
+    background-color: #def9ff;
+  }
+  #wrap .page #content {
+    border-color: #4b6569;
+  }
+  #wrap footer p {
+    color: #fff;
+  }
+  #wrap .exhibit-page-nav {
+    background-color: #4b6569;
+  }
+  #wrap .exhibit-page-nav .current, #wrap .exhibit-child-nav .current {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  #wrap .exhibit-page-nav a:link, #wrap .exhibit-page-nav a:visited {
+    color: #def9ff;
+  }
+  #wrap .exhibit-page-nav a:hover, #wrap .exhibit-page-nav a:active {
+    color: #fff;
+  }
+  #wrap #exhibit-page-navigation a, #wrap #exhibit-page-navigation span {
+    background-color: #fff;
+  }
+
 </style> 
 
     <!-- JavaScripts -->
