@@ -171,7 +171,11 @@
   }
   .show .item-file img {
     vertical-align: bottom;
-    max-width: 100%;
+    /*max-width: 100%;*/
+    /* Images were overflowing with max-width. 
+     * Mysteriously fixed by setting width instead. 
+     */
+    width: 100%;
   }
   .show .item-file > div {
     display: inline-block;

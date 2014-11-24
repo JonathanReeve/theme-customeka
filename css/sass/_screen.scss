@@ -155,7 +155,12 @@ a { text-decoration: none; }
 
         img { 
             vertical-align: bottom; 
-            max-width: 100%;
+            /*max-width: 100%;*/
+	    /* Images were overflowing with max-width. 
+	     * Mysteriously fixed by setting width instead. 
+	     */ 
+ 	    width: 100%; 
+	    
         }
         
         & > div {
