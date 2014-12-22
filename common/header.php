@@ -28,15 +28,17 @@
     echo head_css();
     ?>
 
-<!-- Load Google Font Stylesheet for Header--> 
 <?php 
+   	require_once( 'colors.php' );  
+    
+        // Load Google Font Stylesheet for Header
 	if (get_theme_option('Heading Text Font') != NULL) {
 		$headingTextFont=get_theme_option('Heading Text Font');  
 		$googleLink="<link href='http://fonts.googleapis.com/css?family=".$headingTextFont."' rel='stylesheet' type='text/css'>";
 		echo $googleLink;
 	} 
     
-        // Load Google Font Stylesheet for Body--> 
+        // Load Google Font Stylesheet for Body
 	if (get_theme_option('Body Text Font') != NULL) {
 		$bodyTextFont=get_theme_option('Body Text Font');  
 		$googleLink="<link href='http://fonts.googleapis.com/css?family=".$bodyTextFont."' rel='stylesheet' type='text/css'>";
@@ -51,11 +53,44 @@
 	} 
 	
 	// Get Variables for Navigation Colors to be Used in Custom Styles Below
+	// @todo Deprecate this. 
 	if (get_theme_option('Navigation Color One') != NULL) {
 		$navColorOne=get_theme_option('Navigation Color One');
 	} 
 	if (get_theme_option('Navigation Color Two') != NULL) {
 		$navColorTwo=get_theme_option('Navigation Color Two');
+	} 
+
+	// Get color preferences from config. 
+	if (get_theme_option('Color One') != NULL) { 
+		$c1 = get_theme_option('Color One'); 
+		$v = ( is_light_color( hex_to_rgb( $c1 ) ) ) ?  -1 : 1; 
+		$c1v2 = colorBrightness( $c1, $v * 0.2 );  
+		$c1v3 = colorBrightness( $c1, $v * 0.3 );  
+		$c1v4 = colorBrightness( $c1, $v * 0.4 );  
+		$c1v5 = colorBrightness( $c1, $v * 0.5 );  
+		$c1v6 = colorBrightness( $c1, $v * 0.6 );  
+		$c1v7 = colorBrightness( $c1, $v * 0.7 );  
+		$c1v2i = colorBrightness( $c1, $v * -0.7 );  
+	} 
+	if (get_theme_option('Color Two') != NULL) { 
+		$c2 = get_theme_option('Color Two'); 
+		$v = ( is_light_color( hex_to_rgb ( $c2 ) ) ) ?  -1 : 1; 
+		$c2v2 = colorBrightness( $c2, $v * 0.2 );  
+		$c2v3 = colorBrightness( $c2, $v * 0.3 );  
+		$c2v4 = colorBrightness( $c2, $v * 0.4 );  
+		$c2v5 = colorBrightness( $c2, $v * 0.5 );  
+		$c2v6 = colorBrightness( $c2, $v * 0.6 );  
+		$c2v7 = colorBrightness( $c2, $v * 0.7 );  
+		$c2v2i = colorBrightness( $c2, $v * -0.7 );  
+	} 
+	if (get_theme_option('Color Three') != NULL) { 
+		// Body text color 
+		$c3 = get_theme_option('Color Three'); 
+	} 
+	if (get_theme_option('Color Four') != NULL) { 
+		// Link color and other highlights
+		$c4 = get_theme_option('Color Four'); 
 	} 
 ?>
 
@@ -72,29 +107,109 @@
 	} 
 
  /* colors */ 
-  #wrap body, #wrap footer, #wrap .exhibit-page-nav, #wrap nav.top {
-    <?php if (get_theme_option('Color One')) echo 'background-color: ' . get_theme_option('Color One'); ?> 
+  #wrap body {
+    <?php echo "background-color: $c1;"; ?> 
+    <?php echo "color: $c3;"; ?> 
   }
   #wrap h1, #wrap #site-title a {
-    <?php if (get_theme_option('Color Three')) echo 'color: ' . get_theme_option('Color Three'); ?> 
+    <?php echo "background-color: $c1;"; ?> 
+    <?php echo "color: $c1v5;"; ?> 
   }
-  #wrap a:hover, #wrap a:active {
-    <?php if (get_theme_option('Color Four')) echo 'color: ' . get_theme_option('Color Four'); ?> 
+  #wrap #content h1, #wrap #content h2, #wrap #content h3, #wrap #content h4, #wrap #content h5, #wrap #content h6  { 
+    <?php echo "color: $c1v5;"; ?> 
+  } 
+  #wrap a, #wrap a:link{
+    <?php echo "color: $c4"; ?> 
   }
   #wrap #content,
+  #wrap header,
   #wrap #secondary-nav .current a,
   #wrap #secondary-nav a.current,
   #wrap .secondary-nav .current a,
   #wrap .secondary-nav a.current,
   #wrap .exhibit-section-nav .current a {
-    <?php if (get_theme_option('Color Five')) echo 'background-color: ' . get_theme_option('Color Five'); ?> 
+    <?php echo "background-color: $c1;"; ?> 
   }
-  #wrap #content div {
-    <?php if (get_theme_option('Color Three')) echo 'border-color: ' . get_theme_option('Color Three'); ?> 
+  #wrap #content div { 
+    <?php echo "background-color: $c2;"; ?> 
+    <?php echo "border-color: $c2v2i;"; ?> 
+    <?php echo "color: $c2v4;"; ?> 
+  } 
+  #wrap #content div#primary, #wrap #content div#outputs { 
+    <?php echo "background-color: $c1v7;"; ?> 
+    <?php echo "color: $c1v4;"; ?> 
+  } 
+  #wrap #content .item.hentry { 
+    <?php echo "background-color: $c2;"; ?> 
+  } 
+  #wrap #content .item.hentry h2 a { 
+    <?php echo "color: $c2v4;"; ?> 
+  } 
+  #wrap #content .item.hentry h2 a:hover { 
+    <?php echo "color: $c2v2;"; ?> 
+  } 
+  #wrap #content h2 { 
+    <?php echo "border-color: $c2v2i;"; ?> 
+  } 
+  #wrap #content #primary > div, #wrap #content #sidebar > div, .item-pagination li { 
+    <?php echo "background-color: $c2;"; ?> 
+    <?php echo "border-color: $c2v2i;"; ?> 
   }
-  #wrap #content .pagination_previous a, #wrap #content .pagination_next a, #wrap #content nav .pagination_list, #wrap a:link, #wrap nav.top, #wrap nav.top ul li ul {
-    <?php if (get_theme_option('Color Two')) echo 'color: ' . get_theme_option('Color Two'); ?> 
+  #wrap #content #primary h1, #wrap #content #primary h2, #wrap #content #primary h3, #wrap #content #primary h4 { 
+    <?php echo "color: $c2v2;"; ?> 
+  } 
+  #wrap #content #sidebar > div h1, #wrap #content #sidebar > div h2, #wrap #content #sidebar > div h3, #wrap #content #sidebar > div h4 { 
+    <?php echo "color: $c2v4;"; ?> 
+  } 
+  #wrap #content #sidebar a { 
+    <?php echo "color: $c2v5;"; ?> 
+  } 
+  #wrap #content #sidebar a:hover { 
+    <?php echo "color: $c2v4;"; ?> 
+  } 
+  #wrap #content div.hTagcloud { 
+    <?php echo "background-color: $c1;"; ?> 
+  } 
+  #wrap #content div.hTagcloud a { 
+    <?php echo "color: $c2v4;"; ?> 
+  } 
+  #wrap #content div.hTagcloud ul li { 
+    <?php echo "background-color: $c2;"; ?> 
+  } 
+  #wrap nav.top, #wrap nav.top ul li ul { 
+    <?php echo "background-color: $c2;"; ?> 
+  } 
+  #wrap nav.top a { 
+    <?php echo "color: $c2v2;"; ?> 
   }
+  #wrap #content .item-pagination a, #wrap #content .pagination a, #wrap #exhibit-page-navigation a, #wrap #exhibit-page-navigation span {
+    <?php echo "background-color: $c2;"; ?> 
+    <?php echo "color: $c2v4;"; ?> 
+  }
+  #wrap #content #exhibit-page-navigation span.current-page { 
+    <?php echo "background-color: $c2v2i;"; ?> 
+  } 
+  #wrap #content .item-pagination a:hover, #wrap #content .pagination a:hover {
+    <?php echo "color: $c2v2;"; ?> 
+  } 
+  #wrap body { 
+    <?php echo "color: $c3;"; ?> 
+  } 
+  .exhibits #wrap #content div#primary { 
+    <?php echo "background-color: $c2;"; ?> 
+    <?php echo "border-color: $c2v2i;"; ?> 
+    <?php echo "color: $c2v4;"; ?> 
+  } 
+  .exhibits #wrap #content .exhibit-page-nav { 
+    <?php echo "background-color: $c1;"; ?> 
+    <?php echo "border-color: $c2v2i;"; ?> 
+    <?php echo "color: $c2v4;"; ?> 
+  } 
+  .exhibits #wrap #content #secondary-nav a:link { 
+    <?php echo "color: $c1v4;"; ?> 
+  } 
+  
+
 
 </style> 
 
