@@ -96,6 +96,7 @@
 
 <!-- Custom Styles --> 
 <style type="text/css"> 
+
 	header a, h1, h2, h3, h4, h5, h6 { 
 		<?php if (get_theme_option('Heading Text Font')) echo 'font-family: ' .  get_theme_option('Heading Text Font'); ?>			
 	}
@@ -106,110 +107,8 @@
 		font-family: <?php echo get_theme_option('Body Text Font'); ?>;
 	} 
 
- /* colors */ 
-  #wrap body {
-    <?php echo "background-color: $c1;"; ?> 
-    <?php echo "color: $c3;"; ?> 
-  }
-  #wrap h1, #wrap #site-title a {
-    <?php echo "background-color: $c1;"; ?> 
-    <?php echo "color: $c1v5;"; ?> 
-  }
-  #wrap #content h1, #wrap #content h2, #wrap #content h3, #wrap #content h4, #wrap #content h5, #wrap #content h6  { 
-    <?php echo "color: $c1v5;"; ?> 
-  } 
-  #wrap a, #wrap a:link{
-    <?php echo "color: $c4"; ?> 
-  }
-  #wrap #content,
-  #wrap header,
-  #wrap #secondary-nav .current a,
-  #wrap #secondary-nav a.current,
-  #wrap .secondary-nav .current a,
-  #wrap .secondary-nav a.current,
-  #wrap .exhibit-section-nav .current a {
-    <?php echo "background-color: $c1;"; ?> 
-  }
-  #wrap #content div { 
-    <?php echo "background-color: $c2;"; ?> 
-    <?php echo "border-color: $c2v2i;"; ?> 
-    <?php echo "color: $c2v4;"; ?> 
-  } 
-  #wrap #content div#primary, #wrap #content div#outputs { 
-    <?php echo "background-color: $c1v7;"; ?> 
-    <?php echo "color: $c1v4;"; ?> 
-  } 
-  #wrap #content .item.hentry { 
-    <?php echo "background-color: $c2;"; ?> 
-  } 
-  #wrap #content .item.hentry h2 a { 
-    <?php echo "color: $c2v4;"; ?> 
-  } 
-  #wrap #content .item.hentry h2 a:hover { 
-    <?php echo "color: $c2v2;"; ?> 
-  } 
-  #wrap #content h2 { 
-    <?php echo "border-color: $c2v2i;"; ?> 
-  } 
-  #wrap #content #primary > div, #wrap #content #sidebar > div, .item-pagination li { 
-    <?php echo "background-color: $c2;"; ?> 
-    <?php echo "border-color: $c2v2i;"; ?> 
-  }
-  #wrap #content #primary h1, #wrap #content #primary h2, #wrap #content #primary h3, #wrap #content #primary h4 { 
-    <?php echo "color: $c2v2;"; ?> 
-  } 
-  #wrap #content #sidebar > div h1, #wrap #content #sidebar > div h2, #wrap #content #sidebar > div h3, #wrap #content #sidebar > div h4 { 
-    <?php echo "color: $c2v4;"; ?> 
-  } 
-  #wrap #content #sidebar a { 
-    <?php echo "color: $c2v5;"; ?> 
-  } 
-  #wrap #content #sidebar a:hover { 
-    <?php echo "color: $c2v4;"; ?> 
-  } 
-  #wrap #content div.hTagcloud { 
-    <?php echo "background-color: $c1;"; ?> 
-  } 
-  #wrap #content div.hTagcloud a { 
-    <?php echo "color: $c2v4;"; ?> 
-  } 
-  #wrap #content div.hTagcloud ul li { 
-    <?php echo "background-color: $c2;"; ?> 
-  } 
-  #wrap nav.top, #wrap nav.top ul li ul { 
-    <?php echo "background-color: $c2;"; ?> 
-  } 
-  #wrap nav.top a { 
-    <?php echo "color: $c2v2;"; ?> 
-  }
-  #wrap #content .item-pagination a, #wrap #content .pagination a, #wrap #exhibit-page-navigation a, #wrap #exhibit-page-navigation span {
-    <?php echo "background-color: $c2;"; ?> 
-    <?php echo "color: $c2v4;"; ?> 
-  }
-  #wrap #content #exhibit-page-navigation span.current-page { 
-    <?php echo "background-color: $c2v2i;"; ?> 
-  } 
-  #wrap #content .item-pagination a:hover, #wrap #content .pagination a:hover {
-    <?php echo "color: $c2v2;"; ?> 
-  } 
-  #wrap body { 
-    <?php echo "color: $c3;"; ?> 
-  } 
-  .exhibits #wrap #content div#primary { 
-    <?php echo "background-color: $c2;"; ?> 
-    <?php echo "border-color: $c2v2i;"; ?> 
-    <?php echo "color: $c2v4;"; ?> 
-  } 
-  .exhibits #wrap #content .exhibit-page-nav { 
-    <?php echo "background-color: $c1;"; ?> 
-    <?php echo "border-color: $c2v2i;"; ?> 
-    <?php echo "color: $c2v4;"; ?> 
-  } 
-  .exhibits #wrap #content #secondary-nav a:link { 
-    <?php echo "color: $c1v4;"; ?> 
-  } 
-  
-
+	<?php require_once( 'custom-sass.php' ); ?>  
+	<?php require_once( 'custom-sass.php' ); ?>  
 
 </style> 
 

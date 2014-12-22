@@ -1,5 +1,4 @@
 <?php 
-$test= 'test'; 
 /* 
  * This file contains functions for processing colors.  
  * for Elementaire 3.0. 
