@@ -1,15 +1,15 @@
 <?php 
 
-$light_gray = '#dfe2e2'; 
-$dark_gray = '#5a5a5a';
-$title_blue = '#859ca2';
-$slate = '#4b6569';
-$very_pale_blue = '#def9ff';
-$bright_blue = '#56ACBA';
-$hover_blue = '#3acacc';
-$pale_blue = '#98c4c9';
-$footer_blue = '#2f3e4a';
-$off_white = '#f8f8f8';
+$light_gray: '#dfe2e2'; 
+$dark_gray: '#5a5a5a';
+$title_blue: '#859ca2';
+$slate: '#4b6569';
+$very_pale_blue: '#def9ff';
+$bright_blue: '#56ACBA';
+$hover_blue: '#3acacc';
+$pale_blue: '#98c4c9';
+$footer_blue: '#2f3e4a';
+$off_white: '#f8f8f8';
 
 $sass = "
 .winter {

@@ -71,6 +71,7 @@
 		$c1v5 = colorBrightness( $c1, $v * 0.5 );  
 		$c1v6 = colorBrightness( $c1, $v * 0.6 );  
 		$c1v7 = colorBrightness( $c1, $v * 0.7 );  
+		$c1v8 = colorBrightness( $c1, $v * 0.8 );  
 		$c1v2i = colorBrightness( $c1, $v * -0.7 );  
 	} 
 	if (get_theme_option('Color Two') != NULL) { 
@@ -107,10 +108,99 @@
 		font-family: <?php echo get_theme_option('Body Text Font'); ?>;
 	} 
 
-	<?php require_once( 'custom-sass.php' ); ?>  
-	<?php require_once( 'custom-sass.php' ); ?>  
+.winter body {
+  background-color: <?php echo $c1v2i; ?>;
+  color: <?php echo $c2v2i; ?>; }
+.winter h1, .winter #site-title a {
+  color: <?php echo $c2; ?>; }
+.winter input[type=submit], .winter button, .winter .button, .winter #advanced-search {
+  background-color: <?php echo $c2; ?>; }
+.winter input[type=text], .winter input[type=password], .winter textarea {
+  background-color: <?php echo $c2v4; ?>; }
+.winter a:link {
+  color: <?php echo $c1; ?>; }
+.winter a:visited {
+  color: <?php echo $c1v2; ?>; }
+.winter a:hover, .winter a:active {
+  color: <?php echo $c1v6; ?>; }
+.winter header {
+	background-color: <?php echo $c1v2; ?>; }
+.winter nav.top {
+  background-color: <?php echo $c1; ?>; }
+  .winter nav.top li:hover a {
+    color: <?php echo $c1v8; ?>; }
+  .winter nav.top a:link, .winter nav.top a:visited {
+    color: <?php echo $c1v4; ?>; }
+  .winter nav.top a:active, .winter nav.top a:hover {
+    color: <?php echo $c1v8; ?>; }
+  .winter nav.top ul li ul {
+    background-color: <?php echo $c1; ?>; }
+    .winter nav.top ul li ul li > a:link, .winter nav.top ul li ul li > a:visited, .winter nav.top ul li ul li > a:active, .winter nav.top ul li ul li > a:hover {
+      color: <?php echo $c1v8; ?>; }
+.winter #intro {
+  color: <?php echo $c1v8; ?>; }
+.winter #content,
+.winter #secondary-nav .current a,
+.winter #secondary-nav a.current,
+.winter .secondary-nav .current a,
+.winter .secondary-nav a.current,
+.winter .exhibit-section-nav .current a {
+  background-color: <?php echo $c1v2; ?>; }
+.winter #home #content > div {
+  border-color: <?php echo $c2; ?>; }
+.winter #content h1 {
+  color: <?php echo $c1v8; ?>; }
+.winter #content h2 {
+  border-color: <?php echo $c2v4; ?>; }
+.winter #content div {
+  border-color: <?php echo $c2; ?>; }
+.winter #content > div, .winter #content #primary > div, .winter #content #sidebar > div,
+.winter #content #advanced-search-form > div, .winter #content #exhibit-pages {
+  border-color: <?php echo $c2; ?>; }
+.winter #content #primary > div, .winter #content #sidebar > div {
+  background-color: <?php echo $c1v8; ?>; }
+.winter #content .pagination_previous a, .winter #content .pagination_next a {
+  background-color: <?php echo $c1; ?>; }
+.winter #content .pagination a:link, .winter #content .pagination a:visited {
+  color: <?php echo $c1v4; ?>; }
+.winter #content .pagination a:hover, .winter #content .pagination a:active {
+  color: <?php echo $c1v8; ?>; }
+.winter #content .pagination input[type=text] {
+  border-color: <?php echo $c2v4; ?>; }
+.winter #content nav .pagination_list {
+  background-color: <?php echo $c1; ?>; }
+.winter #content .items-nav a:link, .winter #content .items-nav a:visited, .winter #content .secondary-nav a:link, .winter #content .secondary-nav a:visited, .winter #content #secondary-nav a:link, .winter #content #secondary-nav a:visited, .winter #content #outputs a:link, .winter #content #outputs a:visited, .winter #content #exhibit-child-pages a:link, .winter #content #exhibit-child-pages a:visited {
+  color: <?php echo $c1v4; ?>; }
+.winter #content .items-nav a:hover, .winter #content .items-nav a:active, .winter #content .secondary-nav a:hover, .winter #content .secondary-nav a:active, .winter #content #secondary-nav a:hover, .winter #content #secondary-nav a:active, .winter #content #outputs a:hover, .winter #content #outputs a:active, .winter #content #exhibit-child-pages a:hover, .winter #content #exhibit-child-pages a:active {
+  color: <?php echo $c1v8; ?>; }
+.winter #content .item-img {
+  border-color: <?php echo $c2v4; ?>; }
+.winter #content div.hTagcloud {
+  border: 0;
+  background-color: transparent;
+  box-shadow: transparent 0 0 0; }
+.winter #search-results th {
+  background-color: <?php echo $c2; ?>; }
+.winter #search-filters li, .winter #item-filters li {
+  background-color: <?php echo $c1v4; ?>; }
+.winter .page #content {
+  border-color: <?php echo $c2; ?>; }
+.winter footer {
+  background-color: <?php echo $c1v2i; ?>; }
+.winter footer p {
+  color: <?php echo $c1v8; ?>; }
+.winter .exhibit-page-nav {
+  background-color: <?php echo $c2; ?>; }
+.winter .exhibit-page-nav .current, .winter .exhibit-child-nav .current {
+  background-color: rgba(0, 0, 0, 0.1); }
+.winter .exhibit-page-nav a:link, .winter .exhibit-page-nav a:visited {
+  color: <?php echo $c1v4; ?>; }
+.winter .exhibit-page-nav a:hover, .winter .exhibit-page-nav a:active {
+  color: <?php echo $c1v8; ?>; }
+.winter #exhibit-page-navigation a, .winter #exhibit-page-navigation span {
+  background-color: <?php echo $c1v8; ?>; }
 
-</style> 
+</style>;  
 
     <!-- JavaScripts -->
     <?php queue_js_file('vendor/modernizr'); ?>
