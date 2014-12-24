@@ -52,14 +52,6 @@
 		echo $googleLink;
 	} 
 	
-	// Get Variables for Navigation Colors to be Used in Custom Styles Below
-	// @todo Deprecate this. 
-	if (get_theme_option('Navigation Color One') != NULL) {
-		$navColorOne=get_theme_option('Navigation Color One');
-	} 
-	if (get_theme_option('Navigation Color Two') != NULL) {
-		$navColorTwo=get_theme_option('Navigation Color Two');
-	} 
 
 	// Get color preferences from config. 
 	if (get_theme_option('Color One') != NULL) { 
@@ -130,6 +122,10 @@
   background-color: <?php echo $c2; ?>; }
 .winter input[type=text], .winter input[type=password], .winter textarea {
   background-color: <?php echo $c2v4; ?>; }
+.winter header input[type=submit], .winter header button, .winter .button, .winter header #advanced-search {
+  background-color: <?php echo $c1; ?>; }
+.winter header #search-form input[type=text] {
+  background-color: <?php echo $c1v4; ?>; }
 .winter a:link {
   color: <?php echo $c2v2; ?>; }
 .winter a:visited {
@@ -190,12 +186,18 @@
   color: <?php echo $c2v6; ?>; }
 
 /* Secondary nav is against the c1 background */ 
-.winter #content .secondary-nav a:link, .winter #content .secondary-nav a:visited, .winter #content #secondary-nav a:link, .winter #content #secondary-nav a:visited { 
+.winter #content .secondary-nav a:link, .winter #content .secondary-nav a:visited, .winter #content #secondary-nav a:link, .winter #content #secondary-nav a:visited, .winter #content #exhibit-child-pages a:link, .winter #content #exhibit-child-pages a:visited { 
   color: <?php echo $c1v2; ?>; }
-.winter #content .secondary-nav a:hover, .winter #content .secondary-nav a:active, .winter #content #secondary-nav a:hover, .winter #content #secondary-nav a:active, .winter #content .items-nav a:hover { 
+.winter #content .secondary-nav a:hover, .winter #content .secondary-nav a:active, .winter #content #secondary-nav a:hover, .winter #content #secondary-nav a:active, .winter #content .items-nav a:hover, .winter #content #exhibit-child-pages a:hover { 
   color: <?php echo $c1v6; ?>; }
 
-.winter #content .items-nav a:active, .winter #content #outputs a:hover, .winter #content #outputs a:active, .winter #content #exhibit-child-pages a:hover, .winter #content #exhibit-child-pages a:active {
+/* ...except in exhibits. */ 
+.exhibits .winter #content .secondary-nav a:link, .exhibits .winter #content .secondary-nav a:visited, .exhibits .winter #content #secondary-nav a:link, .exhibits .winter #content #secondary-nav a:visited { 
+  color: <?php echo $c2v2; ?>; }
+.winter .exhibits #content .secondary-nav a:hover, .winter .exhibits #content .secondary-nav a:active, .winter .exhibits #content #secondary-nav a:hover, .winter .exhibits #content #secondary-nav a:active, .winter .exhibits #content .items-nav a:hover { 
+  color: <?php echo $c2v6; ?>; }
+
+.winter #content .items-nav a:active, .winter #content #outputs a:hover, .winter #content #outputs a:active {
   color: <?php echo $c2v7; ?>; }
 .winter #content .item-img {
   border-color: <?php echo $c2v4; ?>; }
