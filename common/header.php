@@ -95,9 +95,15 @@
 		$c3desat = colorSaturation( $c3, -0.4 ); 
 		$c3sat = colorSaturation( $c3, 0.4 ); 
 	} 
-	if (get_theme_option('Color Four') != NULL) { 
-		// Link color and other highlights
-		$c4 = get_theme_option('Color Four'); 
+	if (get_theme_option('Heading Color') != NULL) { 
+		$hc = get_theme_option('Heading Color'); 
+		$v = ( is_light_color( hex_to_rgb ( $hc ) ) ) ?  -1 : 1; 
+		$hcv2 = colorBrightness( $hc, $v * 0.2 );  
+		$hcv3 = colorBrightness( $hc, $v * 0.3 );  
+		$hcv4 = colorBrightness( $hc, $v * 0.4 );  
+		$hcv5 = colorBrightness( $hc, $v * 0.5 );  
+		$hcv6 = colorBrightness( $hc, $v * 0.6 );  
+		$hcv7 = colorBrightness( $hc, $v * 0.7 );  
 	} 
 ?>
 
@@ -127,7 +133,7 @@
   background-color: <?php echo $c1v2i; ?>;
   color: <?php echo $c2v2i; ?>; }
 .winter h1, .winter #site-title a {
-  color: <?php echo $c1v2; ?>; }
+  color: <?php echo ( isset( $hc ) ? $hc : $c1v2 ); ?>; }
 .winter input[type=submit], .winter button, .winter .button, .winter #advanced-search {
   background-color: <?php echo $c2; ?>; }
 .winter input[type=text], .winter input[type=password], .winter textarea {
@@ -168,7 +174,8 @@
 .winter #home #content > div {
   border-color: <?php echo $c2; ?>; }
 .winter #content h1 {
-  color: <?php echo $c1v2; ?>; }
+    color: <?php echo ( isset( $hc ) ? $hc : $c1v2 ); ?>;  
+  } 
 .winter #content h2 {
   border-color: <?php echo $c2v6; ?>; }
 .winter #content div {
@@ -197,9 +204,9 @@
 
 /* Secondary nav is against the c1 background */ 
 .winter #content .secondary-nav a:link, .winter #content .secondary-nav a:visited, .winter #content #secondary-nav a:link, .winter #content #secondary-nav a:visited, .winter #content #exhibit-child-pages a:link, .winter #content #exhibit-child-pages a:visited { 
-  color: <?php echo $c1v2; ?>; }
+  color: <?php echo ( isset( $hc ) ? $hc : $c1v2 ); ?>; }
 .winter #content .secondary-nav a:hover, .winter #content .secondary-nav a:active, .winter #content #secondary-nav a:hover, .winter #content #secondary-nav a:active, .winter #content .items-nav a:hover, .winter #content #exhibit-child-pages a:hover { 
-  color: <?php echo $c1v6; ?>; }
+  color: <?php echo ( isset( $hcv6 ) ? $hcv6 : $c1v6 ); ?>; }
 
 /* ...except in exhibits. */ 
 .exhibits .winter #content .secondary-nav a:link, .exhibits .winter #content .secondary-nav a:visited, .exhibits .winter #content #secondary-nav a:link, .exhibits .winter #content #secondary-nav a:visited { 
@@ -237,7 +244,6 @@
   background-color: <?php echo $c2; ?>; }
 .winter #content div.hTagcloud ul li { 
   background-color: <?php echo $c2; ?>; }
-
 
 <?php if ( '1' == get_theme_option( 'Hide Header Text' ) ): ?>
 	.winter header { 
