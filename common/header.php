@@ -73,6 +73,8 @@
 		$c1v7 = colorBrightness( $c1, $v * 0.7 );  
 		$c1v8 = colorBrightness( $c1, $v * 0.8 );  
 		$c1v2i = colorBrightness( $c1, $v * -0.7 );  
+		$c1desat = colorSaturation( $c1, -0.4 ); 
+		$c1sat = colorSaturation( $c1, 0.4 ); 
 	} 
 	if (get_theme_option('Color Two') != NULL) { 
 		$c2 = get_theme_option('Color Two'); 
@@ -84,10 +86,21 @@
 		$c2v6 = colorBrightness( $c2, $v * 0.6 );  
 		$c2v7 = colorBrightness( $c2, $v * 0.7 );  
 		$c2v2i = colorBrightness( $c2, $v * -0.7 );  
+		$c2desat = colorSaturation( $c2, -0.4 ); 
+		$c2sat = colorSaturation( $c2, 0.4 ); 
 	} 
 	if (get_theme_option('Color Three') != NULL) { 
 		// Body text color 
 		$c3 = get_theme_option('Color Three'); 
+		$c3v2 = colorBrightness( $c3, $v * 0.2 );  
+		$c3v3 = colorBrightness( $c3, $v * 0.3 );  
+		$c3v4 = colorBrightness( $c3, $v * 0.4 );  
+		$c3v5 = colorBrightness( $c3, $v * 0.5 );  
+		$c3v6 = colorBrightness( $c3, $v * 0.6 );  
+		$c3v7 = colorBrightness( $c3, $v * 0.7 );  
+		$c3v2i = colorBrightness( $c3, $v * -0.7 );  
+		$c3desat = colorSaturation( $c3, -0.4 ); 
+		$c3sat = colorSaturation( $c3, 0.4 ); 
 	} 
 	if (get_theme_option('Color Four') != NULL) { 
 		// Link color and other highlights
@@ -112,19 +125,19 @@
   background-color: <?php echo $c1v2i; ?>;
   color: <?php echo $c2v2i; ?>; }
 .winter h1, .winter #site-title a {
-  color: <?php echo $c2; ?>; }
+  color: <?php echo $c1v2; ?>; }
 .winter input[type=submit], .winter button, .winter .button, .winter #advanced-search {
   background-color: <?php echo $c2; ?>; }
 .winter input[type=text], .winter input[type=password], .winter textarea {
   background-color: <?php echo $c2v4; ?>; }
 .winter a:link {
-  color: <?php echo $c1; ?>; }
+  color: <?php echo $c2v2; ?>; }
 .winter a:visited {
-  color: <?php echo $c1v2; ?>; }
+  color: <?php echo $c2v2; ?>; }
 .winter a:hover, .winter a:active {
-  color: <?php echo $c1v6; ?>; }
+  color: <?php echo $c2v4; ?>; }
 .winter header {
-	background-color: <?php echo $c1v2; ?>; }
+	background-color: <?php echo $c1v7; ?>; }
 .winter nav.top {
   background-color: <?php echo $c1; ?>; }
   .winter nav.top li:hover a {
@@ -145,34 +158,45 @@
 .winter .secondary-nav .current a,
 .winter .secondary-nav a.current,
 .winter .exhibit-section-nav .current a {
-  background-color: <?php echo $c1v2; ?>; }
+  background-color: <?php echo $c1v8; ?>; }
 .winter #home #content > div {
   border-color: <?php echo $c2; ?>; }
 .winter #content h1 {
-  color: <?php echo $c1v8; ?>; }
+  color: <?php echo $c1v2; ?>; }
 .winter #content h2 {
-  border-color: <?php echo $c2v4; ?>; }
+  border-color: <?php echo $c2v6; ?>; }
 .winter #content div {
   border-color: <?php echo $c2; ?>; }
 .winter #content > div, .winter #content #primary > div, .winter #content #sidebar > div,
 .winter #content #advanced-search-form > div, .winter #content #exhibit-pages {
-  border-color: <?php echo $c2; ?>; }
+  background-color: <?php echo $c2; ?>; 
+  color: <?php echo $c2v2; ?>; 
+  border-color: <?php echo $c2v7; ?>; }
 .winter #content #primary > div, .winter #content #sidebar > div {
-  background-color: <?php echo $c1v8; ?>; }
+  background-color: <?php echo $c2; ?>; }
 .winter #content .pagination_previous a, .winter #content .pagination_next a {
-  background-color: <?php echo $c1; ?>; }
+  background-color: <?php echo $c2; ?>; }
 .winter #content .pagination a:link, .winter #content .pagination a:visited {
-  color: <?php echo $c1v4; ?>; }
+  color: <?php echo $c2v4; ?>; }
 .winter #content .pagination a:hover, .winter #content .pagination a:active {
-  color: <?php echo $c1v8; ?>; }
+  color: <?php echo $c2v8; ?>; }
+.winter #content .item-pagination li { 
+  background-color: <?php echo $c2; ?>; } 
 .winter #content .pagination input[type=text] {
   border-color: <?php echo $c2v4; ?>; }
 .winter #content nav .pagination_list {
   background-color: <?php echo $c1; ?>; }
-.winter #content .items-nav a:link, .winter #content .items-nav a:visited, .winter #content .secondary-nav a:link, .winter #content .secondary-nav a:visited, .winter #content #secondary-nav a:link, .winter #content #secondary-nav a:visited, .winter #content #outputs a:link, .winter #content #outputs a:visited, .winter #content #exhibit-child-pages a:link, .winter #content #exhibit-child-pages a:visited {
-  color: <?php echo $c1v4; ?>; }
-.winter #content .items-nav a:hover, .winter #content .items-nav a:active, .winter #content .secondary-nav a:hover, .winter #content .secondary-nav a:active, .winter #content #secondary-nav a:hover, .winter #content #secondary-nav a:active, .winter #content #outputs a:hover, .winter #content #outputs a:active, .winter #content #exhibit-child-pages a:hover, .winter #content #exhibit-child-pages a:active {
-  color: <?php echo $c1v8; ?>; }
+.winter #content .items-nav a:link, .winter #content .items-nav a:visited, .winter #content #outputs a:link, .winter #content #outputs a:visited, .winter #content #exhibit-child-pages a:link, .winter #content #exhibit-child-pages a:visited {
+  color: <?php echo $c2v6; ?>; }
+
+/* Secondary nav is against the c1 background */ 
+.winter #content .secondary-nav a:link, .winter #content .secondary-nav a:visited, .winter #content #secondary-nav a:link, .winter #content #secondary-nav a:visited { 
+  color: <?php echo $c1v2; ?>; }
+.winter #content .secondary-nav a:hover, .winter #content .secondary-nav a:active, .winter #content #secondary-nav a:hover, .winter #content #secondary-nav a:active, .winter #content .items-nav a:hover { 
+  color: <?php echo $c1v6; ?>; }
+
+.winter #content .items-nav a:active, .winter #content #outputs a:hover, .winter #content #outputs a:active, .winter #content #exhibit-child-pages a:hover, .winter #content #exhibit-child-pages a:active {
+  color: <?php echo $c2v7; ?>; }
 .winter #content .item-img {
   border-color: <?php echo $c2v4; ?>; }
 .winter #content div.hTagcloud {
@@ -198,7 +222,9 @@
 .winter .exhibit-page-nav a:hover, .winter .exhibit-page-nav a:active {
   color: <?php echo $c1v8; ?>; }
 .winter #exhibit-page-navigation a, .winter #exhibit-page-navigation span {
-  background-color: <?php echo $c1v8; ?>; }
+  background-color: <?php echo $c2; ?>; }
+.winter #content div.hTagcloud ul li { 
+  background-color: <?php echo $c2; ?>; }
 
 </style>;  
 
