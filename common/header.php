@@ -238,6 +238,13 @@
 .winter #content div.hTagcloud ul li { 
   background-color: <?php echo $c2; ?>; }
 
+
+<?php if ( '1' == get_theme_option( 'Hide Header Text' ) ): ?>
+	.winter header { 
+		min-height: 6em; 
+	} 
+<?php endif; ?> 
+
 <?php if ( 1 == get_theme_option('Exhibits Minimal Header') ) : ?>
 	/* remove top nav for minimal header style */ 
 	.exhibits nav.top, .exhibits #search-container { 
@@ -268,9 +275,11 @@
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
     <div id="wrap">
         <header>
+	    <?php if ( 0 == get_theme_option( 'Hide Header Text' ) ): ?> 
             <div id="site-title">
                 <?php echo link_to_home_page(theme_logo()); ?>
             </div>
+	    <?php endif; ?> 
             <div id="search-container">
                 <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
                 <?php echo search_form(array('show_advanced' => true)); ?>
