@@ -116,6 +116,12 @@
 	#content { 
 		background-image: url('<?php echo elementaire_custom_background(); ?>');
 	} 
+	<?php if ( get_theme_option( 'Header Background' ) ): ?> 
+	header { 
+		background-image: url('<?php echo elementaire_custom_header_background(); ?>');
+	}
+	<?php endif; ?> 
+
 
 .winter body {
   background-color: <?php echo $c1v2i; ?>;

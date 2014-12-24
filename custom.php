@@ -11,3 +11,12 @@ function elementaire_custom_background()
 	} 
         echo $html;
 }
+
+function elementaire_custom_header_background()
+{
+    if(function_exists('get_theme_option') && $headerBg = get_theme_option('Header Background')) {
+        $storage = Zend_Registry::get('storage');
+        $headerBg = $storage->getUri($storage->getPathByType($headerBg, 'theme_uploads'));
+	echo $headerBg;
+    }
+}
