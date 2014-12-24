@@ -112,6 +112,9 @@
 	body { 
 		font-family: <?php echo get_theme_option('Body Text Font'); ?>;
 	} 
+	#content { 
+		background-image: url('<?php echo elementaire_custom_background(); ?>');
+	} 
 
 .winter body {
   background-color: <?php echo $c1v2i; ?>;
@@ -208,7 +211,7 @@
 .winter #search-results th {
   background-color: <?php echo $c2; ?>; }
 .winter #search-filters li, .winter #item-filters li {
-  background-color: <?php echo $c1v4; ?>; }
+  background-color: <?php echo $c2; ?>; }
 .winter .page #content {
   border-color: <?php echo $c2; ?>; }
 .winter footer {
