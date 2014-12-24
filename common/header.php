@@ -77,6 +77,7 @@
 		$c2v5 = colorBrightness( $c2, $v * 0.5 );  
 		$c2v6 = colorBrightness( $c2, $v * 0.6 );  
 		$c2v7 = colorBrightness( $c2, $v * 0.7 );  
+		$c2v8 = colorBrightness( $c2, $v * 0.8 );  
 		$c2v2i = colorBrightness( $c2, $v * -0.7 );  
 		$c2desat = colorSaturation( $c2, -0.4 ); 
 		$c2sat = colorSaturation( $c2, 0.4 ); 
@@ -230,6 +231,22 @@
   background-color: <?php echo $c2; ?>; }
 .winter #content div.hTagcloud ul li { 
   background-color: <?php echo $c2; ?>; }
+
+<?php if ( 1 == get_theme_option('Exhibits Minimal Header') ) : ?>
+	/* remove top nav for minimal header style */ 
+	.exhibits nav.top, .exhibits #search-container { 
+		display: none; 
+	} 
+	/* small black minimal site header, less distracting for exhibits */ 
+	.exhibits header { 
+		background-color: #000; 
+		padding: 0 2em; 
+	} 
+	.exhibits #site-title { 
+		font-size: 1em; 
+		padding: 0; 
+	} 
+<?php endif; ?> 
 
 </style>;  
 
