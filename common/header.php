@@ -282,6 +282,13 @@
 	.winter .items #content .item-img {
 		width: 250px;
 	}
+	.winter .items #content .clear { 
+	    clear: both; 
+	    border: 0; 
+	    background-color: transparent; 
+	    box-shadow: none; 
+	    padding: 0; 
+    	} 
 
 <?php endif; ?>
 

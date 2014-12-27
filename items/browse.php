@@ -26,6 +26,8 @@ $sortLinks[__('Date Added')] = 'added';
 
 <?php endif; ?>
 
+<div class="clear"></div> 
+
 <?php foreach (loop('items') as $item): ?>
 <div class="item hentry">
     <h2><?php echo link_to_item(metadata('item', array('Dublin Core', 'Title')), array('class'=>'permalink')); ?></h2>
