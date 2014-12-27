@@ -271,24 +271,25 @@
 	}
 <?php endif; ?>
 
-<?php if ( 1 == get_theme_option('Item File Gallery') ) : ?>
-	.winter .items #content .item-description, .winter .items .tags {
+.winter .items.browse #content .clear { 
+    clear: both; 
+    border: 0; 
+    background-color: transparent; 
+    box-shadow: none; 
+    padding: 0; 
+} 
+
+<?php if ( 0 == get_theme_option('Item File Gallery') ) : ?>
+	.winter .items.browse #content .item-description, .winter .items .tags {
 		display: none;
 	}
-	.winter .items #content .hentry {
+	.winter .items.browse #content .hentry {
 		width: 285px;
 		display: inline-block;
 	}
-	.winter .items #content .item-img {
+	.winter .items.browse #content .item-img {
 		width: 250px;
 	}
-	.winter .items #content .clear { 
-	    clear: both; 
-	    border: 0; 
-	    background-color: transparent; 
-	    box-shadow: none; 
-	    padding: 0; 
-    	} 
 
 <?php endif; ?>
 
