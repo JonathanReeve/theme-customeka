@@ -53,7 +53,7 @@
 	}
 	
 	// Get color preferences from config.
-	$c1 = ( NULL !== get_theme_option('Color One') ) ? get_theme_option('Color One') : '#343058';
+	$c1 = ( get_theme_option('Color One') == NULL || get_theme_option('Color One') == '' ) ? '#343058' : get_theme_option('Color One');
 	$v = ( is_light_color( hex_to_rgb( $c1 ) ) ) ?  -1 : 1;
 	$c1v2 = colorBrightness( $c1, $v * 0.2 );
 	$c1v3 = colorBrightness( $c1, $v * 0.3 );
@@ -66,7 +66,7 @@
 	$c1desat = colorSaturation( $c1, -0.4 );
 	$c1sat = colorSaturation( $c1, 0.4 );
 
-	$c2 = ( NULL !== get_theme_option('Color Two') ) ? get_theme_option('Color Two') : '#3e8238';
+	$c2 = ( get_theme_option('Color Two') == NULL || get_theme_option('Color Two') == '' ) ? '#3e8238' : get_theme_option('Color Two');
 	$v = ( is_light_color( hex_to_rgb ( $c2 ) ) ) ?  -1 : 1;
 	$c2v2 = colorBrightness( $c2, $v * 0.2 );
 	$c2v3 = colorBrightness( $c2, $v * 0.3 );
@@ -284,13 +284,17 @@
 		display: none;
 	}
 	.winter .items.browse #content .hentry {
-		width: 285px;
 		display: inline-block;
+		width: 30.5%;
+		margin: 1%; 
 	}
 	.winter .items.browse #content .item-img {
-		width: 250px;
+		width: 100%;
 	}
-
+	.winter .items.browse #content .hentry h2 { 
+		font-size: 1em; 
+		line-height: 1.3em; 
+	} 
 <?php endif; ?>
 
 </style>;
