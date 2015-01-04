@@ -1,2 +1,5 @@
 # For VIM
 .*.sw*
+
+#SASS
+css/.sass-cache
