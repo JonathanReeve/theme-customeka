@@ -796,6 +796,7 @@ footer {
 #content #outputs {
     @include block-reset;
     clear: both;
+    margin-top: 5em; 
     
     p { padding-left: 0; }
 }

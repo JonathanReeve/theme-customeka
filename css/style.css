@@ -819,6 +819,7 @@
     box-shadow: transparent 0 0 0;
     padding: 0;
     clear: both;
+    margin-top: 5em;
   }
   #content #outputs p {
     padding-left: 0;
