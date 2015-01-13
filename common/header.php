@@ -203,8 +203,12 @@
   color: <?php echo $c2v6; ?>; }
 
 /* Secondary nav is against the c1 background */
-.winter #content .secondary-nav a:link, .winter #content .secondary-nav a:visited, .winter #content #secondary-nav a:link, .winter #content #secondary-nav a:visited, .winter #content #exhibit-child-pages a:link, .winter #content #exhibit-child-pages a:visited {
+.winter #content .secondary-nav a:link, .winter #content .secondary-nav a:visited, .winter #content #secondary-nav a:link, .winter #content #secondary-nav a:visited, .winter #content #exhibit-child-pages a:link, .winter #content #exhibit-child-pages a:visited, .winter #content > h2 {
   color: <?php echo ( isset( $hc ) ? $hc : $c1v2 ); ?>; }
+.winter #content > h2 { 
+	border: 0; /* Don't use the lines you normally do. */ 
+	margin-bottom: 0.3em; 
+} 
 .winter #content .secondary-nav a:hover, .winter #content .secondary-nav a:active, .winter #content #secondary-nav a:hover, .winter #content #secondary-nav a:active, .winter #content .items-nav a:hover, .winter #content #exhibit-child-pages a:hover {
   color: <?php echo ( isset( $hcv6 ) ? $hcv6 : $c1v6 ); ?>; }
 
@@ -271,7 +275,7 @@
 	}
 <?php endif; ?>
 
-.winter .items.browse #content .clear, .winter .collections.browse #content .clear { 
+.winter .items.browse #content .clear, .winter .collections.browse #content .clear, .winter .exhibits.browse #content .clear { 
     clear: both; 
     border: 0; 
     background-color: transparent; 

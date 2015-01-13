@@ -49,6 +49,8 @@ $sortLinks[__('Date Added')] = 'added';
 
 <?php endforeach; ?>
 
+<div class="clear"></div> 
+
 <?php echo pagination_links(); ?>
 
 <?php fire_plugin_hook('public_collections_browse', array('collections'=>$collections, 'view' => $this)); ?>
