@@ -271,7 +271,7 @@
 	}
 <?php endif; ?>
 
-.winter .items.browse #content .clear { 
+.winter .items.browse #content .clear, .winter .collections.browse #content .clear { 
     clear: both; 
     border: 0; 
     background-color: transparent; 
@@ -283,17 +283,20 @@
 	.winter .items.browse #content .item-description, .winter .items .tags {
 		display: none;
 	}
-	.winter .items.browse #content .hentry {
+	.winter .items.browse #content .hentry, .winter .collections.browse #content .collection {
 		display: inline-block;
 		width: 30.5%;
 		margin: 1%; 
 	}
-	.winter .items.browse #content .item-img {
+	.winter .items.browse #content .item-img, .winter .collections.browse #content .item-img  {
 		width: 100%;
 	}
-	.winter .items.browse #content .hentry h2 { 
+	.winter .items.browse #content .hentry h2, .winter .items.browse #content .hentry h2 { 
 		font-size: 1em; 
 		line-height: 1.3em; 
+	} 
+	.winter #content .collection img { 
+		width: 100%; 
 	} 
 <?php endif; ?>
 
