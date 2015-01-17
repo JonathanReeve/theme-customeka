@@ -716,7 +716,17 @@ footer {
             margin-bottom: 0;
         }
         
-        #recent-items h2 { @include padding-trailer(.5); }
+        #recent-items { 
+		h2 { 
+			@include padding-trailer(.5); 
+		}
+		.item { 
+			clear: both; 
+			img { 
+				float: none; 
+			} 
+		} 
+	} 
 
     }
 

@@ -743,6 +743,12 @@
   #home #recent-items h2 {
     padding-bottom: 0.75em;
   }
+  #home #recent-items .item {
+    clear: both;
+  }
+  #home #recent-items .item img {
+    float: none;
+  }
 
   /* !---------- Items ---------- */
   .items #sort-links, .collections #sort-links {
