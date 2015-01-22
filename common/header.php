@@ -304,7 +304,7 @@
 	} 
 <?php endif; ?>
 
-</style>;
+</style>
 
     <!-- JavaScripts -->
     <?php queue_js_file('vendor/modernizr'); ?>
