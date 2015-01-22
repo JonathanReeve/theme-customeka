@@ -203,7 +203,7 @@
   color: <?php echo $c2v6; ?>; }
 
 /* Secondary nav is against the c1 background */
-.winter #content .secondary-nav a:link, .winter #content .secondary-nav a:visited, .winter #content #secondary-nav a:link, .winter #content #secondary-nav a:visited, .winter #content #exhibit-child-pages a:link, .winter #content #exhibit-child-pages a:visited, .winter #content > h2 {
+.winter #content .secondary-nav a:link, .winter #content .secondary-nav a:visited, .winter #content #secondary-nav a:link, .winter #content #secondary-nav a:visited, .winter #content #exhibit-child-pages a:link, .winter #content #exhibit-child-pages a:visited, .winter #content > h2, .winter #content > #simple-pages-breadcrumbs {
   color: <?php echo ( isset( $hc ) ? $hc : $c1v2 ); ?>; }
 .winter #content > h2 { 
 	border: 0; /* Don't use the lines you normally do. */ 
