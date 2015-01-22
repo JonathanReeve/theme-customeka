@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="<?php echo get_theme_option('Style Sheet'); ?>" lang="<?php echo get_html_lang(); ?>">
+<html class="elementaire <?php echo get_theme_option('Style Sheet'); ?>" lang="<?php echo get_html_lang(); ?>">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -124,137 +124,137 @@
 	}
 	<?php endif; ?>
 
-.winter body {
+.elementaire body {
   background-color: <?php echo $c1v2i; ?>;
   color: <?php echo $c2v2i; ?>; }
-.winter h1, .winter #site-title a {
+.elementaire h1, .elementaire #site-title a {
   color: <?php echo ( isset( $hc ) ? $hc : $c1v2 ); ?>; }
-.winter input[type=submit], .winter button, .winter .button, .winter #advanced-search {
+.elementaire input[type=submit], .elementaire button, .elementaire .button, .elementaire #advanced-search {
   background-color: <?php echo $c2; ?>; }
-.winter input[type=text], .winter input[type=password], .winter textarea {
+.elementaire input[type=text], .elementaire input[type=password], .elementaire textarea {
   background-color: <?php echo $c2v4; ?>; }
-.winter header input[type=submit], .winter header button, .winter .button, .winter header #advanced-search {
+.elementaire header input[type=submit], .elementaire header button, .elementaire .button, .elementaire header #advanced-search {
   background-color: <?php echo $c1; ?>; }
-.winter header #search-form input[type=text] {
+.elementaire header #search-form input[type=text] {
   background-color: <?php echo $c1v4; ?>; }
-.winter a:link {
+.elementaire a:link {
   color: <?php echo $c2v2; ?>; }
-.winter a:visited {
+.elementaire a:visited {
   color: <?php echo $c2v2; ?>; }
-.winter a:hover, .winter a:active {
+.elementaire a:hover, .elementaire a:active {
   color: <?php echo $c2v4; ?>; }
-.winter header {
+.elementaire header {
 	background-color: <?php echo $c1v7; ?>; }
-.winter nav.top {
+.elementaire nav.top {
   background-color: <?php echo $c1; ?>; }
-  .winter nav.top li:hover a {
+  .elementaire nav.top li:hover a {
     color: <?php echo $c1v2; ?>; }
-  .winter nav.top a:link, .winter nav.top a:visited {
+  .elementaire nav.top a:link, .elementaire nav.top a:visited {
     color: <?php echo $c1v4; ?>; }
-  .winter nav.top a:active, .winter nav.top a:hover {
+  .elementaire nav.top a:active, .elementaire nav.top a:hover {
     color: <?php echo $c1v8; ?>; }
-  .winter nav.top ul li ul {
+  .elementaire nav.top ul li ul {
     background-color: <?php echo $c1; ?>; }
-    .winter nav.top ul li ul li > a:link, .winter nav.top ul li ul li > a:visited, .winter nav.top ul li ul li > a:active, .winter nav.top ul li ul li > a:hover {
+    .elementaire nav.top ul li ul li > a:link, .elementaire nav.top ul li ul li > a:visited, .elementaire nav.top ul li ul li > a:active, .elementaire nav.top ul li ul li > a:hover {
       color: <?php echo $c1v4; ?>; }
-.winter #intro {
+.elementaire #intro {
   color: <?php echo $c1v8; ?>; }
-.winter #content,
-.winter #secondary-nav .current a,
-.winter #secondary-nav a.current,
-.winter .secondary-nav .current a,
-.winter .secondary-nav a.current,
-.winter .exhibit-section-nav .current a {
+.elementaire #content,
+.elementaire #secondary-nav .current a,
+.elementaire #secondary-nav a.current,
+.elementaire .secondary-nav .current a,
+.elementaire .secondary-nav a.current,
+.elementaire .exhibit-section-nav .current a {
   background-color: <?php echo $c1v8; ?>; }
-.winter #home #content > div {
+.elementaire #home #content > div {
   border-color: <?php echo $c2; ?>; }
-.winter #content h1 {
+.elementaire #content h1 {
     color: <?php echo ( isset( $hc ) ? $hc : $c1v2 ); ?>;
   }
-.winter #content h2 {
+.elementaire #content h2 {
   border-color: <?php echo $c2v6; ?>; }
-.winter #content div {
+.elementaire #content div {
   border-color: <?php echo $c2; ?>; }
-.winter #content > div, .winter #content #primary > div, .winter #content #sidebar > div,
-.winter #content #advanced-search-form > div, .winter #content #exhibit-pages {
+.elementaire #content > div, .elementaire #content #primary > div, .elementaire #content #sidebar > div,
+.elementaire #content #advanced-search-form > div, .elementaire #content #exhibit-pages {
   background-color: <?php echo $c2; ?>;
   color: <?php echo $c2v2; ?>;
   border-color: <?php echo $c2v7; ?>; }
-.winter #content #primary > div, .winter #content #sidebar > div {
+.elementaire #content #primary > div, .elementaire #content #sidebar > div {
   background-color: <?php echo $c2; ?>; }
-.winter #content .pagination_previous a, .winter #content .pagination_next a {
+.elementaire #content .pagination_previous a, .elementaire #content .pagination_next a {
   background-color: <?php echo $c2; ?>; }
-.winter #content .pagination a:link, .winter #content .pagination a:visited {
+.elementaire #content .pagination a:link, .elementaire #content .pagination a:visited {
   color: <?php echo $c2v4; ?>; }
-.winter #content .pagination a:hover, .winter #content .pagination a:active {
+.elementaire #content .pagination a:hover, .elementaire #content .pagination a:active {
   color: <?php echo $c2v8; ?>; }
-.winter #content .item-pagination li {
+.elementaire #content .item-pagination li {
   background-color: <?php echo $c2; ?>; }
-.winter #content .pagination input[type=text] {
+.elementaire #content .pagination input[type=text] {
   border-color: <?php echo $c2v4; ?>; }
-.winter #content nav .pagination_list {
+.elementaire #content nav .pagination_list {
   background-color: <?php echo $c1; ?>; }
-.winter #content .page-input form {
+.elementaire #content .page-input form {
   /* Page numbers are against $c1 background. */
 	color: <?php echo $c1v2; ?>; }
-.winter #content .page-input input {
+.elementaire #content .page-input input {
 	color: <?php echo $c2; ?>; }
-.winter #content .items-nav a:link, .winter #content .items-nav a:visited, .winter #content #outputs a:link, .winter #content #outputs a:visited, .winter #content #exhibit-child-pages a:link, .winter #content #exhibit-child-pages a:visited {
+.elementaire #content .items-nav a:link, .elementaire #content .items-nav a:visited, .elementaire #content #outputs a:link, .elementaire #content #outputs a:visited, .elementaire #content #exhibit-child-pages a:link, .elementaire #content #exhibit-child-pages a:visited {
   color: <?php echo $c2v6; ?>; }
 
 /* Secondary nav is against the c1 background */
-.winter #content .secondary-nav a:link, .winter #content .secondary-nav a:visited, .winter #content #secondary-nav a:link, .winter #content #secondary-nav a:visited, .winter #content #exhibit-child-pages a:link, .winter #content #exhibit-child-pages a:visited, .winter #content > h2, .winter #content > #simple-pages-breadcrumbs {
+.elementaire #content .secondary-nav a:link, .elementaire #content .secondary-nav a:visited, .elementaire #content #secondary-nav a:link, .elementaire #content #secondary-nav a:visited, .elementaire #content #exhibit-child-pages a:link, .elementaire #content #exhibit-child-pages a:visited, .elementaire #content > h2, .elementaire #content > #simple-pages-breadcrumbs {
   color: <?php echo ( isset( $hc ) ? $hc : $c1v2 ); ?>; }
-.winter #content > h2 { 
+.elementaire #content > h2 { 
 	border: 0; /* Don't use the lines you normally do. */ 
 	margin-bottom: 0.3em; 
 } 
-.winter #content .secondary-nav a:hover, .winter #content .secondary-nav a:active, .winter #content #secondary-nav a:hover, .winter #content #secondary-nav a:active, .winter #content .items-nav a:hover, .winter #content #exhibit-child-pages a:hover {
+.elementaire #content .secondary-nav a:hover, .elementaire #content .secondary-nav a:active, .elementaire #content #secondary-nav a:hover, .elementaire #content #secondary-nav a:active, .elementaire #content .items-nav a:hover, .elementaire #content #exhibit-child-pages a:hover {
   color: <?php echo ( isset( $hcv6 ) ? $hcv6 : $c1v6 ); ?>; }
 
 /* ...except in exhibits. */
-.exhibits .winter #content .secondary-nav a:link, .exhibits .winter #content .secondary-nav a:visited, .exhibits .winter #content #secondary-nav a:link, .exhibits .winter #content #secondary-nav a:visited {
+.exhibits .elementaire #content .secondary-nav a:link, .exhibits .elementaire #content .secondary-nav a:visited, .exhibits .elementaire #content #secondary-nav a:link, .exhibits .elementaire #content #secondary-nav a:visited {
   color: <?php echo $c2v2; ?>; }
-.winter .exhibits #content .secondary-nav a:hover, .winter .exhibits #content .secondary-nav a:active, .winter .exhibits #content #secondary-nav a:hover, .winter .exhibits #content #secondary-nav a:active, .winter .exhibits #content .items-nav a:hover {
+.elementaire .exhibits #content .secondary-nav a:hover, .elementaire .exhibits #content .secondary-nav a:active, .elementaire .exhibits #content #secondary-nav a:hover, .elementaire .exhibits #content #secondary-nav a:active, .elementaire .exhibits #content .items-nav a:hover {
   color: <?php echo $c2v6; ?>; }
 
-.winter #content .items-nav a:active, .winter #content #outputs a:hover, .winter #content #outputs a:active {
+.elementaire #content .items-nav a:active, .elementaire #content #outputs a:hover, .elementaire #content #outputs a:active {
   color: <?php echo $c2v7; ?>; }
-.winter #content .item-img {
+.elementaire #content .item-img {
   border-color: <?php echo $c2v4; ?>; }
-.winter #content div.hTagcloud {
+.elementaire #content div.hTagcloud {
   border: 0;
   background-color: transparent;
   box-shadow: transparent 0 0 0; }
-.winter #search-results th {
+.elementaire #search-results th {
   background-color: <?php echo $c2; ?>; }
-.winter #search-filters li, .winter #item-filters li {
+.elementaire #search-filters li, .elementaire #item-filters li {
   background-color: <?php echo $c2; ?>; }
-.winter .page #content {
+.elementaire .page #content {
   border-color: <?php echo $c2; ?>; }
-.winter footer {
+.elementaire footer {
   background-color: <?php echo $c1v2i; ?>; }
-.winter footer p {
+.elementaire footer p {
   color: <?php echo $c1v2; ?>; }
-.winter footer a:link, .winter footer a:visited {
+.elementaire footer a:link, .elementaire footer a:visited {
   color: <?php echo $c1v4; ?>; }
-.winter footer a:hover {
+.elementaire footer a:hover {
   color: <?php echo $c1v2; ?>; }
-.winter .exhibit-page-nav {
+.elementaire .exhibit-page-nav {
   background-color: <?php echo $c2; ?>; }
-.winter .exhibit-page-nav .current, .winter .exhibit-child-nav .current {
+.elementaire .exhibit-page-nav .current, .elementaire .exhibit-child-nav .current {
   background-color: rgba(0, 0, 0, 0.1); }
-.winter .exhibit-page-nav a:link, .winter .exhibit-page-nav a:visited {
+.elementaire .exhibit-page-nav a:link, .elementaire .exhibit-page-nav a:visited {
   color: <?php echo $c1v4; ?>; }
-.winter .exhibit-page-nav a:hover, .winter .exhibit-page-nav a:active {
+.elementaire .exhibit-page-nav a:hover, .elementaire .exhibit-page-nav a:active {
   color: <?php echo $c1v8; ?>; }
-.winter #exhibit-page-navigation a, .winter #exhibit-page-navigation span {
+.elementaire #exhibit-page-navigation a, .elementaire #exhibit-page-navigation span {
   background-color: <?php echo $c2; ?>; }
-.winter #content div.hTagcloud ul li {
+.elementaire #content div.hTagcloud ul li {
   background-color: <?php echo $c2; ?>; }
 
 <?php if ( '1' == get_theme_option( 'Hide Header Text' ) ): ?>
-	.winter header {
+	.elementaire header {
 		min-height: 6em;
 	}
 <?php endif; ?>
@@ -275,7 +275,7 @@
 	}
 <?php endif; ?>
 
-.winter .items.browse #content .clear, .winter .collections.browse #content .clear, .winter .exhibits.browse #content .clear { 
+.elementaire .items.browse #content .clear, .elementaire .collections.browse #content .clear, .elementaire .exhibits.browse #content .clear { 
     clear: both; 
     border: 0; 
     background-color: transparent; 
@@ -284,22 +284,22 @@
 } 
 
 <?php if ( 0 == get_theme_option('Item File Gallery') ) : ?>
-	.winter .items.browse #content .item-description, .winter .items .tags {
+	.elementaire .items.browse #content .item-description, .elementaire .items .tags {
 		display: none;
 	}
-	.winter .items.browse #content .hentry, .winter .collections.browse #content .collection {
+	.elementaire .items.browse #content .hentry, .elementaire .collections.browse #content .collection {
 		display: inline-block;
 		width: 30.5%;
 		margin: 1%; 
 	}
-	.winter .items.browse #content .item-img, .winter .collections.browse #content .item-img  {
+	.elementaire .items.browse #content .item-img, .elementaire .collections.browse #content .item-img  {
 		width: 100%;
 	}
-	.winter .items.browse #content .hentry h2, .winter .items.browse #content .hentry h2 { 
+	.elementaire .items.browse #content .hentry h2, .elementaire .items.browse #content .hentry h2 { 
 		font-size: 1em; 
 		line-height: 1.3em; 
 	} 
-	.winter #content .collection img { 
+	.elementaire #content .collection img { 
 		width: 100%; 
 	} 
 <?php endif; ?>
