@@ -21,7 +21,19 @@ By changing the two main color settings, Color One and Color Two, you can colori
 By checking "Item File Gallery," you can display your items and collections in a grid, instead of a list. This can allow you to display many more items on your Browse Items page.  
 
 ## History
+
 This project grew out of a theme called Elementaire, which can still be found on this repository, on other branches. The `old-2.0` branch contains the theme called Elementaire, which has a fixed with of about 960px and is made to be compatible with Elementaire 1.0, a theme developed for Omeka 1.X. 
 
+ * Current Version - Version 3.0 "Customeka" 
+   * Responsive 
+   * Completely rewritten. 
+   * Compatible with Omeka 2.X. 
+ * Version 2.0 - "Elementaire" 
+   * Branch `old-2.0`. 
+   * Fixed width. 
+   * Compatible with Omeka 2.X. 
+ * Version 1.0 - Compatible with Omeka 1.X
+
 ## Installation
+
 Download the .zip file using the button "Download ZIP" above, and unzip this directory into your Omeka installation's `/themes` directory. Then, in Dashboard -> Appearance, select "Customeka." 
