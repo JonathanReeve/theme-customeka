@@ -22,15 +22,15 @@ By checking "Item File Gallery," you can display your items and collections in a
 
 ## History
 
-This project grew out of a theme called Elementaire, which can still be found on this repository, on other branches. Here's a version list: 
+This theme is a rewrite of a theme called Elementaire, which can still be found on this repository, on the `2.X` branch. Here's a version comparison: 
 
  * Current Version - Version 3.0 "Customeka" 
-   * Tag "v3.0."  
+   * Master branch, tag "v3.0."  
    * Responsive.  
    * Completely rewritten. 
    * Compatible with Omeka 2.X. 
  * Version 2.0 - "Elementaire" 
-   * On branch `old-2.0`. 
+   * On branch `2.X`. 
    * Fixed width. 
    * Compatible with Omeka 2.X. 
  * Version 1.0 - Compatible with Omeka 1.X
