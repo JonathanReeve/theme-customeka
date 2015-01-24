@@ -1142,27 +1142,29 @@ footer {
 /* !---------- Simple Pages ---------- */
 
 .simple-pages-navigation {
-    list-style:none;
+	list-style:none;
+	.current ul { 
+		display:block;
+	} 
+	ul { 
+		display:none;
+	} 
+	a {
+		text-decoration:none;
+		border-bottom:1px solid #ddd;
+		display:block;
+		font-weight:bold;
+		padding:4px;
+	}
 }
-.simple-pages-navigation ul {
-    display:none;
-}
-.simple-pages-navigation .current ul {
-    display:block;
-}
-
-.simple-pages-navigation a {
-    text-decoration:none;
-    border-bottom:1px solid #ddd;
-    display:block;
-    font-weight:bold;
-    padding:4px;
-}
-
 #simple-pages-breadcrumbs {
-    font-weight:bold;
-    @include trailer();
+	font-weight:bold;
+	@include trailer();
 }
+
+.simple-page #content #primary h2 { 
+	border: none; 
+} 
 
 
 /* !---------- Winter Styles ---------- */

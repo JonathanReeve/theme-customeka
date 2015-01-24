@@ -1171,15 +1171,12 @@
   .simple-pages-navigation {
     list-style: none;
   }
-
-  .simple-pages-navigation ul {
-    display: none;
-  }
-
   .simple-pages-navigation .current ul {
     display: block;
   }
-
+  .simple-pages-navigation ul {
+    display: none;
+  }
   .simple-pages-navigation a {
     text-decoration: none;
     border-bottom: 1px solid #ddd;
@@ -1191,6 +1188,10 @@
   #simple-pages-breadcrumbs {
     font-weight: bold;
     margin-bottom: 1.5em;
+  }
+
+  .simple-page #content #primary h2 {
+    border: none;
   }
 
   /* !---------- Winter Styles ---------- */
