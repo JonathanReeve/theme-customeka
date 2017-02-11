@@ -105,7 +105,7 @@
 <!-- Custom Styles -->
 <style type="text/css">
 
-	header a, h1, h2, h3, h4, h5, h6 {
+	header #site-title a, h1, h2, h3, h4, h5, h6 {
 		<?php if (get_theme_option('Heading Text Font')) echo 'font-family: ' .  get_theme_option('Heading Text Font') . ';'; ?>			
 		<?php if (get_theme_option('Heading Font Size')) echo 'font-size: ' .  get_theme_option('Heading Font Size') . ';'; ?>			
 	}
