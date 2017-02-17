@@ -382,7 +382,7 @@
     width: 60%;
     font-size: 0.875em;
     line-height: 1.71429em;
-    float: left;
+    /*float: left;*/
   }
   #search-form input[type=submit] {
     width: 30%;
